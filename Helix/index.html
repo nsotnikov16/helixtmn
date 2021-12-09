@@ -19,91 +19,113 @@
 
 <body>
     <div class="page">
-        <header class="header page__container">
-    <div class="header__container">
-        <div class="header__top">
-            <div class="logo">
-                <img src="img/logo.png" alt="Logo">
-                <p>Сеть лабораторий «Хеликс» В ТЮМЕНИ</p>
+        <header class="header">
+    <div class="page__container">
+        <div class="header__container">
+            <div class="header__top">
+                <div class="logo">
+                    <img src="img/logo.png" alt="Logo">
+                    <p>Сеть лабораторий «Хеликс» В ТЮМЕНИ</p>
+                </div>
+                <div class="header__top-container">
+                    <div class="header__top-top">
+                        <nav class="header__submenu">
+                            <ul class="header__submenu-list">
+                                <li class="header__submenu-item"><a href="#" class="header__submenu-link">О клинике</a>
+                                </li>
+                                <li class="header__submenu-item"><a href="#" class="header__submenu-link">Лицензии</a>
+                                </li>
+                                <li class="header__submenu-item"><a href="#" class="header__submenu-link">ОМС</a></li>
+                                <li class="header__submenu-item"><a href="#" class="header__submenu-link">Наши врачи</a>
+                                </li>
+                                <li class="header__submenu-item"><a href="#" class="header__submenu-link">Отзывы</a>
+                                </li>
+                                <li class="header__submenu-item"><a href="#" class="header__submenu-link">Выезд на
+                                        дом</a>
+                                </li>
+                            </ul>
+                        </nav>
+                        <a class="header__eye">
+
+                            <svg class="header__eye-icon">
+                                <use href="img/icons/icons.svg#eye"></use>
+                            </svg>
+                            <p>Слабовидящим</p>
+                        </a>
+
+                    </div>
+                    <div class="header__top-bottom">
+                        <form class="header__search">
+                            <div class="header__search-row">
+                                <svg>
+                                    <use href="img/icons/icons.svg#search"></use>
+                                </svg>
+                                <input type="text" class="header__search-input"
+                                    placeholder="Поиск нужного исследования, врача" minlength="1" autocomplete="off" />
+                            </div>
+                            <button class="header__search-btn">Найти</button>
+                        </form>
+                        <div class="header__contacts">
+                            <a href="tel:+73452355560" class="phone">
+                                <svg>
+                                    <use href="img/icons/icons.svg#phone"></use>
+                                </svg>
+                                <p>8 (3452) <span>35-55-60</span></p>
+                            </a>
+                            <a href="#" class="header__contacts-map">8 центров в Тюмени</a>
+                        </div>
+                        <button class="callback-btn callback-btn_header">Запись на прием</button>
+                    </div>
+
+                </div>
             </div>
-            <div class="header__top-grid">
-                <nav class="header__submenu">
-                    <ul class="header__submenu-list">
-                        <li class="header__submenu-item"><a class="header__submenu-link"></a></li>
+            <div style="display: none;" class="header__bottom">
+                <nav class="header__menu">
+                    <ul class="header__menu-list">
+                        <li class="header__menu-item">
+                            <a href="#" class="header__menu-link"></a>
+                        </li>
+                        <li class="header__menu-item">
+                            <a href="#" class="header__menu-link"></a>
+                        </li>
+                        <li class="header__menu-item">
+                            <a href="#" class="header__menu-link"></a>
+                        </li>
+                        <li class="header__menu-item">
+                            <a href="#" class="header__menu-link"></a>
+                        </li>
+                        <li class="header__menu-item">
+                            <a href="#" class="header__menu-link"></a>
+                        </li>
+                        <li class="header__menu-item">
+                            <a href="#" class="header__menu-link"></a>
+                        </li>
+                        <li class="header__menu-item">
+                            <a href="#" class="header__menu-link"></a>
+                        </li>
+                        <li class="header__menu-item">
+                            <a href="#" class="header__menu-link"></a>
+                        </li>
+                        <li class="header__menu-item">
+                            <a href="#" class="header__menu-link"></a>
+                        </li>
+                        <li class="header__menu-item">
+                            <a href="#" class="header__menu-link header__menu-link_covid">
+                                <svg>
+                                    <use href="img/icons/icons.svg#virus"></use>
+                                </svg>
+                                <span>Covid-19</span>
+                            </a>
+                        </li>
                     </ul>
                 </nav>
-                <a class="header__eye">
-                    <svg>
-                        <use href="img/icons/icons.svg#eye"></use>
-                    </svg>
-                    <p>Слабовидящим</p>
-                </a>
-                <form class="header__search">
-                    <div class="header__search-row">
-                        <svg>
-                            <use href="img/icons/icons.svg#search"></use>
-                        </svg>
-                        <input type="text" class="header__search-input" autocomplete="off"/>
-                    </div>
-                    <button class="header__search-btn">Найти</button>
-                </form>
-                <div class="header__contacts">
-                    <a href="tel:+73452355560" class="header__phone">
-                        <svg>
-                            <use href="img/icons/icons.svg#phone"></use>
-                        </svg>
-                        <p>8 (3452) <span>35-55-60</span></p>
-                    </a>
-                    <a href="#" class="header__contacts-map">8 центров в Тюмени</a>
-                </div>
-                <button class="callback">Запись на прием</button>
+            </div>
+            <div class="header__bottom-mobile">
+
             </div>
         </div>
-        <div class="header__bottom">
-            <nav class="header__menu">
-                <ul class="header__menu-list">
-                    <li class="header__menu-item">
-                        <a href="#" class="header__menu-link"></a>
-                    </li>
-                    <li class="header__menu-item">
-                        <a href="#" class="header__menu-link"></a>
-                    </li>
-                    <li class="header__menu-item">
-                        <a href="#" class="header__menu-link"></a>
-                    </li>
-                    <li class="header__menu-item">
-                        <a href="#" class="header__menu-link"></a>
-                    </li>
-                    <li class="header__menu-item">
-                        <a href="#" class="header__menu-link"></a>
-                    </li>
-                    <li class="header__menu-item">
-                        <a href="#" class="header__menu-link"></a>
-                    </li>
-                    <li class="header__menu-item">
-                        <a href="#" class="header__menu-link"></a>
-                    </li>
-                    <li class="header__menu-item">
-                        <a href="#" class="header__menu-link"></a>
-                    </li>
-                    <li class="header__menu-item">
-                        <a href="#" class="header__menu-link"></a>
-                    </li>
-                    <li class="header__menu-item">
-                        <a href="#" class="header__menu-link header__menu-link_covid">
-                            <svg>
-                                <use href="img/icons/icons.svg#virus"></use>
-                            </svg>
-                            <span>Covid-19</span>
-                        </a>
-                    </li>
-                </ul>
-            </nav>
-        </div>
-        <div class="header__bottom-mobile">
-
-        </div>
     </div>
+
 </header>
         <main class="main">
             

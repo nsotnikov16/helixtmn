@@ -1,0 +1,194 @@
+.header {
+  // .header__container
+  padding-top: 14px;
+
+  &__container {
+    width: 100%;
+  }
+
+  // .header__top
+
+  &__top {
+    display: flex;
+    align-items: center;
+     
+    
+  }
+
+  &__top-container {
+    margin-left: 5%;
+    display: flex;
+    flex-direction: column;
+    /* @media (max-width: 1291px) {
+      width: 100%;
+    } */
+  }
+
+  &__top-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 18px;
+  }
+
+  &__top-bottom {
+    display: flex;
+    align-items: center;
+    /* justify-content: space-between; */
+  }
+
+  // .header__submenu
+
+  &__submenu {
+    grid-column: 1/3;
+  }
+
+  // .header__submenu-list
+
+  &__submenu-list {
+    display: flex;
+    align-items: center;
+  }
+
+  // .header__submenu-item
+
+  &__submenu-item {
+    margin-right: 35px;
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  // .header__submenu-link
+
+  &__submenu-link {
+    font-size: 14px;
+    line-height: 17px;
+    color: #4b5563;
+  }
+
+  // .header__eye
+
+  &__eye {
+    justify-self: end;
+    display: flex;
+    align-items: center;
+    p {
+      margin-left: 8px;
+      font-size: 14px;
+      line-height: 17px;
+      color: #4b5563;
+    }
+  }
+
+  // .header__eye-icon
+
+  &__eye-icon {
+    width: 19px;
+    height: 11px;
+  }
+
+  // .header__search
+
+  &__search {
+    width: 550px;
+    height: 50px;
+    border-radius: 7px;
+    border: 1px solid rgba(69, 181, 83, 0.6);
+    display: flex;
+
+    align-items: center;
+  }
+
+  // .header__search-row
+
+  &__search-row {
+    max-width: 445px;
+    display: flex;
+    align-items: center;
+    padding: 18px 0 16px 20px;
+    width: 100%;
+    svg {
+      width: 16px;
+      height: 16px;
+      opacity: 0.5;
+    }
+  }
+
+  // .header__search-input
+
+  &__search-input {
+    margin-left: 14px;
+    width: 90%;
+    font-size: 16px;
+    line-height: 19px;
+    color: #9ca3af;
+  }
+
+  // .header__search-btn
+
+  &__search-btn {
+    background: rgba(69, 181, 83, 0.15);
+    height: 50px;
+    border-radius: 0px 7px 7px 0px;
+
+    width: 20%;
+    display: block;
+  }
+
+  // .header__contacts
+
+  &__contacts {
+    margin: 0 21px 0 25px;
+    width: 215px;
+  }
+
+  // .header__contacts-map
+
+  &__contacts-map {
+    font-size: 14px;
+    line-height: 17px;
+    color: #4b5563;
+    padding-bottom: 2px;
+    border-bottom: 1px dashed #9ca3af;
+    margin-left: 25px;
+    display: inline-block;
+  }
+
+  // .header__bottom
+
+  &__bottom {
+  }
+
+  // .header__menu
+
+  &__menu {
+  }
+
+  // .header__menu-list
+
+  &__menu-list {
+  }
+
+  // .header__menu-item
+
+  &__menu-item {
+  }
+
+  // .header__menu-link
+
+  &__menu-link {
+    // .header__menu-link_covid
+
+    &_covid {
+    }
+  }
+
+  // .header__bottom-mobile
+
+  &__bottom-mobile {
+  }
+}
+
+.logo {
+}
