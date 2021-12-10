@@ -13,8 +13,11 @@
 
 @import "normalize";
 
-.page {
+body {
   font-family: "Din Next";
+}
+.page {
+  
   color: #111827;
 
   &__container {
@@ -40,6 +43,8 @@ a,
   padding: 0;
   background: initial;
 }
+
+
 
 ul {
   list-style: none;
@@ -134,6 +139,7 @@ section {
 
 /* Записаться/обратный звонок */
 .callback-btn {
+  font-family: "Din Next";
   padding: 13px 25px 10px;
   background-color: #45b553;
   border-radius: 6px;
@@ -171,6 +177,23 @@ section {
     width: 165px;
     height: 50px;
   }
+  &.callback-btn_white {
+    background-color: #ffffff;
+    color: #45b553;
+    border: 1px solid #45b553;
+    border-radius: 7px;
+    width: 140px;
+    height: 50px;
+    padding: 15px 28px;
+    text-transform: none;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+    &:hover {
+      color: #fff;
+      background-color: #45b553;
+    }
+  }
 }
 
 /* Список */
@@ -181,20 +204,56 @@ section {
 }
 
 .list-item {
-  a {
+  a,
+  .banners .list-item p {
     display: flex;
     align-items: center;
     svg {
       flex-grow: 0;
       flex-shrink: 0;
+      margin-top: 3px;
     }
   }
 }
 
 .list-text {
+  font-family: "Din Next";
   font-size: 16px;
   margin-left: 8px;
   flex-grow: 0;
+}
+
+.all-link {
+  font-family: "Din Next";
+  display: inline-block;
+  margin-top: 30px;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 19px;
+  color: #45b553;
+
+  &.section__all {
+    position: relative;
+    padding: 8px 10px;
+    &:hover {
+      background-color: rgba(69, 181, 83, 0.09);
+
+      border-radius: 6px;
+    }
+  }
+
+  svg {
+    padding-left: 6px;
+    width: 24px;
+    height: 12px;
+  }
+}
+
+.section__top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 0 35px;
 }
 
 /* Лого */
@@ -214,3 +273,15 @@ section {
 
 /* Диагностика */
 @import "diagnostics";
+
+/* Популярные услуги */
+@import "popular";
+
+/* Врачи */
+@import "doctors";
+
+/* Почему Hellix, о компании */
+@import "about";
+
+/* Яндекс Карты */
+@import "maps";

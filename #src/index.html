@@ -15,18 +15,32 @@
         rel="stylesheet">
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
     <link rel="stylesheet" href="css/style.css">
+    <script src="https://api-maps.yandex.ru/2.1/?apikey=32934b60-7668-4b0e-b423-d1d9d7bd789d&lang=ru_RU" type="text/javascript"></script>
 </head>
 
 <body>
+    <!-- Главная -->
     <div class="page">
+        <!-- Шапка -->
         @@include('components/_header.html')
         <main class="main">
+            <!-- Баннеры -->
             @@include('components/_banners.html')
-            @@include('components/_doctors-tabs.html')
+            <!-- Специальности -->
+            @@include('components/_specialties.html')
+            <!-- Диагностика -->
             @@include('components/_diagnostics.html')
+            <!-- Популярные услуги -->
+            @@include('components/_popular.html')
+            <!-- Наши врачи -->
+            @@include('components/_doctors.html')
+            <!-- Почему Hellix -->
+            @@include('components/_about.html')
         </main>
+        @@include('components/_maps.html')
         @@include('components/_footer.html')
     </div>
+    
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script src="js/script.js"></script>
 </body>

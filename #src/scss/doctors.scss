@@ -1,0 +1,73 @@
+.doctors {
+    margin-bottom: 90px;
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+  }
+
+  &__item {
+    border: 1px solid #e5e7eb;
+    border-radius: 13px;
+  }
+
+  &__photo {
+    border-top-left-radius: 13px;
+    border-top-right-radius: 13px;
+    width: 100%;
+    height: 270px;
+    object-fit: cover;
+  }
+
+  &__description {
+    padding: 30px 28px 35px;
+  }
+
+  &__post {
+    font-size: 12px;
+    line-height: 14px;
+    text-transform: uppercase;
+    color: #6b7280;
+    padding: 0 0 5px;
+  }
+
+  &__name {
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 30px;
+    padding: 0 0 12px;
+  }
+
+  &__experience {
+    font-size: 14px;
+    line-height: 32px;
+    color: #6b7280;
+    padding: 0 0 15px;
+  }
+
+  &__lists {
+    grid-template-columns: repeat(2, max-content);
+    gap: 10px 12px;
+    svg {
+      margin: 2px !important;
+    }
+
+    .list-item a {
+        align-items: flex-start;
+    }
+
+    .list-text {
+      font-size: 14px;
+      max-width: 115px;
+    }
+  }
+
+  .ellipse-icon {
+    width: 8px;
+    height: 8px;
+  }
+
+  .callback-btn_white {
+    margin-top: 15px;
+  }
+}
