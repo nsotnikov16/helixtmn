@@ -15,19 +15,24 @@
         rel="stylesheet">
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
     <link rel="stylesheet" href="css/style.css">
+    <script src="https://api-maps.yandex.ru/2.1/?apikey=32934b60-7668-4b0e-b423-d1d9d7bd789d&lang=ru_RU" type="text/javascript"></script>
 </head>
 
 <body>
+    <!-- Главная -->
     <div class="page">
+        <!-- Шапка -->
         <header class="header">
     <div class="page__container">
         <div class="header__container">
 
+            <!-- Логотип -->
             <div class="logo">
                 <img src="./img/logo.png" alt="Logo">
                 <p>Сеть лабораторий «Хеликс» В ТЮМЕНИ</p>
             </div>
 
+            <!-- Верхнее подменю -->
             <nav class="header__submenu">
                 <ul class="header__submenu-list">
                     <li class="header__submenu-item"><a href="#" class="header__submenu-link">О клинике</a>
@@ -44,6 +49,8 @@
                     </li>
                 </ul>
             </nav>
+
+            <!-- Слабовидящим -->
             <a class="header__eye">
 
                 <svg class="header__eye-icon">
@@ -52,7 +59,7 @@
                 <p>Слабовидящим</p>
             </a>
 
-
+            <!-- Поиск -->
             <form class="header__search">
                 <div class="header__search-row">
                     <svg>
@@ -63,6 +70,8 @@
                 </div>
                 <button class="header__search-btn">Найти</button>
             </form>
+
+            <!-- Контакты в шапке -->
             <div class="header__contacts">
                 <a href="tel:+73452355560" class="phone">
                     <svg>
@@ -72,9 +81,11 @@
                 </a>
                 <a href="#" class="header__contacts-map">8 центров в Тюмени</a>
             </div>
+
+            <!-- Кнопка -->
             <button class="callback-btn callback-btn_header">Запись на прием</button>
 
-
+            <!-- Верхнее меню -->
             <nav class="menu menu_header">
                 <ul class="menu__list">
                     <li class="menu__item menu__item-dropdown">
@@ -137,9 +148,12 @@
 
 </header>
         <main class="main">
+            <!-- Баннеры -->
             <section class="banners">
     <div class="page__container">
         <div class="banners__container">
+
+            <!-- Свайпер -->
             <div class="swiper swiper-banners">
                 <div class="swiper-wrapper">
                     <div class="swiper-slide">
@@ -149,47 +163,47 @@
                             </h1>
                             <ul class="list">
                                 <li class="list-item">
-                                    <a href="#">
+                                    <p>
                                         <svg class="ellipse-icon">
                                             <use href="./img/icons/icons.svg#ellipse"></use>
                                         </svg>
                                         <span class="list-text">Сердца</span>
-                                    </a>
+                                    </p>
                                 </li>
                                 <li class="list-item">
-                                    <a href="#">
+                                    <p>
                                         <svg class="ellipse-icon">
                                             <use href="./img/icons/icons.svg#ellipse"></use>
                                         </svg>
-                                        <span class="list-text">Щитовидной железы</span></a>
+                                        <span class="list-text">Щитовидной железы</span></p>
                                 </li>
                                 <li class="list-item">
-                                    <a href="#">
+                                    <p>
                                         <svg class="ellipse-icon">
                                             <use href="./img/icons/icons.svg#ellipse">Сосудов шеи и головы</use>
                                         </svg>
-                                        <span class="list-text">Сосудов шеи и головы</span></a>
+                                        <span class="list-text">Сосудов шеи и головы</span></p>
                                 </li>
                                 <li class="list-item">
-                                    <a href="#">
+                                    <p>
                                         <svg class="ellipse-icon">
                                             <use href="./img/icons/icons.svg#ellipse"></use>
                                         </svg>
-                                        <span class="list-text">Почек</span></a>
+                                        <span class="list-text">Почек</span></p>
                                 </li>
                                 <li class="list-item">
-                                    <a href="#">
+                                    <p>
                                         <svg class="ellipse-icon">
                                             <use href="./img/icons/icons.svg#ellipse"></use>
                                         </svg>
-                                        <span class="list-text">Молочной железы</span></a>
+                                        <span class="list-text">Молочной железы</span></p>
                                 </li>
                                 <li class="list-item">
-                                    <a href="#">
+                                    <p>
                                         <svg class="ellipse-icon">
                                             <use href="./img/icons/icons.svg#ellipse"></use>
                                         </svg>
-                                        <span class="list-text">Таза</span></a>
+                                        <span class="list-text">Таза</span></p>
                                 </li>
                             </ul>
                             <div class="banners__signup">
@@ -209,6 +223,8 @@
                 <div class="swiper-button-next"></div>
                 <div class="swiper-button-prev"></div>
             </div>
+            <!-- Конец свайпера -->
+
             <div style="background-image: url(./img/banners/modelirovanie.png);" class="banners__block">
                 <h2 class="banners__block-title">Объемное моделирование губ</h2>
                 <button class="callback-btn callback-btn_banners-block">Записаться</button>
@@ -225,6 +241,7 @@
         </p>
     </div>
 </section>
+            <!-- Специальности -->
             <div class="specialties">
     <div class="page__container">
         <div class="tabs">
@@ -465,6 +482,7 @@
     </div>
 </div>
 </div>
+            <!-- Диагностика -->
             <section class="diagnostics">
     <div class="page__container">
         <div class="diagnostics__container">
@@ -472,7 +490,7 @@
             <ul class="diagnostics__cards">
                 <li class="diagnostics__card">
                     <img class="diagnostics__card-img" src="./img/diagnostics/uzi.png" alt="#">
-                    <h3 class="diagnostics__card-title">Ультразвуковое исследование (УЗИ)</h3>
+                    <a href="#"><h3 class="diagnostics__card-title">Ультразвуковое исследование (УЗИ)</h3></a>
                     <ul class="list diagnostics__list">
                         <li class="list-item">
                             <a href="#">
@@ -500,7 +518,7 @@
                         </li>
 
                     </ul>
-                    <a href="#" class="diagnostics__link">Все услуги УЗИ
+                    <a href="#" class="all-link">Все услуги УЗИ
                         <svg>
                             <use href="./img/icons/icons.svg#arrow-link"></use>
                         </svg>
@@ -508,7 +526,7 @@
                 </li>
                 <li class="diagnostics__card">
                     <img class="diagnostics__card-img" src="./img/diagnostics/ekg.png" alt="#">
-                    <h3 class="diagnostics__card-title">Электрокардиограмма (ЭКГ)</h3>
+                    <a href="#"><h3 class="diagnostics__card-title">Электрокардиограмма (ЭКГ)</h3></a>
                     <ul class="list diagnostics__list">
                         <li class="list-item">
                             <a href="#">
@@ -530,7 +548,7 @@
                 </li>
                 <li class="diagnostics__card">
                     <img class="diagnostics__card-img" src="./img/diagnostics/function.png" alt="#">
-                    <h3 class="diagnostics__card-title">Функциональная диагностика</h3>
+                    <a href="#"><h3 class="diagnostics__card-title">Функциональная диагностика</h3></a>
                     <ul class="list diagnostics__list">
                         <li class="list-item">
                             <a href="#">
@@ -564,9 +582,337 @@
         </div>
     </div>
 </section>
+            <!-- Популярные услуги -->
+            <section class="popular">
+    <div class="page__container">
+        
+            <div class="section__top">
+                <h2 class="section__title">Популярные услуги</h2>
+                <a href="#" class="all-link section__all">Все услуги
+                    <svg>
+                        <use href="./img/icons/icons.svg#arrow-link"></use>
+                    </svg>
+                </a>
+            </div>
+
+            <ul class="popular__cards">
+                <li class="popular__card">
+                    <a href="#" class="popular__card-link">
+                        <img class="popular__card-img" src="./img/popular/1.png" alt="#">
+                        <p class="popular__card-text">Оформление справки в бассейн</p>
+                    </a>
+                </li>
+                <li class="popular__card">
+                    <a href="#" class="popular__card-link">
+                        <img class="popular__card-img" src="./img/popular/2.png" alt="#">
+                        <p class="popular__card-text">Оформление справки в бассейн</p>
+                    </a>
+                </li>
+                <li class="popular__card">
+                    <a href="#" class="popular__card-link">
+                        <img class="popular__card-img" src="./img/popular/1.png" alt="#">
+                        <p class="popular__card-text">Оформление справки в бассейн</p>
+                    </a>
+                </li>
+                <li class="popular__card">
+                    <a href="#" class="popular__card-link">
+                        <img class="popular__card-img" src="./img/popular/2.png" alt="#">
+                        <p class="popular__card-text">Оформление справки в бассейн</p>
+                    </a>
+                </li>
+                <li class="popular__card">
+                    <a href="#" class="popular__card-link">
+                        <img class="popular__card-img" src="./img/popular/1.png" alt="#">
+                        <p class="popular__card-text">Оформление справки в бассейн</p>
+                    </a>
+                </li>
+                <li class="popular__card">
+                    <a href="#" class="popular__card-link">
+                        <img class="popular__card-img" src="./img/popular/2.png" alt="#">
+                        <p class="popular__card-text">Оформление справки в бассейн</p>
+                    </a>
+                </li>
+                <li class="popular__card">
+                    <a href="#" class="popular__card-link">
+                        <img class="popular__card-img" src="./img/popular/1.png" alt="#">
+                        <p class="popular__card-text">Оформление справки в бассейн</p>
+                    </a>
+                </li>
+                <li class="popular__card">
+                    <a href="#" class="popular__card-link">
+                        <img class="popular__card-img" src="./img/popular/2.png" alt="#">
+                        <p class="popular__card-text">Оформление справки в бассейн</p>
+                    </a>
+                </li>
+                <li class="popular__card">
+                    <a href="#" class="popular__card-link">
+                        <img class="popular__card-img" src="./img/popular/1.png" alt="#">
+                        <p class="popular__card-text">Оформление справки в бассейн</p>
+                    </a>
+                </li>
+                <li class="popular__card">
+                    <a href="#" class="popular__card-link">
+                        <img class="popular__card-img" src="./img/popular/2.png" alt="#">
+                        <p class="popular__card-text">Оформление справки в бассейн</p>
+                    </a>
+                </li>
+            </ul>
+    </div>
+</section>
+            <!-- Наши врачи -->
+            <section class="doctors">
+    <div class="page__container">
+
+        <div class="section__top">
+            <h2 class="section__title">Наши врачи</h2>
+            <a href="#" class="all-link section__all">Все врачи
+                <svg>
+                    <use href="./img/icons/icons.svg#arrow-link"></use>
+                </svg>
+            </a>
+        </div>
+        <ul class="doctors__list">
+            <li class="doctors__item">
+                <img class="doctors__photo" src="./img/doctor.png" alt="#">
+                <div class="doctors__description">
+                    <p class="doctors__post">Врач хирург</p>
+                    <a href="#">
+                        <h3 class="doctors__name">Петров Иван Иванович</h3>
+                    </a>
+                    <p class="doctors__experience">Стаж работы 10 лет</p>
+                    <ul class="list doctors__lists">
+                        <li class="list-item">
+                            <a href="#">
+                                <svg class="ellipse-icon">
+                                    <use href="./img/icons/icons.svg#ellipse-full"></use>
+                                </svg>
+                                <span class="list-text">ДЦ на Ямской</span>
+                            </a>
+                        </li>
+                        <li class="list-item">
+                            <a href="#">
+                                <svg class="ellipse-icon">
+                                    <use href="./img/icons/icons.svg#ellipse-full"></use>
+                                </svg>
+                                <span class="list-text">ДЦ на Гольцова</span>
+                            </a>
+                        </li>
+                    </ul>
+                    <button class="callback-btn callback-btn_white">Записаться</button>
+                </div>
+            </li>
+            <li class="doctors__item">
+                <img class="doctors__photo" src="./img/doctor.png" alt="#">
+                <div class="doctors__description">
+                    <p class="doctors__post">Врач хирург</p>
+                    <a href="#">
+                        <h3 class="doctors__name">Петров Иван Иванович</h3>
+                    </a>
+                    <p class="doctors__experience">Стаж работы 10 лет</p>
+                    <ul class="list doctors__lists">
+                        <li class="list-item">
+                            <a href="#">
+                                <svg class="ellipse-icon">
+                                    <use href="./img/icons/icons.svg#ellipse-full"></use>
+                                </svg>
+                                <span class="list-text">ДЦ на Ямской</span>
+                            </a>
+                        </li>
+                        <li class="list-item">
+                            <a href="#">
+                                <svg class="ellipse-icon">
+                                    <use href="./img/icons/icons.svg#ellipse-full"></use>
+                                </svg>
+                                <span class="list-text">ДЦ на Гольцова</span>
+                            </a>
+                        </li>
+                    </ul>
+                    <button class="callback-btn callback-btn_white">Записаться</button>
+                </div>
+            </li>
+            <li class="doctors__item">
+                <img class="doctors__photo" src="./img/doctor.png" alt="#">
+                <div class="doctors__description">
+                    <p class="doctors__post">Врач хирург</p>
+                    <a href="#">
+                        <h3 class="doctors__name">Петров Иван Иванович</h3>
+                    </a>
+                    <p class="doctors__experience">Стаж работы 10 лет</p>
+                    <ul class="list doctors__lists">
+                        <li class="list-item">
+                            <a href="#">
+                                <svg class="ellipse-icon">
+                                    <use href="./img/icons/icons.svg#ellipse-full"></use>
+                                </svg>
+                                <span class="list-text">ДЦ на Ямской</span>
+                            </a>
+                        </li>
+                        <li class="list-item">
+                            <a href="#">
+                                <svg class="ellipse-icon">
+                                    <use href="./img/icons/icons.svg#ellipse-full"></use>
+                                </svg>
+                                <span class="list-text">ДЦ на Гольцова</span>
+                            </a>
+                        </li>
+                    </ul>
+                    <button class="callback-btn callback-btn_white">Записаться</button>
+                </div>
+            </li>
+            <li class="doctors__item">
+                <img class="doctors__photo" src="./img/doctor.png" alt="#">
+                <div class="doctors__description">
+                    <p class="doctors__post">Врач хирург</p>
+                    <a href="#">
+                        <h3 class="doctors__name">Петров Иван Иванович</h3>
+                    </a>
+                    <p class="doctors__experience">Стаж работы 10 лет</p>
+                    <ul class="list doctors__lists">
+                        <li class="list-item">
+                            <a href="#">
+                                <svg class="ellipse-icon">
+                                    <use href="./img/icons/icons.svg#ellipse-full"></use>
+                                </svg>
+                                <span class="list-text">ДЦ на Ямской</span>
+                            </a>
+                        </li>
+                        <li class="list-item">
+                            <a href="#">
+                                <svg class="ellipse-icon">
+                                    <use href="./img/icons/icons.svg#ellipse-full"></use>
+                                </svg>
+                                <span class="list-text">ДЦ на Гольцова</span>
+                            </a>
+                        </li>
+                    </ul>
+                    <button class="callback-btn callback-btn_white">Записаться</button>
+                </div>
+            </li>
+        </ul>
+    </div>
+</section>
+            <!-- Почему Hellix -->
+            <section class="about about_main">
+    <div class="page__container ">
+        <div class="about__container">
+            <img class="about__photo" src="./img/about/photo.png" alt="#">
+            <div class="about__block">
+                <h2 class="section__title">Почему Hellix</h2>
+                <div class="about__info">
+                    <p>Лабораторная служба «Хеликс» выполняет более 2000 наименований
+                        исследований для более чем 1500 частных и государственных медицинских учреждений, оказывает
+                        услуги
+                        клиентам в 130 городах России, имеет 5 лабораторных комплекса площадью более 6 000 м2 в Москве,
+                        Санкт-Петербурге, Екатеринбурге, Краснодаре и Новосибирске. </p>
+                    <div class="about__mission">
+                        <h3>Наша миссия</h3>
+                        <p>Предоставить доступ к лучшим услугам и специалистам в своей
+                            области в одном месте. Мы делаем упор на качестве предоставляемых услуг и сервисе для наших
+                            пациентов.</p>
+                        <ul>
+                            <li>
+                                <img src="./img/about/1.png" alt="#">
+                                <p>Врачи высокой квалицикации</p>
+                            </li>
+                            <li>
+                                <img src="./img/about/2.png" alt="#">
+                                <p>Современное диагностическое оборудование</p>
+                            </li>
+                            <li>
+                                <img src="./img/about/3.png" alt="#">
+                                <p>Быстрое получение результата</p>
+                            </li>
+                            <li>
+                                <img src="./img/about/4.png" alt="#">
+                                <p>8 центров в Тюмени</p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>
         </main>
+        <div id="map" class="maps">
+    <div class="page__container maps__container">
+        <div class="maps__absoulute">
+            <h2 class="maps__absolute-title">Наши филиалы</h2>
+            <ul class="list">
+                <li class="list-item">
+                    <a data-map="1">
+                        <svg class="ellipse-icon">
+                            <use href="./img/icons/icons.svg#map-icon"></use>
+                        </svg>
+                        <span class="list-text">ДЦ на Свердлова</span>
+                    </a>
+                </li>
+                <li class="list-item">
+                    <a data-map="2">
+                        <svg class="ellipse-icon">
+                            <use href="./img/icons/icons.svg#map-icon"></use>
+                        </svg>
+                        <span class="list-text">ДЦ на Ямской</span>
+                    </a>
+                </li>
+                <li class="list-item">
+                    <a data-map="3">
+                        <svg class="ellipse-icon">
+                            <use href="./img/icons/icons.svg#map-icon"></use>
+                        </svg>
+                        <span class="list-text">ДЦ на Газовиков</span>
+                    </a>
+                </li>
+                <li class="list-item">
+                    <a data-map="4">
+                        <svg class="ellipse-icon">
+                            <use href="./img/icons/icons.svg#map-icon"></use>
+                        </svg>
+                        <span class="list-text">ДЦ на Республики</span>
+                    </a>
+                </li>
+                <li class="list-item">
+                    <a data-map="5">
+                        <svg class="ellipse-icon">
+                            <use href="./img/icons/icons.svg#map-icon"></use>
+                        </svg>
+                        <span class="list-text">ДЦ на Гольцова</span>
+                    </a>
+                </li>
+                <li class="list-item">
+                    <a data-map="6">
+                        <svg class="ellipse-icon">
+                            <use href="./img/icons/icons.svg#map-icon"></use>
+                        </svg>
+                        <span class="list-text">ДЦ на Монтажников</span>
+                    </a>
+                </li>
+                <li class="list-item">
+                    <a data-map="7">
+                        <svg class="ellipse-icon">
+                            <use href="./img/icons/icons.svg#map-icon"></use>
+                        </svg>
+                        <span class="list-text">ДЦ на Менделеева</span>
+                    </a>
+                </li>
+                <li class="list-item">
+                    <a data-map="8">
+                        <svg class="ellipse-icon">
+                            <use href="./img/icons/icons.svg#map-icon"></use>
+                        </svg>
+                        <!-- Университетская или Ленина? -->
+                        <span class="list-text">ДЦ на Ленина</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+</div>
         
     </div>
+    
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script src="js/script.js"></script>
 </body>
