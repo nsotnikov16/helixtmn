@@ -25,7 +25,7 @@ a,
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  background: inherit;
+  background: initial;
 }
 
 ul {
@@ -43,7 +43,8 @@ input {
   outline: none;
 }
 
-a:hover, button:hover {
+a:hover,
+button:hover {
   cursor: pointer;
 }
 
@@ -88,8 +89,10 @@ p {
 
   &__container {
     margin: 0 auto;
-    width: 1290px;
-    padding: 0 30px;
+    max-width: 1290px;
+    @media (max-width: 1290px) {
+      padding: 0 30px;
+    }
   }
 }
 
@@ -110,6 +113,12 @@ p {
     color: #45b553;
   }
 }
+
+.ellipse-icon {
+  width: 12px;
+  height: 12px;
+}
+
 .callback-btn {
   padding: 13px 25px 10px;
   background-color: #45b553;
@@ -125,6 +134,17 @@ p {
     box-shadow: 0px 7px 15px rgba(69, 181, 83, 0.4);
     padding: 18px 0 15px;
     width: 180px;
+    justify-self: end;
+    padding: 0 !important;
+    min-height: 100%;
+    @media (max-width: 1289px) {
+      width: 144px;
+      height: 40px;
+      font-size: 12px;
+      line-height: 14px;
+      min-height: 80%;
+      align-self: center;
+    }
   }
 }
 
@@ -132,3 +152,5 @@ p {
 @import "logo";
 /* Шапка */
 @import "header";
+@import "menu";
+@import "banners";

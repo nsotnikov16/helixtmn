@@ -6,7 +6,7 @@
 	"author": "helix",
 	"license": "ISC",
 	"scripts": {
-		"deploy": "gh-pages -d helix"
+		"deploy": "gh-pages -d Helix"
 	},
 	"devDependencies": {
 		"browser-sync": "latest",
