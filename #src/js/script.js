@@ -14,7 +14,7 @@ var swiper = new Swiper(".swiper-banners", {
     },
 });
 
-//tabs
+//Tabs
 
 const tabs = document.querySelectorAll('.tabs')
 

@@ -1,0 +1,54 @@
+.diagnostics {
+    margin-bottom: 58px;
+    &__container {
+    }
+
+    &__cards {
+        margin-top: 18px;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 30px;
+    }
+
+    &__card {
+        border: 1px solid #e5e7eb;
+        border-radius: 13px;
+        padding: 40px 18px;
+    }
+
+    &__card-img {
+        height: 100px;
+        object-fit: contain;
+        object-position: center;
+        margin: 0 auto;
+        display: block;
+    }
+
+    &__card-title {
+        margin: 30px 0 20px;
+    }
+
+    &__list {
+        grid-template-columns: 1fr;
+        gap: 15px;
+
+        .list-item a {
+            align-items: flex-start;
+        }
+    }
+
+    &__link {
+        display: block;
+        padding-top: 30px;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 19px;
+        color: #45b553;
+
+        svg {
+            padding-left: 6px;
+            width: 24px;
+            height: 12px;
+        }
+    }
+}

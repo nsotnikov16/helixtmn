@@ -21,19 +21,7 @@
         max-width: 540px;
     }
 
-    &__list {
-        display: grid;
-        grid-template-columns: repeat(3, max-content);
-        gap: 15px 50px;
-    }
-
-    &__list-item {
-    }
-
-    &__list-text {
-        font-size: 16px;
-        margin-left: 5px;
-    }
+    
 
     &__signup {
     }

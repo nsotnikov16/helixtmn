@@ -501,6 +501,16 @@ template {
   display: none;
 }
 
+.page {
+  font-family: "Din Next";
+  color: #111827;
+}
+
+.page__container {
+  margin: 0 auto;
+  max-width: 1290px;
+}
+
 h1,
 h2,
 h3,
@@ -538,18 +548,22 @@ button:hover {
 }
 
 h1 {
+  font-family: "Din Next";
   font-weight: 500;
   font-size: 42px;
   line-height: 52px;
 }
 
-h2 {
+h2,
+.section__title {
+  font-family: "Din Next";
   font-weight: 500;
   font-size: 36px;
   line-height: 54px;
 }
 
 h3 {
+  font-family: "Din Next";
   font-weight: 500;
   font-size: 24px;
   line-height: 30px;
@@ -572,15 +586,7 @@ p {
   line-height: 24px;
 }
 
-.page {
-  font-family: "Din Next";
-  color: #111827;
-}
-
-.page__container {
-  margin: 0 auto;
-  max-width: 1290px;
-}
+/* Номер телефона */
 
 .phone {
   display: -webkit-box;
@@ -607,14 +613,18 @@ p {
   color: #45b553;
 }
 
+/* Иконка кружка */
+
 .ellipse-icon {
-  width: 12px;
-  height: 12px;
+  width: 12px !important;
+  height: 12px !important;
 }
 
 .visually-hidden {
   display: none;
 }
+
+/* Записаться/обратный звонок */
 
 .callback-btn {
   padding: 13px 25px 10px;
@@ -650,6 +660,40 @@ p {
   background-color: #ffffff;
   width: 165px;
   height: 50px;
+}
+
+/* Список */
+
+.list {
+  display: grid;
+  grid-template-columns: repeat(3, -webkit-max-content);
+  grid-template-columns: repeat(3, max-content);
+  gap: 15px 50px;
+}
+
+.list-item a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.list-item a svg {
+  -webkit-box-flex: 0;
+      -ms-flex-positive: 0;
+          flex-grow: 0;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+}
+
+.list-text {
+  font-size: 16px;
+  margin-left: 8px;
+  -webkit-box-flex: 0;
+      -ms-flex-positive: 0;
+          flex-grow: 0;
 }
 
 /* Лого */
@@ -956,18 +1000,6 @@ p {
   max-width: 540px;
 }
 
-.banners__list {
-  display: grid;
-  grid-template-columns: repeat(3, -webkit-max-content);
-  grid-template-columns: repeat(3, max-content);
-  gap: 15px 50px;
-}
-
-.banners__list-text {
-  font-size: 16px;
-  margin-left: 5px;
-}
-
 .banners__price {
   font-family: "Roboto", sans-serif;
   color: #ff6d3b;
@@ -1186,6 +1218,65 @@ p {
 
 .specialties .tabs__tab.tabs__tab_active {
   display: block;
+}
+
+/* Диагностика */
+
+.diagnostics {
+  margin-bottom: 58px;
+}
+
+.diagnostics__cards {
+  margin-top: 18px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+}
+
+.diagnostics__card {
+  border: 1px solid #e5e7eb;
+  border-radius: 13px;
+  padding: 40px 18px;
+}
+
+.diagnostics__card-img {
+  height: 100px;
+  -o-object-fit: contain;
+     object-fit: contain;
+  -o-object-position: center;
+     object-position: center;
+  margin: 0 auto;
+  display: block;
+}
+
+.diagnostics__card-title {
+  margin: 30px 0 20px;
+}
+
+.diagnostics__list {
+  grid-template-columns: 1fr;
+  gap: 15px;
+}
+
+.diagnostics__list .list-item a {
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+.diagnostics__link {
+  display: block;
+  padding-top: 30px;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 19px;
+  color: #45b553;
+}
+
+.diagnostics__link svg {
+  padding-left: 6px;
+  width: 24px;
+  height: 12px;
 }
 
 @media (max-width: 1290px) {
