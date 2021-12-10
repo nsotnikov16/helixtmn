@@ -1,0 +1,18 @@
+<svg width="19" height="32" viewBox="0 0 19 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M4.18582 12.1496C3.83522 11.7429 3.31866 11.4951 2.76003 11.4951C1.82275 11.4951 1.37865 12.0467 1.16829 12.5516C1.01636 12.9186 0.969617 13.3253 1.0187 13.7179C1.39034 16.7869 2.64784 18.5165 4.21153 20.6435C5.94352 22.9996 6.17258 25.7787 6.17258 25.7787" stroke="#344154" stroke-width="0.701208" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M8.78106 13.6284V4.99185C8.78106 4.11534 8.0705 3.40479 7.19399 3.40479C6.31748 3.40479 5.60693 4.11534 5.60693 4.99185V16.2252" stroke="#344154" stroke-width="0.701208" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M11.9529 13.6287V2.58707C11.9529 1.71056 11.2423 1 10.3658 1C9.48927 1 8.77872 1.71056 8.77872 2.58707V4.99221" stroke="#344154" stroke-width="0.701208" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="7.50001" cy="20.5" r="0.5" fill="#FF6D3B"/>
+<circle cx="10.5" cy="18.5" r="0.5" fill="#FF6D3B"/>
+<circle cx="12.5" cy="20.5" r="0.5" fill="#FF6D3B"/>
+<circle cx="10.5" cy="23.5" r="0.5" fill="#FF6D3B"/>
+<circle cx="14.5" cy="18.5" r="0.5" fill="#FF6D3B"/>
+<circle cx="7.50001" cy="17.5" r="0.5" fill="#FF6D3B"/>
+<circle cx="12.5" cy="16.5" r="0.5" fill="#FF6D3B"/>
+<circle cx="13.5" cy="22.5" r="0.5" fill="#FF6D3B"/>
+<path d="M15.127 13.6284V4.99185C15.127 4.11534 14.4164 3.40479 13.5399 3.40479C12.6634 3.40479 11.9529 4.11534 11.9529 4.99185" stroke="#344154" stroke-width="0.701208" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M15.127 7.16129C15.127 6.28478 15.8375 5.57422 16.7141 5.57422C17.5906 5.57422 18.3011 6.28478 18.3011 7.16129V11.3755L18.2894 15.2789C18.21 18.2824 17.7121 21.2649 16.7888 24.1258C16.492 25.0514 16.3494 25.7783 16.3494 25.7783" stroke="#344154" stroke-width="0.701208" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M17.4643 25.7808H4.68835V30.6635H17.4643V25.7808Z" stroke="#344154" stroke-width="0.701208" stroke-miterlimit="10" stroke-linecap="round"/>
+<path d="M14.6198 28.2209C14.6198 28.1508 14.5637 28.0947 14.4936 28.0947C14.4234 28.0947 14.3673 28.1508 14.3673 28.2209C14.3673 28.2911 14.4234 28.3472 14.4936 28.3472C14.5637 28.3495 14.6198 28.2911 14.6198 28.2209Z" stroke="#344154" stroke-width="0.701208" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M12.21 28.221C12.21 27.8563 12.2964 27.5127 12.4484 27.2065H6.11647V29.2354H12.4507C12.2964 28.9292 12.21 28.5856 12.21 28.221Z" fill="#8AA0B2"/>
+</svg>

@@ -83,6 +83,9 @@ p {
   line-height: 24px;
 }
 
+section {
+}
+
 .page {
   font-family: "Din Next";
   color: #111827;
@@ -119,6 +122,11 @@ p {
   height: 12px;
 }
 
+.visually-hidden {
+  display: none;
+}
+
+
 .callback-btn {
   padding: 13px 25px 10px;
   background-color: #45b553;
@@ -146,11 +154,30 @@ p {
       align-self: center;
     }
   }
+  &.callback-btn_banner {
+    width: 210px;
+    height: 50px;
+  }
+
+  &.callback-btn_banners-block {
+    color: #111827;
+    background-color: #ffffff;
+    width: 165px;
+    height: 50px;
+  }
 }
 
 /* Лого */
 @import "logo";
+
 /* Шапка */
 @import "header";
+
+/* Меню */
 @import "menu";
+
+/* Баннеры */
 @import "banners";
+
+/* Специальности */
+@import "specialties";

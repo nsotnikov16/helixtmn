@@ -1,0 +1,116 @@
+.specialties {
+    margin: 60px 0 68px;
+    &__block {
+        padding: 0 0 45px;
+        &:last-child {
+            padding: 0;
+        }
+    }
+
+    &__title {
+        padding: 0 0 22px;
+        font-size: 24px;
+        line-height: 29px;
+        font-weight: 400;
+    }
+
+    &__list {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 35px 50px;
+    }
+
+    &__item {
+    }
+
+    &__item-link {
+        display: flex;
+        align-items: center;
+        svg {
+            width: 30px;
+            height: 30px;
+        }
+
+        span {
+            padding-left: 10px;
+            font-size: 16px;
+            line-height: 19px;
+        }
+    }
+
+    .tabs {
+        border-radius: 9px;
+
+        border-top: none;
+        &__controls {
+            background: #f9fafb;
+            border-top-left-radius: 9px;
+            border-top-right-radius: 9px;
+            border-top: 1px solid #e5e7eb;
+            border-bottom: 1px solid #8fd398;
+            display: flex;
+
+            align-items: center;
+            label {
+                border: 1px solid #e5e7eb;
+                white-space: nowrap;
+                border-top: none;
+                font-weight: 500;
+                font-size: 18px;
+                line-height: 22px;
+                text-transform: uppercase;
+
+                display: block;
+                text-align: center;
+                padding: 25px 80px;
+                &:first-child {
+                    border-top-left-radius: 9px;
+                }
+
+                &:last-child {
+                    border-top-right-radius: 9px;
+                    width: 100%;
+                    text-align: left;
+                }
+
+                &:hover {
+                    cursor: pointer;
+                }
+            }
+
+            .label--active {
+                position: relative;
+                background: #f3faf4;
+                border: 1px solid #8fd398;
+                border-bottom: none;
+                color: #45b553;
+                &::after {
+                    position: absolute;
+                    content: "";
+                    bottom: -5%;
+                    left: 0;
+                    background: #f3faf4;
+                    height: 10px;
+                    width: 100%;
+                }
+            }
+        }
+
+        &__content {
+            background: #f3faf4;
+            border: 1px solid #8fd398;
+            
+            border-top: none;
+        }
+
+        &__tab {
+            background: inherit;
+            padding: 45px 40px;
+            
+            display: none;
+            &.tabs__tab_active {
+                display: block;
+            }
+        }
+    }
+}
