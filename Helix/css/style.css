@@ -1577,15 +1577,14 @@ p {
 
 .maps .list-item a {
   padding: 12px 14px 10px;
+  /* &:hover, */
 }
 
-.maps .list-item a:hover,
 .maps .list-item a.active {
   background: #f3f4f6;
   border-radius: 6px;
 }
 
-.maps .list-item a:hover .list-text,
 .maps .list-item a.active .list-text {
   color: #46b554;
 }
