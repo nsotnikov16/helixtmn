@@ -923,6 +923,10 @@ p {
   border-radius: 0px 7px 7px 0px;
   width: 20%;
   display: block;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 19px;
+  color: #45b553;
 }
 
 .header__contacts {
