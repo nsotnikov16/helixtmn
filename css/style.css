@@ -1241,10 +1241,10 @@ p {
 
 .specialties .tabs__controls {
   background: #f9fafb;
-  border-top-left-radius: 9px;
+  /* border-top-left-radius: 9px;
   border-top-right-radius: 9px;
   border-top: 1px solid #e5e7eb;
-  border-bottom: 1px solid #8fd398;
+  border-bottom: 1px solid #8fd398; */
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1261,6 +1261,8 @@ p {
   font-size: 18px;
   line-height: 22px;
   text-transform: uppercase;
+  border-bottom: 1px solid #8fd398;
+  border-top: 1px solid #e5e7eb;
   display: block;
   text-align: center;
   padding: 25px 80px;
@@ -1301,12 +1303,16 @@ p {
 .specialties .tabs__content {
   background: #f3faf4;
   border: 1px solid #8fd398;
+  border-bottom-left-radius: 9px;
+  border-bottom-right-radius: 9px;
   border-top: none;
 }
 
 .specialties .tabs__tab {
   background: inherit;
   padding: 45px 40px;
+  border-bottom-left-radius: 9px;
+  border-bottom-right-radius: 9px;
   display: none;
 }
 
