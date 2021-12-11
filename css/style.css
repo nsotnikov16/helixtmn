@@ -616,6 +616,26 @@ p {
   color: #45b553;
 }
 
+.email {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.email svg {
+  width: 16px;
+  height: 16px;
+}
+
+.email p {
+  font-size: 18px;
+  line-height: 22px;
+  margin-left: 7px;
+}
+
 /* Иконка кружка */
 
 .ellipse-icon {
@@ -627,9 +647,9 @@ p {
   display: none;
 }
 
-/* Записаться/обратный звонок */
+/* Кнопки */
 
-.callback-btn {
+.btn {
   font-family: "Din Next";
   padding: 13px 25px 10px;
   background-color: #45b553;
@@ -641,7 +661,7 @@ p {
   color: #ffffff;
 }
 
-.callback-btn.callback-btn_header {
+.btn.btn_main {
   background: -webkit-gradient(linear, left top, right top, from(#45b553), to(#56c263));
   background: -o-linear-gradient(left, #45b553 0%, #56c263 100%);
   background: linear-gradient(90deg, #45b553 0%, #56c263 100%);
@@ -654,19 +674,19 @@ p {
   min-height: 100%;
 }
 
-.callback-btn.callback-btn_banner {
+.btn.btn_banner {
   width: 210px;
   height: 50px;
 }
 
-.callback-btn.callback-btn_banners-block {
+.btn.btn_banners-block {
   color: #111827;
   background-color: #ffffff;
   width: 165px;
   height: 50px;
 }
 
-.callback-btn.callback-btn_white {
+.btn.btn_white {
   background-color: #ffffff;
   color: #45b553;
   border: 1px solid #45b553;
@@ -680,7 +700,7 @@ p {
   line-height: 19px;
 }
 
-.callback-btn.callback-btn_white:hover {
+.btn.btn_white:hover {
   color: #fff;
   background-color: #45b553;
 }
@@ -760,6 +780,16 @@ p {
       -ms-flex-align: center;
           align-items: center;
   margin: 0 0 35px;
+}
+
+.contraindications {
+  font-family: "Din Pro";
+  font-weight: 300;
+  font-size: 48px;
+  line-height: 58px;
+  letter-spacing: -0.014em;
+  color: #d1d5db;
+  text-align: center;
 }
 
 /* Лого */
@@ -1131,13 +1161,6 @@ p {
 
 .banners__contraindications {
   margin-top: 14px;
-  font-family: "Din Pro";
-  font-weight: 300;
-  font-size: 48px;
-  line-height: 58px;
-  letter-spacing: -0.014em;
-  color: #d1d5db;
-  text-align: center;
 }
 
 .swiper-banners {
@@ -1338,13 +1361,15 @@ p {
 
 .popular__cards {
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(234px, 1fr));
   gap: 30px;
 }
 
 .popular__card {
-  width: 234px;
   height: 220px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 5px;
 }
 
 .popular__card-link {
@@ -1361,18 +1386,6 @@ p {
   height: 100%;
 }
 
-.popular__card-img {
-  border-radius: 5px;
-  position: absolute;
-  -o-object-fit: cover;
-     object-fit: cover;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  z-index: -1;
-}
-
 .popular__card-text {
   font-family: "Din Next";
   font-size: 18px;
@@ -1380,7 +1393,9 @@ p {
   text-align: center;
   background: #ffffffb3;
   border-radius: 6px;
-  margin: 0 10px 12px;
+  margin: 0 auto 12px;
+  max-width: 85%;
+  padding: 8px;
 }
 
 /* Врачи */
@@ -1461,7 +1476,7 @@ p {
   height: 8px;
 }
 
-.doctors .callback-btn_white {
+.doctors .btn_white {
   margin-top: 15px;
 }
 
@@ -1631,6 +1646,161 @@ p {
   margin-left: 0;
 }
 
+/* Подвал */
+
+.footer__top {
+  margin: 80px 0 40px;
+}
+
+.footer__grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 4%;
+}
+
+.footer__menu .footer__grid-title {
+  padding-bottom: 25px;
+}
+
+.footer__grid-title {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 22px;
+  text-transform: uppercase;
+  color: #177122;
+  opacity: 0.5;
+}
+
+.footer__menu-list {
+  display: grid;
+  grid-template-columns: repeat(2, -webkit-max-content);
+  grid-template-columns: repeat(2, max-content);
+  gap: 15px 50px;
+}
+
+.footer__menu-list a {
+  font-size: 16px;
+  line-height: 19px;
+}
+
+.footer__contacts {
+  justify-self: end;
+}
+
+.footer__contacts .footer__grid-title {
+  padding-bottom: 12px;
+}
+
+.footer__contacts-number {
+  font-size: 13px;
+  line-height: 15px;
+  color: #9ca3af;
+  padding-bottom: 2px;
+}
+
+.footer .logo {
+  grid-row: 1/1;
+}
+
+.footer .btn_main {
+  margin-top: 25px;
+  width: 100%;
+  padding: 16px 0 !important;
+  min-height: initial;
+}
+
+.footer .phone svg {
+  width: 16px;
+  height: 16px;
+}
+
+.footer__bottom {
+  background: #f3f4f6;
+}
+
+.footer__additionally {
+  padding-top: 45px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.footer__copyright,
+.footer__info-list a {
+  font-size: 14px;
+  line-height: 17px;
+  text-transform: uppercase;
+  color: #9ca3af;
+}
+
+.footer__info,
+.footer__info-list,
+.footer__social {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.footer__info-list {
+  margin-right: 30px;
+}
+
+.footer__info-list li {
+  margin-right: 45px;
+}
+
+.footer__info-list li:last-child {
+  margin: 0;
+}
+
+.footer__social li {
+  margin-right: 20px;
+}
+
+.footer__social li:last-child {
+  margin: 0;
+}
+
+.footer__social a {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #9ca3af;
+}
+
+.footer__social a svg {
+  width: 16px;
+  height: 16px;
+}
+
+.footer__contraindications {
+  padding: 30px 0;
+  font-size: 50px;
+  line-height: 58px;
+  letter-spacing: -0.02em;
+}
+
 @media (max-width: 1290px) {
   .page__container {
     padding: 0 30px;
@@ -1642,7 +1812,7 @@ p {
 }
 
 @media (max-width: 1289px) {
-  .callback-btn.callback-btn_header {
+  .btn.btn_main {
     width: 144px;
     height: 40px;
     font-size: 12px;
