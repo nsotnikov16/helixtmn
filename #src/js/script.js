@@ -50,7 +50,7 @@ if (tabs.length > 0) {
 /* Яндекс карты */
 ymaps.ready(init);
 
-const adressPharmacies = [
+const addresses = [
     {
         id: "1",
         coordinates: [57.158492, 65.552467],
@@ -119,23 +119,23 @@ function init() {
 
         BalloonContentLayout = ymaps.templateLayoutFactory.createClass(
             `<div class="map__info">
-        <p class="map__info-title">{{properties.title}}</p>   
-        <div class="map__info-row">
-            <svg>
-                <use href="./img/icons/icons.svg#map-location"></use>
-            </svg>
-            <p>{{properties.adress}}</p>
-        </div>
-        <a href="tel:+73452355560" class="phone">
+                <p class="map__info-title">{{properties.title}}</p>   
+                <div class="map__info-row">
+                    <svg>
+                        <use href="./img/icons/icons.svg#map-location"></use>
+                    </svg>
+                    <p>{{properties.adress}}</p>
+                </div>
+                <a href="tel:+73452355560" class="phone">
                     <svg>
                         <use href="./img/icons/icons.svg#phone"></use>
                     </svg>
                     <p> 8 (3452) <span>35-55-60</span></p>
                 </a>
-    </div>`
+            </div>`
         );
 
-    adressPharmacies.forEach(
+    addresses.forEach(
         ({ adress, title, coordinates, id }, ind) => {
             myPlacemarkWithContent = new ymaps.Placemark(
                 coordinates,
