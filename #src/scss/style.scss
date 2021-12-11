@@ -17,7 +17,6 @@ body {
   font-family: "Din Next";
 }
 .page {
-  
   color: #111827;
 
   &__container {
@@ -43,8 +42,6 @@ a,
   padding: 0;
   background: initial;
 }
-
-
 
 ul {
   list-style: none;
@@ -127,6 +124,20 @@ section {
   }
 }
 
+.email {
+  display: flex;
+  align-items: center;
+  svg {
+    width: 16px;
+    height: 16px;
+  }
+  p {
+    font-size: 18px;
+    line-height: 22px;
+    margin-left: 7px;
+  }
+}
+
 /* Иконка кружка */
 .ellipse-icon {
   width: 12px !important;
@@ -137,8 +148,8 @@ section {
   display: none;
 }
 
-/* Записаться/обратный звонок */
-.callback-btn {
+/* Кнопки */
+.btn {
   font-family: "Din Next";
   padding: 13px 25px 10px;
   background-color: #45b553;
@@ -149,7 +160,7 @@ section {
   text-transform: uppercase;
 
   color: #ffffff;
-  &.callback-btn_header {
+  &.btn_main {
     background: linear-gradient(90deg, #45b553 0%, #56c263 100%);
     box-shadow: 0px 7px 15px rgba(69, 181, 83, 0.4);
     padding: 18px 0 15px;
@@ -166,18 +177,18 @@ section {
       align-self: center;
     }
   }
-  &.callback-btn_banner {
+  &.btn_banner {
     width: 210px;
     height: 50px;
   }
 
-  &.callback-btn_banners-block {
+  &.btn_banners-block {
     color: #111827;
     background-color: #ffffff;
     width: 165px;
     height: 50px;
   }
-  &.callback-btn_white {
+  &.btn_white {
     background-color: #ffffff;
     color: #45b553;
     border: 1px solid #45b553;
@@ -256,6 +267,16 @@ section {
   margin: 0 0 35px;
 }
 
+.contraindications {
+  font-family: "Din Pro";
+  font-weight: 300;
+  font-size: 48px;
+  line-height: 58px;
+  letter-spacing: -0.014em;
+  color: #d1d5db;
+  text-align: center;
+}
+
 /* Лого */
 @import "logo";
 
@@ -285,3 +306,6 @@ section {
 
 /* Яндекс Карты */
 @import "maps";
+
+/* Подвал */
+@import "footer";
