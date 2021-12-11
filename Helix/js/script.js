@@ -161,15 +161,17 @@ function init() {
             const links = document.querySelectorAll('.maps .list-item a')
             const link = document.querySelector(`[data-map="${id}"]`)
 
+            const handleClass = () => {
+                links.forEach(item => item.classList.remove('active'))
+                link.classList.add('active')
+            }
 
             link.addEventListener('click', () => {
-                links.forEach(item => item.classList.remove('active'))
                 myMap.geoObjects.get(ind).balloon.open()
-                link.classList.add('active')
+                handleClass()
             })
 
-            /* console.log(myMap.geoObjects.get(ind).balloon.open());
- */
+            myPlacemarkWithContent.events.add('click', handleClass)
         }
     );
 
