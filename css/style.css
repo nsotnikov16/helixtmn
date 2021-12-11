@@ -1175,7 +1175,8 @@ p {
 }
 
 .swiper-banners .swiper-pagination-bullet {
-  /* background-color: #ffffff; */
+  background-color: #ffffff;
+  opacity: 1;
 }
 
 .swiper-banners .swiper-pagination-bullet-active {
