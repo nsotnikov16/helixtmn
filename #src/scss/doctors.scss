@@ -1,5 +1,5 @@
 .doctors {
-    margin-bottom: 90px;
+    /* margin-bottom: 90px; */
   &__list {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -60,6 +60,13 @@
       font-size: 14px;
       max-width: 115px;
     }
+  }
+
+  &__all {
+    padding-top: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 
   .ellipse-icon {

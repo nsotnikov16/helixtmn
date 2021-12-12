@@ -1,6 +1,7 @@
 .about {
   &.about_main {
     margin-bottom: 110px;
+    margin-top: 90px;
   }
   &__container {
     display: flex;
@@ -30,13 +31,7 @@
   }
 
   &__mission {
-    background: linear-gradient(
-      180deg,
-      rgba(228, 244, 234, 0.75) 0%,
-      rgba(249, 246, 229, 0.75) 100%
-    );
-    border-radius: 5px;
-    padding: 28px 40px 15px;
+    
     > h3 {
       padding-bottom: 12px;
     }

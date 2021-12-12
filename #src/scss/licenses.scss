@@ -1,0 +1,42 @@
+.licenses {
+  &.licenses_main {
+    border-top: 1px solid #e5e7eb;
+    padding-top: 70px;
+  }
+
+  &__item {
+    max-width: 234px;
+    padding: 22px 26px;
+    border: 1px solid #e5e7eb;
+    border-radius: 7px;
+  }
+
+  &__img {
+    width: 182px;
+    height: 260px;
+    object-fit: cover;
+  }
+
+  &__container-for-arrows {
+    position: relative;
+    .swiper-button-next,
+    .swiper-button-prev {
+      &::after {
+        font-size: 25px;
+        color: #9ca3af;
+      }
+    }
+
+    .swiper-button-next {
+      right: -40px;
+    }
+
+    .swiper-button-prev {
+      left: -40px;
+    }
+  }
+}
+
+.swiper.swiper-licenses {
+  margin-top: 40px;
+}

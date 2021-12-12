@@ -26,6 +26,13 @@ body {
       padding: 0 30px;
     }
   }
+
+  &__title {
+    font-weight: 500;
+    font-size: 48px;
+    line-height: 54px;
+    margin: 22px 0;
+  }
 }
 
 h1,
@@ -103,6 +110,10 @@ p {
 }
 
 section {
+  margin: 30px 0 60px;
+  /* &:first-child {
+    margin-top: 30px;
+  } */
 }
 
 /* Номер телефона */
@@ -205,6 +216,15 @@ section {
       background-color: #45b553;
     }
   }
+
+  &.btn_all {
+    
+    border: 1px solid #9ca3af;
+    color: #111827;
+    border-radius: 7px;
+    background: #fff;
+    text-transform: initial;
+  }
 }
 
 /* Список */
@@ -277,11 +297,24 @@ section {
   text-align: center;
 }
 
+.light-green-block {
+  background: linear-gradient(
+    180deg,
+    rgba(228, 244, 234, 0.75) 0%,
+    rgba(249, 246, 229, 0.75) 100%
+  );
+  border-radius: 5px;
+  padding: 28px 40px 15px;
+}
+
 /* Лого */
 @import "logo";
 
 /* Шапка */
 @import "header";
+
+/* Хлебные крошки */
+@import "breadcrumbs";
 
 /* Меню */
 @import "menu";
@@ -303,6 +336,9 @@ section {
 
 /* Почему Hellix, о компании */
 @import "about";
+
+/* Лицензии */
+@import "licenses";
 
 /* Яндекс Карты */
 @import "maps";

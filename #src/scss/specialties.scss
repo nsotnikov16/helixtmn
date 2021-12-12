@@ -1,5 +1,5 @@
 .specialties {
-    margin: 60px 0 68px;
+    /* margin: 60px 0 68px; */
     &__block {
         padding: 0 0 45px;
         &:last-child {
@@ -44,10 +44,6 @@
         border-top: none;
         &__controls {
             background: #f9fafb;
-            /* border-top-left-radius: 9px;
-            border-top-right-radius: 9px;
-            border-top: 1px solid #e5e7eb;
-            border-bottom: 1px solid #8fd398; */
             display: flex;
 
             align-items: center;

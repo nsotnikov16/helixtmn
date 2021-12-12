@@ -1,5 +1,5 @@
 //Scroll to map
-$('.header__contacts-map').on('click', function() {
+$('.header__contacts-map').on('click', function () {
 
     let href = $(this).attr('href');
 
@@ -15,11 +15,11 @@ $('.header__contacts-map').on('click', function() {
 
 
 // Swiper Banners 
-var swiper = new Swiper(".swiper-banners", {
+var swiperBanners = new Swiper(".swiper-banners", {
 
     navigation: {
-        nextEl: ".swiper-button-next",
-        prevEl: ".swiper-button-prev",
+        nextEl: ".swiper-banners .swiper-button-next",
+        prevEl: ".swiper-banners .swiper-button-prev",
     },
     pagination: {
         el: ".swiper-pagination",
@@ -29,6 +29,18 @@ var swiper = new Swiper(".swiper-banners", {
         },
     },
 });
+
+
+// Swiper Doctors
+var swiperLicenses = new Swiper(".swiper-licenses", {
+    slidesPerView: 5,
+    spaceBetween: 30,
+    navigation: {
+        nextEl: ".licenses .swiper-button-next",
+        prevEl: ".licenses .swiper-button-prev",
+    },
+});
+
 
 //Tabs
 
