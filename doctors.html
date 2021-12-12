@@ -15,7 +15,8 @@
         rel="stylesheet">
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
     <link rel="stylesheet" href="css/style.css">
-    <script src="https://api-maps.yandex.ru/2.1/?apikey=32934b60-7668-4b0e-b423-d1d9d7bd789d&lang=ru_RU" type="text/javascript"></script>
+    <script src="https://api-maps.yandex.ru/2.1/?apikey=32934b60-7668-4b0e-b423-d1d9d7bd789d&lang=ru_RU"
+        type="text/javascript"></script>
 </head>
 
 <body>
@@ -147,100 +148,25 @@
     </div>
 
 </header>
-        <main class="main">
-            <!-- Баннеры -->
-            <section class="banners">
+        <!-- Хлебные крошки -->
+        <div class="breadcrumbs">
     <div class="page__container">
-        <div class="banners__container">
-
-            <!-- Свайпер -->
-            <div class="swiper swiper-banners">
-                <div class="swiper-wrapper">
-                    <div class="swiper-slide">
-                        <div style="background-image: url(./img/banners/uzi.png);" class="banners__banner">
-                            <h1 class="banners__title">
-                                Ультразвуковая диагностика (УЗИ)
-                            </h1>
-                            <ul class="list">
-                                <li class="list-item">
-                                    <p>
-                                        <svg class="ellipse-icon">
-                                            <use href="./img/icons/icons.svg#ellipse"></use>
-                                        </svg>
-                                        <span class="list-text">Сердца</span>
-                                    </p>
-                                </li>
-                                <li class="list-item">
-                                    <p>
-                                        <svg class="ellipse-icon">
-                                            <use href="./img/icons/icons.svg#ellipse"></use>
-                                        </svg>
-                                        <span class="list-text">Щитовидной железы</span></p>
-                                </li>
-                                <li class="list-item">
-                                    <p>
-                                        <svg class="ellipse-icon">
-                                            <use href="./img/icons/icons.svg#ellipse">Сосудов шеи и головы</use>
-                                        </svg>
-                                        <span class="list-text">Сосудов шеи и головы</span></p>
-                                </li>
-                                <li class="list-item">
-                                    <p>
-                                        <svg class="ellipse-icon">
-                                            <use href="./img/icons/icons.svg#ellipse"></use>
-                                        </svg>
-                                        <span class="list-text">Почек</span></p>
-                                </li>
-                                <li class="list-item">
-                                    <p>
-                                        <svg class="ellipse-icon">
-                                            <use href="./img/icons/icons.svg#ellipse"></use>
-                                        </svg>
-                                        <span class="list-text">Молочной железы</span></p>
-                                </li>
-                                <li class="list-item">
-                                    <p>
-                                        <svg class="ellipse-icon">
-                                            <use href="./img/icons/icons.svg#ellipse"></use>
-                                        </svg>
-                                        <span class="list-text">Таза</span></p>
-                                </li>
-                            </ul>
-                            <div class="banners__signup">
-                                <p class="banners__price">от <span>1200 ₽</span></p>
-                                <button class="btn btn_banner">Записаться на узи</button>
-                            </div>
-
-                        </div>
-
-                    </div>
-                    <div class="swiper-slide"></div>
-                    <div class="swiper-slide"></div>
-                    <div class="swiper-slide"></div>
-                </div>
-                <div class="swiper-pagination"></div>
-
-                <div class="swiper-button-next"></div>
-                <div class="swiper-button-prev"></div>
-            </div>
-            <!-- Конец свайпера -->
-
-            <div style="background-image: url(./img/banners/modelirovanie.png);" class="banners__block">
-                <h2 class="banners__block-title">Объемное моделирование губ</h2>
-                <button class="btn btn_banners-block">Записаться</button>
-            </div>
-            <div style="background-image: url(./img/banners/centers.png);" class="banners__block">
-                <h2 class="banners__block-title">Выберите удобное отделение поблизости</h2>
-                <div class="banners__block-centers">
-                    <p>8</p>
-                    <p>Медицинских центров в Тюмени</p>
-                </div>
-            </div>
-        </div>
-        <p class="contraindications banners__contraindications">ИМЕЮТСЯ ПРОТИВОПОКАЗАНИЯ. НЕОБХОДИМО ПОЛУЧЕНИЕ КОНСУЛЬТАЦИИ СПЕЦИАЛИСТА
-        </p>
+        <ul class="breadcrumbs__list">
+            <li class="breadcrumbs__item">
+                <a href="./index.html" class="breadcrumbs__link">Главная</a>
+            </li>
+            <li class="breadcrumbs__item">
+                <span class="breadcrumbs__current">Выбрать врача</span>
+            </li>
+        </ul>
     </div>
-</section>
+</div>
+
+        <main class="main">
+            <div class="page__container">
+                <h1 class="page__title">Выберите врача</h1>
+            </div>
+
             <!-- Специальности -->
             <section class="specialties">
     <div class="page__container">
@@ -481,183 +407,7 @@
         </div>
     </div>
 </section>
-            <!-- Диагностика -->
-            <section class="diagnostics">
-    <div class="page__container">
-        <div class="diagnostics__container">
-            <h2 class="section__title">Диагностика</h2>
-            <ul class="diagnostics__cards">
-                <li class="diagnostics__card">
-                    <img class="diagnostics__card-img" src="./img/diagnostics/uzi.png" alt="#">
-                    <a href="#"><h3 class="diagnostics__card-title">Ультразвуковое исследование (УЗИ)</h3></a>
-                    <ul class="list diagnostics__list">
-                        <li class="list-item">
-                            <a href="#">
-                                <svg class="ellipse-icon">
-                                    <use href="./img/icons/icons.svg#ellipse"></use>
-                                </svg>
-                                <span class="list-text">Транскраниальное дуплексное сканирование (ТКДС)</span>
-                            </a>
-                        </li>
-                        <li class="list-item">
-                            <a href="#">
-                                <svg class="ellipse-icon">
-                                    <use href="./img/icons/icons.svg#ellipse"></use>
-                                </svg>
-                                <span class="list-text"> УЗИ сосудов головного мозга</span>
-                            </a>
-                        </li>
-                        <li class="list-item">
-                            <a href="#">
-                                <svg class="ellipse-icon">
-                                    <use href="./img/icons/icons.svg#ellipse"></use>
-                                </svg>
-                                <span class="list-text"> Узи почек</span>
-                            </a>
-                        </li>
 
-                    </ul>
-                    <a href="#" class="all-link">Все услуги УЗИ
-                        <svg>
-                            <use href="./img/icons/icons.svg#arrow-link"></use>
-                        </svg>
-                    </a>
-                </li>
-                <li class="diagnostics__card">
-                    <img class="diagnostics__card-img" src="./img/diagnostics/ekg.png" alt="#">
-                    <a href="#"><h3 class="diagnostics__card-title">Электрокардиограмма (ЭКГ)</h3></a>
-                    <ul class="list diagnostics__list">
-                        <li class="list-item">
-                            <a href="#">
-                                <svg class="ellipse-icon">
-                                    <use href="./img/icons/icons.svg#ellipse"></use>
-                                </svg>
-                                <span class="list-text">ЭКГ с нагрузкой</span>
-                            </a>
-                        </li>
-                        <li class="list-item">
-                            <a href="#">
-                                <svg class="ellipse-icon">
-                                    <use href="./img/icons/icons.svg#ellipse"></use>
-                                </svg>
-                                <span class="list-text">ЭКГ без нагрузки</span>
-                            </a>
-                        </li>
-                    </ul>
-                </li>
-                <li class="diagnostics__card">
-                    <img class="diagnostics__card-img" src="./img/diagnostics/function.png" alt="#">
-                    <a href="#"><h3 class="diagnostics__card-title">Функциональная диагностика</h3></a>
-                    <ul class="list diagnostics__list">
-                        <li class="list-item">
-                            <a href="#">
-                                <svg class="ellipse-icon">
-                                    <use href="./img/icons/icons.svg#ellipse"></use>
-                                </svg>
-                                <span class="list-text">Биоимпедансный анализ состава тела</span>
-                            </a>
-                        </li>
-                        <li class="list-item">
-                            <a href="#">
-                                <svg class="ellipse-icon">
-                                    <use href="./img/icons/icons.svg#ellipse"></use>
-                                </svg>
-                                <span class="list-text">Суточное мониторирование по Холтеру</span>
-                            </a>
-                        </li>
-                        <li class="list-item">
-                            <a href="#">
-                                <svg class="ellipse-icon">
-                                    <use href="./img/icons/icons.svg#ellipse"></use>
-                                </svg>
-                                <span class="list-text"> Кислородная барокамера</span>
-                            </a>
-                        </li>
-
-                    </ul>
-                    
-                </li>
-            </ul>
-        </div>
-    </div>
-</section>
-            <!-- Популярные услуги -->
-            <section class="popular">
-    <div class="page__container">
-
-        <div class="section__top">
-            <h2 class="section__title">Популярные услуги</h2>
-            <a href="#" class="all-link section__all">Все услуги
-                <svg>
-                    <use href="./img/icons/icons.svg#arrow-link"></use>
-                </svg>
-            </a>
-        </div>
-
-        <ul class="popular__cards">
-            <li style="background-image: url(./img/popular/1.png);" class="popular__card">
-                <a href="#" class="popular__card-link">
-
-                    <p class="popular__card-text">Оформление справки в бассейн</p>
-                </a>
-            </li>
-            <li style="background-image: url(./img/popular/2.png);" class="popular__card">
-                <a href="#" class="popular__card-link">
-
-                    <p class="popular__card-text">Оформление справки в бассейн</p>
-                </a>
-            </li>
-            <li style="background-image: url(./img/popular/1.png);" class="popular__card">
-                <a href="#" class="popular__card-link">
-
-                    <p class="popular__card-text">Оформление справки в бассейн</p>
-                </a>
-            </li>
-            <li style="background-image: url(./img/popular/2.png);" class="popular__card">
-                <a href="#" class="popular__card-link">
-
-                    <p class="popular__card-text">Оформление справки в бассейн</p>
-                </a>
-            </li>
-            <li style="background-image: url(./img/popular/1.png);" class="popular__card">
-                <a href="#" class="popular__card-link">
-
-                    <p class="popular__card-text">Оформление справки в бассейн</p>
-                </a>
-            </li>
-            <li style="background-image: url(./img/popular/2.png);" class="popular__card">
-                <a href="#" class="popular__card-link">
-
-                    <p class="popular__card-text">Оформление справки в бассейн</p>
-                </a>
-            </li>
-            <li style="background-image: url(./img/popular/1.png);" class="popular__card">
-                <a href="#" class="popular__card-link">
-
-                    <p class="popular__card-text">Оформление справки в бассейн</p>
-                </a>
-            </li>
-            <li style="background-image: url(./img/popular/2.png);" class="popular__card">
-                <a href="#" class="popular__card-link">
-
-                    <p class="popular__card-text">Оформление справки в бассейн</p>
-                </a>
-            </li>
-            <li style="background-image: url(./img/popular/1.png);" class="popular__card">
-                <a href="#" class="popular__card-link">
-
-                    <p class="popular__card-text">Оформление справки в бассейн</p>
-                </a>
-            </li>
-            <li style="background-image: url(./img/popular/2.png);" class="popular__card">
-                <a href="#" class="popular__card-link">
-
-                    <p class="popular__card-text">Оформление справки в бассейн</p>
-                </a>
-            </li>
-        </ul>
-    </div>
-</section>
             <!-- Наши врачи -->
             <section class="doctors">
     <div class="page__container">
@@ -670,6 +420,11 @@
                 </svg>
             </a>
         </div>
+
+
+
+
+
         <ul class="doctors__list">
             <li class="doctors__item">
                 <img class="doctors__photo" src="./img/doctor.png" alt="#">
@@ -788,50 +543,61 @@
                 </div>
             </li>
         </ul>
+        <div class="doctors__all">
+            <button class="btn btn_all">Показать еще</button>
+        </div>
+
     </div>
 </section>
-            <!-- Почему Hellix -->
-            <section class="about about_main">
-    <div class="page__container ">
-        <div class="about__container">
-            <img class="about__photo" src="./img/about/photo.png" alt="#">
-            <div class="about__block">
-                <h2 class="section__title">Почему Hellix</h2>
-                <div class="about__info">
-                    <p>Лабораторная служба «Хеликс» выполняет более 2000 наименований
-                        исследований для более чем 1500 частных и государственных медицинских учреждений, оказывает
-                        услуги
-                        клиентам в 130 городах России, имеет 5 лабораторных комплекса площадью более 6 000 м2 в Москве,
-                        Санкт-Петербурге, Екатеринбурге, Краснодаре и Новосибирске. </p>
-                    <div class="about__mission light-green-block">
-                        <h3>Наша миссия</h3>
-                        <p>Предоставить доступ к лучшим услугам и специалистам в своей
-                            области в одном месте. Мы делаем упор на качестве предоставляемых услуг и сервисе для наших
-                            пациентов.</p>
-                        <ul>
-                            <li>
-                                <img src="./img/about/1.png" alt="#">
-                                <p>Врачи высокой квалицикации</p>
-                            </li>
-                            <li>
-                                <img src="./img/about/2.png" alt="#">
-                                <p>Современное диагностическое оборудование</p>
-                            </li>
-                            <li>
-                                <img src="./img/about/3.png" alt="#">
-                                <p>Быстрое получение результата</p>
-                            </li>
-                            <li>
-                                <img src="./img/about/4.png" alt="#">
-                                <p>8 центров в Тюмени</p>
-                            </li>
-                        </ul>
+
+            <!-- Лицензии -->
+            <section class="licenses licenses_main">
+    <div class="page__container">
+        <h2 class="section__title">Лицензии</h2>
+        <div class="licenses__container-for-arrows">
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper swiper-licenses">
+
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <div class="licenses__item">
+                            <img class="licenses__img" src="./img/license.png" alt="license">
+                        </div>
                     </div>
+                    <div class="swiper-slide">
+                        <div class="licenses__item">
+                            <img class="licenses__img" src="./img/license.png" alt="license">
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="licenses__item">
+                            <img class="licenses__img" src="./img/license.png" alt="license">
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="licenses__item">
+                            <img class="licenses__img" src="./img/license.png" alt="license">
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="licenses__item">
+                            <img class="licenses__img" src="./img/license.png" alt="license">
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="licenses__item">
+                            <img class="licenses__img" src="./img/license.png" alt="license">
+                        </div>
+                    </div>
+
                 </div>
             </div>
         </div>
 
+
     </div>
+
 </section>
         </main>
         <div id="map" class="maps">

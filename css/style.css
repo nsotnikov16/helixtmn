@@ -514,6 +514,13 @@ body {
   max-width: 1290px;
 }
 
+.page__title {
+  font-weight: 500;
+  font-size: 48px;
+  line-height: 54px;
+  margin: 22px 0;
+}
+
 h1,
 h2,
 h3,
@@ -587,6 +594,13 @@ h5 {
 p {
   font-size: 16px;
   line-height: 24px;
+}
+
+section {
+  margin: 30px 0 60px;
+  /* &:first-child {
+    margin-top: 30px;
+  } */
 }
 
 /* Номер телефона */
@@ -705,6 +719,14 @@ p {
   background-color: #45b553;
 }
 
+.btn.btn_all {
+  border: 1px solid #9ca3af;
+  color: #111827;
+  border-radius: 7px;
+  background: #fff;
+  text-transform: initial;
+}
+
 /* Список */
 
 .list {
@@ -792,6 +814,14 @@ p {
   text-align: center;
 }
 
+.light-green-block {
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(228, 244, 234, 0.75)), to(rgba(249, 246, 229, 0.75)));
+  background: -o-linear-gradient(top, rgba(228, 244, 234, 0.75) 0%, rgba(249, 246, 229, 0.75) 100%);
+  background: linear-gradient(180deg, rgba(228, 244, 234, 0.75) 0%, rgba(249, 246, 229, 0.75) 100%);
+  border-radius: 5px;
+  padding: 28px 40px 15px;
+}
+
 /* Лого */
 
 .logo {
@@ -816,7 +846,7 @@ p {
 /* Шапка */
 
 .header {
-  padding-top: 14px;
+  padding: 14px 0 24px;
 }
 
 .header__container {
@@ -949,6 +979,44 @@ p {
   margin-bottom: 10px;
 }
 
+/* Хлебные крошки */
+
+.breadcrumbs {
+  padding: 22px 0 10px;
+  border-top: 1px solid #e5e7eb;
+}
+
+.breadcrumbs__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.breadcrumbs__item {
+  font-size: 14px;
+  line-height: 17px;
+}
+
+.breadcrumbs__item::after {
+  content: "/";
+  margin: 0 15px 0 11px;
+}
+
+.breadcrumbs__item:nth-last-child(2) {
+  color: #9ca3af;
+}
+
+.breadcrumbs__item:last-child::after {
+  all: initial;
+}
+
+.breadcrumbs__current {
+  color: #9ca3af;
+}
+
 /* Меню */
 
 .menu__list {
@@ -1069,7 +1137,7 @@ p {
 /* Баннеры */
 
 .banners {
-  margin-top: 50px;
+  /* margin-top: 36px; */
 }
 
 .banners__container {
@@ -1190,7 +1258,7 @@ p {
 /* Специальности */
 
 .specialties {
-  margin: 60px 0 68px;
+  /* margin: 60px 0 68px; */
 }
 
 .specialties__block {
@@ -1241,10 +1309,6 @@ p {
 
 .specialties .tabs__controls {
   background: #f9fafb;
-  /* border-top-left-radius: 9px;
-  border-top-right-radius: 9px;
-  border-top: 1px solid #e5e7eb;
-  border-bottom: 1px solid #8fd398; */
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1323,7 +1387,7 @@ p {
 /* Диагностика */
 
 .diagnostics {
-  margin-bottom: 58px;
+  /* margin-bottom: 58px; */
 }
 
 .diagnostics__cards {
@@ -1367,7 +1431,7 @@ p {
 /* Популярные услуги */
 
 .popular {
-  margin: 0 0 65px;
+  /* margin: 0 0 65px; */
 }
 
 .popular__cards {
@@ -1412,7 +1476,7 @@ p {
 /* Врачи */
 
 .doctors {
-  margin-bottom: 90px;
+  /* margin-bottom: 90px; */
 }
 
 .doctors__list {
@@ -1482,6 +1546,19 @@ p {
   max-width: 115px;
 }
 
+.doctors__all {
+  padding-top: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
 .doctors .ellipse-icon {
   width: 8px;
   height: 8px;
@@ -1495,6 +1572,7 @@ p {
 
 .about.about_main {
   margin-bottom: 110px;
+  margin-top: 90px;
 }
 
 .about__container {
@@ -1530,14 +1608,6 @@ p {
   padding-bottom: 35px;
 }
 
-.about__mission {
-  background: -webkit-gradient(linear, left top, left bottom, from(rgba(228, 244, 234, 0.75)), to(rgba(249, 246, 229, 0.75)));
-  background: -o-linear-gradient(top, rgba(228, 244, 234, 0.75) 0%, rgba(249, 246, 229, 0.75) 100%);
-  background: linear-gradient(180deg, rgba(228, 244, 234, 0.75) 0%, rgba(249, 246, 229, 0.75) 100%);
-  border-radius: 5px;
-  padding: 28px 40px 15px;
-}
-
 .about__mission > h3 {
   padding-bottom: 12px;
 }
@@ -1568,6 +1638,49 @@ p {
      object-fit: contain;
   height: 50px;
   display: block;
+}
+
+/* Лицензии */
+
+.licenses.licenses_main {
+  border-top: 1px solid #e5e7eb;
+  padding-top: 70px;
+}
+
+.licenses__item {
+  max-width: 234px;
+  padding: 22px 26px;
+  border: 1px solid #e5e7eb;
+  border-radius: 7px;
+}
+
+.licenses__img {
+  width: 182px;
+  height: 260px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.licenses__container-for-arrows {
+  position: relative;
+}
+
+.licenses__container-for-arrows .swiper-button-next::after,
+.licenses__container-for-arrows .swiper-button-prev::after {
+  font-size: 25px;
+  color: #9ca3af;
+}
+
+.licenses__container-for-arrows .swiper-button-next {
+  right: -40px;
+}
+
+.licenses__container-for-arrows .swiper-button-prev {
+  left: -40px;
+}
+
+.swiper.swiper-licenses {
+  margin-top: 40px;
 }
 
 /* Яндекс Карты */
