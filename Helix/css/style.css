@@ -925,6 +925,11 @@ section {
   border-radius: 13px;
 }
 
+.props-block svg {
+  width: 20px;
+  height: 20px;
+}
+
 .props-block div {
   margin-left: 5px;
 }

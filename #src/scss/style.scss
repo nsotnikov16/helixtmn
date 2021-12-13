@@ -391,6 +391,10 @@ section {
   display: flex;
   border: 1px solid #e5e7eb;
   border-radius: 13px;
+  svg {
+    width: 20px;
+    height: 20px;
+  }
 
   div {
     margin-left: 5px;
