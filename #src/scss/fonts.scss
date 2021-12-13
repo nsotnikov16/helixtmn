@@ -6,12 +6,9 @@
 @include font ('Din Next', 'DINNextW1G-LightItalic', "300", "italic");
 @include font ('Din Next', 'DINNextW1G-Medium', "500", "normal");
 @include font ('Din Next', 'DINNextW1G-MediumItalic', "500", "italic");
-@include font ('Din Next', 'DINNextW1G-Regular', "400", "normal");
+@include font ('Din Next', 'DINNextW1G', "400", "normal");
 @include font ('Din Next', 'DINNextW1G-Italic', "400", "italic");
 @include font ('Din Next', 'DINNextW1G-UltraLight', "200", "normal");
 @include font ('Din Next', 'DINNextW1G-UltraLightIt', "200", "italic");
 
-@include font ('Din Pro', 'DINPro-CondLight', "300", "normal");
-
-
-
+@include font ('Din Pro', 'DINPro-CondensedLight', "300", "normal");

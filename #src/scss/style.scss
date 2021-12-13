@@ -309,7 +309,11 @@ section {
 
 /* Салатовый блок */
 .light-green-block {
-  background: linear-gradient(180deg, rgba(228, 244, 234, 0.75) 0%, rgba(249, 246, 229, 0.75) 100%);
+  background: linear-gradient(
+    180deg,
+    rgba(228, 244, 234, 0.75) 0%,
+    rgba(249, 246, 229, 0.75) 100%
+  );
   border-radius: 5px;
   padding: 28px 40px 15px;
 }
@@ -366,6 +370,46 @@ section {
 .section_bt {
   border-top: 1px solid #e5e7eb;
   padding-top: 70px;
+}
+
+.price-block {
+  padding: 30px 40px;
+  .btn {
+    max-width: 100% !important;
+    width: 100% !important;
+    height: 50px;
+  }
+  .price {
+    > span {
+      color: #111827;
+    }
+  }
+}
+
+.props-block {
+  padding: 30px 40px;
+  display: flex;
+  border: 1px solid #e5e7eb;
+  border-radius: 13px;
+
+  div {
+    margin-left: 5px;
+    p {
+      &:first-child {
+        font-weight: 500;
+        font-size: 30px;
+        line-height: 23px;
+        margin-bottom: 7px;
+      }
+      &:last-child {
+        font-size: 16px;
+        line-height: 20px;
+        color: #4b5563;
+        opacity: 0.5;
+        margin-bottom: 0;
+      }
+    }
+  }
 }
 
 /* Лого */

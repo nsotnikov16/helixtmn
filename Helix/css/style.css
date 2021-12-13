@@ -75,8 +75,8 @@
 @font-face {
   font-family: "Din Next";
   font-display: swap;
-  /* src: url(../fonts/DINNextW1G-Regular.woff2) format("woff2"); */
-  src: url(../fonts/DINNextW1G-Regular.woff) format("woff");
+  /* src: url(../fonts/DINNextW1G.woff2) format("woff2"); */
+  src: url(../fonts/DINNextW1G.woff) format("woff");
   font-weight: 400;
   font-style: normal;
 }
@@ -111,8 +111,8 @@
 @font-face {
   font-family: "Din Pro";
   font-display: swap;
-  /* src: url(../fonts/DINPro-CondLight.woff2) format("woff2"); */
-  src: url(../fonts/DINPro-CondLight.woff) format("woff");
+  /* src: url(../fonts/DINPro-CondensedLight.woff2) format("woff2"); */
+  src: url(../fonts/DINPro-CondensedLight.woff) format("woff");
   font-weight: 300;
   font-style: normal;
 }
@@ -902,6 +902,48 @@ section {
   padding-top: 70px;
 }
 
+.price-block {
+  padding: 30px 40px;
+}
+
+.price-block .btn {
+  max-width: 100% !important;
+  width: 100% !important;
+  height: 50px;
+}
+
+.price-block .price > span {
+  color: #111827;
+}
+
+.props-block {
+  padding: 30px 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  border: 1px solid #e5e7eb;
+  border-radius: 13px;
+}
+
+.props-block div {
+  margin-left: 5px;
+}
+
+.props-block div p:first-child {
+  font-weight: 500;
+  font-size: 30px;
+  line-height: 23px;
+  margin-bottom: 7px;
+}
+
+.props-block div p:last-child {
+  font-size: 16px;
+  line-height: 20px;
+  color: #4b5563;
+  opacity: 0.5;
+  margin-bottom: 0;
+}
+
 /* Лого */
 
 .logo {
@@ -911,7 +953,7 @@ section {
 
 .logo p {
   font-family: "Din Pro";
-  font-weight: 500;
+  font-weight: 600;
   font-size: 14px;
   line-height: 0;
   margin-top: 10px;
@@ -1266,6 +1308,7 @@ section {
 }
 
 .menu__dropdown-link {
+  font-size: 16px;
   line-height: 30px;
   white-space: nowrap;
 }
@@ -1422,6 +1465,8 @@ section {
 .left-menu__dropdown-link {
   color: rgba(17, 24, 39, 0.5);
   display: block;
+  font-size: 16px;
+  line-height: 22px;
 }
 
 .left-menu__dropdown-link:hover {
@@ -2079,8 +2124,10 @@ section {
 
 .services__service {
   display: grid;
-  grid-template-columns: 70% 30%;
-  gap: 0 60px;
+  grid-template-columns: 65% 30%;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 .services__service-title {
@@ -2095,7 +2142,7 @@ section {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  grid-template-columns: 1/3;
+  grid-column: 1/3;
 }
 
 .services__result-container > * {
@@ -2123,6 +2170,11 @@ section {
   line-height: 17px;
   color: #45b553;
   border: 1px solid #45b553;
+}
+
+.services__result-btns .btn:hover {
+  color: #fff;
+  background-color: #45b553;
 }
 
 .services__result-btns .btn:last-child {
@@ -2166,6 +2218,15 @@ section {
   grid-row: 2/3;
   max-width: 135px;
   justify-self: end;
+}
+
+.services__service-right {
+  grid-column: 2/3;
+  grid-row: 1/4;
+}
+
+.services__service-right > * {
+  margin-bottom: 22px;
 }
 
 /* Яндекс Карты */
