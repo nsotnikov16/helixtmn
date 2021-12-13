@@ -73,6 +73,24 @@ if (tabs.length > 0) {
     })
 }
 
+
+// Левое меню 
+
+const leftMenu = document.querySelector('.left-menu')
+if (leftMenu) {
+    const leftMenuItems = leftMenu.querySelectorAll('.left-menu__item_dropdown');
+    leftMenuItems.forEach(li => {
+        const prevEl = li.previousElementSibling;
+        li.querySelector('.left-menu__link').addEventListener('click', e => e.preventDefault())
+        li.addEventListener('click', () => {
+            li.classList.toggle('open')
+            li.classList.contains('open') && prevEl ? prevEl.querySelector('.left-menu__link').style.borderBottom = "0" : prevEl.querySelector('.left-menu__link').style.borderBottom = "1px solid rgba(196, 220, 196, 0.6)"
+        })
+
+    })
+}
+
+
 //Яндекс карты
 
 /* Яндекс карты */
