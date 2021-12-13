@@ -13,6 +13,7 @@
     &__item {
         position: relative;
         padding: 0 25px;
+
         &:last-child {
             border-bottom: 0;
         }
@@ -69,7 +70,6 @@
                 display: block;
             }
         }
-
     }
 
     &__link {
@@ -80,6 +80,13 @@
         color: #111827;
         width: 100%;
         border-bottom: 1px solid rgba(196, 220, 196, 0.6);
+        &.active {
+            color: #45b553;
+        }
+
+        &:hover {
+            color: #45b553;
+        }
     }
 
     &__dropdown {
@@ -106,5 +113,8 @@
     &__dropdown-link {
         color: rgba(17, 24, 39, 0.5);
         display: block;
+        &:hover {
+            color: #45b553;
+        }
     }
 }
