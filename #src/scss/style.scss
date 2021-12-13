@@ -343,7 +343,6 @@ section {
   text-decoration-line: line-through;
 }
 
-
 /* Иконка времени */
 .time-icon {
   width: 16px;
@@ -362,6 +361,11 @@ section {
 .sale-icon {
   width: 56px;
   height: 22px;
+}
+
+.section_bt {
+  border-top: 1px solid #e5e7eb;
+  padding-top: 70px;
 }
 
 /* Лого */
@@ -411,3 +415,9 @@ section {
 
 /* Результаты поиска */
 @import "search-result";
+
+/* Для контентщиков */
+@import "content";
+
+/* Блок записи на услугу */
+@import "signup";

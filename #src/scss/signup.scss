@@ -1,0 +1,28 @@
+.signup {
+    padding: 74px 84px;
+    position: relative;
+    > p {
+        color: #4b5563;
+        max-width: 550px;
+        margin: 15px 0;
+        &:first-child {
+            margin-top: 0;
+        }
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+    .phone {
+        margin: 10px 0;
+    }
+
+    &__img {
+        position: absolute;
+        z-index: 10;
+        top:0;
+        right: 0;
+        object-fit: contain;
+        height: 100%;
+    }
+}
