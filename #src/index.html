@@ -15,7 +15,8 @@
         rel="stylesheet">
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
     <link rel="stylesheet" href="css/style.css">
-    <script src="https://api-maps.yandex.ru/2.1/?apikey=32934b60-7668-4b0e-b423-d1d9d7bd789d&lang=ru_RU" type="text/javascript"></script>
+    <script src="https://api-maps.yandex.ru/2.1/?apikey=32934b60-7668-4b0e-b423-d1d9d7bd789d&lang=ru_RU"
+        type="text/javascript"></script>
 </head>
 
 <body>
@@ -40,6 +41,22 @@
         @@include('components/_maps.html')
         @@include('components/_footer.html')
     </div>
+
+    <!-- Результаты поиска для компонента Битрикса -->
+    <div style="display: none;" class="search-result">
+        <ul class="search-result__list">
+            <li class="search-result__item">
+                <a href="#" class="search-result__link">Ультразвуковая диагностика (УЗИ)</a>
+            </li>
+            <li class="search-result__item">
+                <a href="#" class="search-result__link">Ультразвуковая диагностика (УЗИ)</a>
+            </li>
+            <li class="search-result__item">
+                <a href="#" class="search-result__link">Ультразвуковая диагностика (УЗИ)</a>
+            </li>
+        </ul>
+    </div>
+
     <script src="js/jquery-3.6.0.min.js"></script>
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script src="js/script.js"></script>

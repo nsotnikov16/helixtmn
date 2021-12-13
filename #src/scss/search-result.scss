@@ -1,0 +1,25 @@
+.search-result {
+    &__list {
+        background: #ffffff;
+        border: 1px solid #e5e7eb;
+        border-radius: 7px;
+        display: flex;
+        flex-direction: column;
+        padding: 20px 10px;
+    }
+
+    &__item {
+        padding-bottom: 17px;
+        &:last-child {
+            padding-bottom: 0;
+        }
+    }
+
+    &__link {
+        padding: 7px 10px;
+        border-radius: 6px;
+        &:hover {
+            background: rgba(69, 181, 83, 0.09);
+        }
+    }
+}
