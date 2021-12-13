@@ -897,6 +897,11 @@ section {
   height: 22px;
 }
 
+.section_bt {
+  border-top: 1px solid #e5e7eb;
+  padding-top: 70px;
+}
+
 /* Лого */
 
 .logo {
@@ -1994,6 +1999,7 @@ section {
   display: grid;
   grid-template-columns: 23% 1fr;
   gap: 30px;
+  padding-bottom: 70px;
 }
 
 .services__item {
@@ -2361,6 +2367,53 @@ section {
 
 .search-result__link:hover {
   background: rgba(69, 181, 83, 0.09);
+}
+
+/* Для контентщиков */
+
+.content {
+  /* padding: 50px 0; */
+}
+
+.content p {
+  font-size: 16px;
+  line-height: 26px;
+  margin: 20px 0;
+}
+
+/* Блок записи на услугу */
+
+.signup {
+  padding: 74px 84px;
+  position: relative;
+}
+
+.signup > p {
+  color: #4b5563;
+  max-width: 550px;
+  margin: 15px 0;
+}
+
+.signup > p:first-child {
+  margin-top: 0;
+}
+
+.signup > p:last-child {
+  margin-bottom: 0;
+}
+
+.signup .phone {
+  margin: 10px 0;
+}
+
+.signup__img {
+  position: absolute;
+  z-index: 10;
+  top: 0;
+  right: 0;
+  -o-object-fit: contain;
+     object-fit: contain;
+  height: 100%;
 }
 
 @media (max-width: 1290px) {
