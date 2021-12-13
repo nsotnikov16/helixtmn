@@ -15,7 +15,8 @@
         rel="stylesheet">
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
     <link rel="stylesheet" href="css/style.css">
-    <script src="https://api-maps.yandex.ru/2.1/?apikey=32934b60-7668-4b0e-b423-d1d9d7bd789d&lang=ru_RU" type="text/javascript"></script>
+    <script src="https://api-maps.yandex.ru/2.1/?apikey=32934b60-7668-4b0e-b423-d1d9d7bd789d&lang=ru_RU"
+        type="text/javascript"></script>
 </head>
 
 <body>
@@ -86,17 +87,28 @@
             <button class="btn btn_main">Запись на прием</button>
 
             <!-- Верхнее меню -->
-            <nav class="menu menu_header">
+            <nav class="menu">
                 <ul class="menu__list">
-                    <li class="menu__item menu__item-dropdown">
+                    <li class="menu__item menu__item-dropdown open">
                         <a href="#" class="menu__link">Выбрать врача</a>
                         <div class="menu__expand">
                             <div class="menu__expand-layout">
                                 <ul class="menu__dropdown">
-                                    <li class="menu__dropdown-item"><a href="#" class="menu__dropdown-link">Какой-то пункт</a></li>
-                                    <li class="menu__dropdown-item"><a href="#" class="menu__dropdown-link">Какой-то пункт</a></li>
-                                    <li class="menu__dropdown-item"><a href="#" class="menu__dropdown-link">Какой-то пункт</a></li>
-                                    <li class="menu__dropdown-item"><a href="#" class="menu__dropdown-link">Какой-то пункт</a></li>
+                                    <li class="menu__dropdown-item"><span class="menu__dropdown-link menu__dropdown-link_none">Взрослые врачи</span></li>
+                                    <li class="menu__dropdown-item"><a href="#" class="menu__dropdown-link">Отоларинголог (ЛОР)</a></li>
+                                    <li class="menu__dropdown-item"><a href="#" class="menu__dropdown-link">Дерматовенеролог</a></li>
+                                    <li class="menu__dropdown-item"><a href="#" class="menu__dropdown-link">Невролог</a></li>
+                                    <li class="menu__dropdown-item"><a href="#" class="menu__dropdown-link">Косметолог</a></li>
+                                    <li class="menu__dropdown-item"><a href="#" class="menu__dropdown-link">Аллерголог-иммунологог</a></li>
+                                    <li class="menu__dropdown-item"><a href="#" class="menu__dropdown-link">Эндокринолог</a></li>
+                                    <li class="menu__dropdown-item"><a href="#" class="menu__dropdown-link">Нутрициолог</a></li>
+                                </ul>
+                                <ul class="menu__dropdown">
+                                    <li class="menu__dropdown-item"><span class="menu__dropdown-link menu__dropdown-link_none">Детские врачи</span></li>
+                                    <li class="menu__dropdown-item"><a href="#" class="menu__dropdown-link">Педиатр</a></li>
+                                    <li class="menu__dropdown-item"><a href="#" class="menu__dropdown-link">Эндокринолог</a></li>
+                                    <li class="menu__dropdown-item"><a href="#" class="menu__dropdown-link">Невролог</a></li>
+                                    <li class="menu__dropdown-item"><a href="#" class="menu__dropdown-link">Нефролог</a></li>
                                 </ul>
                             </div>
                         </div>
@@ -175,35 +187,40 @@
                                         <svg class="ellipse-icon">
                                             <use href="./img/icons/icons.svg#ellipse"></use>
                                         </svg>
-                                        <span class="list-text">Щитовидной железы</span></p>
+                                        <span class="list-text">Щитовидной железы</span>
+                                    </p>
                                 </li>
                                 <li class="list-item">
                                     <p>
                                         <svg class="ellipse-icon">
                                             <use href="./img/icons/icons.svg#ellipse">Сосудов шеи и головы</use>
                                         </svg>
-                                        <span class="list-text">Сосудов шеи и головы</span></p>
+                                        <span class="list-text">Сосудов шеи и головы</span>
+                                    </p>
                                 </li>
                                 <li class="list-item">
                                     <p>
                                         <svg class="ellipse-icon">
                                             <use href="./img/icons/icons.svg#ellipse"></use>
                                         </svg>
-                                        <span class="list-text">Почек</span></p>
+                                        <span class="list-text">Почек</span>
+                                    </p>
                                 </li>
                                 <li class="list-item">
                                     <p>
                                         <svg class="ellipse-icon">
                                             <use href="./img/icons/icons.svg#ellipse"></use>
                                         </svg>
-                                        <span class="list-text">Молочной железы</span></p>
+                                        <span class="list-text">Молочной железы</span>
+                                    </p>
                                 </li>
                                 <li class="list-item">
                                     <p>
                                         <svg class="ellipse-icon">
                                             <use href="./img/icons/icons.svg#ellipse"></use>
                                         </svg>
-                                        <span class="list-text">Таза</span></p>
+                                        <span class="list-text">Таза</span>
+                                    </p>
                                 </li>
                             </ul>
                             <div class="banners__signup">
@@ -214,9 +231,73 @@
                         </div>
 
                     </div>
-                    <div class="swiper-slide"></div>
-                    <div class="swiper-slide"></div>
-                    <div class="swiper-slide"></div>
+                    <div class="swiper-slide">
+
+                        <div style="background-image: url(./img/banners/matka.png);" class="banners__banner">
+                            <h1 class="banners__title">Онкоскрининг шейки матки</h1>
+                            <ul class="list list_one-column">
+                                <li class="list-item">
+                                    <p>
+                                        <svg class="ellipse-icon">
+                                            <use href="./img/icons/icons.svg#ellipse"></use>
+                                        </svg>
+                                        <span class="list-text">Тест на ВПЧ высокого онкогенного риска</span>
+                                    </p>
+                                    <p class="banners__price matka"><span>2570 ₽</span> <sup class="banners__price_old"> 5065 ₽</sup> </p>
+                                </li>
+                                <li class="list-item">
+                                    <p>
+                                        <svg class="ellipse-icon">
+                                            <use href="./img/icons/icons.svg#ellipse"></use>
+                                        </svg>
+                                        <span class="list-text">ВПЧ-тест + жидкостная цитология </span>
+                                    </p>
+                                    <p class="banners__price matka"><span>3690 ₽</span> <sup class="banners__price_old">6020 ₽</sup></p>
+                                </li>
+                            </ul>
+                            <div class="banners__signup">
+                                <button class="btn btn_banner">Записаться</button>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="swiper-slide">
+
+                        <div style="background-image: url(./img/banners/covid.png);" class="banners__banner">
+                            <h1 class="banners__title">ПЦР тест на Covid-19</h1>
+                            <ul class="list list_one-column">
+                                <li class="list-item">
+                                    <p>
+                                        <svg class="ellipse-icon">
+                                            <use href="./img/icons/icons.svg#ellipse"></use>
+                                        </svg>
+                                        <span class="list-text">Забор мазка</span>
+                                    </p>
+                                </li>
+                                <li class="list-item">
+                                    <p>
+                                        <svg class="ellipse-icon">
+                                            <use href="./img/icons/icons.svg#ellipse"></use>
+                                        </svg>
+                                        <span class="list-text">Справка на двух языках</span>
+                                    </p>
+                                </li>
+                                <li class="list-item">
+                                    <p>
+                                        <svg class="ellipse-icon">
+                                            <use href="./img/icons/icons.svg#ellipse"></use>
+                                        </svg>
+                                        <span class="list-text">QR-код</span>
+                                    </p>
+                                </li>
+                            </ul>
+                            <div class="banners__signup">
+                                <p class="banners__price"><span>1500 ₽</span></p>
+                                <button class="btn btn_banner">Записаться</button>
+                            </div>
+                        </div>
+
+                    </div>
                 </div>
                 <div class="swiper-pagination"></div>
 
@@ -225,6 +306,10 @@
             </div>
             <!-- Конец свайпера -->
 
+            <!-- <div style="background-image: url(./img/banners/biomaterial.png);" class="banners__block">
+                <h2 class="banners__block-title">Мобильная служба на дом для забора биоматериала</h2>
+                <button class="btn btn_banners-block">Вызвать</button>
+            </div> -->
             <div style="background-image: url(./img/banners/modelirovanie.png);" class="banners__block">
                 <h2 class="banners__block-title">Объемное моделирование губ</h2>
                 <button class="btn btn_banners-block">Записаться</button>
@@ -237,7 +322,8 @@
                 </div>
             </div>
         </div>
-        <p class="contraindications banners__contraindications">ИМЕЮТСЯ ПРОТИВОПОКАЗАНИЯ. НЕОБХОДИМО ПОЛУЧЕНИЕ КОНСУЛЬТАЦИИ СПЕЦИАЛИСТА
+        <p class="contraindications banners__contraindications">ИМЕЮТСЯ ПРОТИВОПОКАЗАНИЯ. НЕОБХОДИМО ПОЛУЧЕНИЕ
+            КОНСУЛЬТАЦИИ СПЕЦИАЛИСТА
         </p>
     </div>
 </section>
@@ -971,7 +1057,7 @@
                     <ul class="footer__social">
                         <!-- Instagram -->
                         <li>
-                            <a href="#">
+                            <a target="_blank" href="#">
                                 <svg>
                                     <use href="./img/icons/icons.svg#instagram"></use>
                                 </svg>
@@ -979,7 +1065,7 @@
                         </li>
                         <!-- Whatsapp -->
                         <li>
-                            <a href="#">
+                            <a target="_blank" href="#">
                                 <svg>
                                     <use href="./img/icons/icons.svg#whatsapp"></use>
                                 </svg>
@@ -987,7 +1073,7 @@
                         </li>
                         <!-- ВК -->
                         <li>
-                            <a href="#">
+                            <a target="_blank" href="#">
                                 <svg>
                                     <use href="./img/icons/icons.svg#vk"></use>
                                 </svg>
@@ -1003,6 +1089,22 @@
     </div>
 </footer>
     </div>
+
+    <!-- Результаты поиска для компонента Битрикса -->
+    <div style="display: none;" class="search-result">
+        <ul class="search-result__list">
+            <li class="search-result__item">
+                <a href="#" class="search-result__link">Ультразвуковая диагностика (УЗИ)</a>
+            </li>
+            <li class="search-result__item">
+                <a href="#" class="search-result__link">Ультразвуковая диагностика (УЗИ)</a>
+            </li>
+            <li class="search-result__item">
+                <a href="#" class="search-result__link">Ультразвуковая диагностика (УЗИ)</a>
+            </li>
+        </ul>
+    </div>
+
     <script src="js/jquery-3.6.0.min.js"></script>
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script src="js/script.js"></script>

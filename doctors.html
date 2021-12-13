@@ -87,17 +87,28 @@
             <button class="btn btn_main">Запись на прием</button>
 
             <!-- Верхнее меню -->
-            <nav class="menu menu_header">
+            <nav class="menu">
                 <ul class="menu__list">
-                    <li class="menu__item menu__item-dropdown">
+                    <li class="menu__item menu__item-dropdown open">
                         <a href="#" class="menu__link">Выбрать врача</a>
                         <div class="menu__expand">
                             <div class="menu__expand-layout">
                                 <ul class="menu__dropdown">
-                                    <li class="menu__dropdown-item"><a href="#" class="menu__dropdown-link">Какой-то пункт</a></li>
-                                    <li class="menu__dropdown-item"><a href="#" class="menu__dropdown-link">Какой-то пункт</a></li>
-                                    <li class="menu__dropdown-item"><a href="#" class="menu__dropdown-link">Какой-то пункт</a></li>
-                                    <li class="menu__dropdown-item"><a href="#" class="menu__dropdown-link">Какой-то пункт</a></li>
+                                    <li class="menu__dropdown-item"><span class="menu__dropdown-link menu__dropdown-link_none">Взрослые врачи</span></li>
+                                    <li class="menu__dropdown-item"><a href="#" class="menu__dropdown-link">Отоларинголог (ЛОР)</a></li>
+                                    <li class="menu__dropdown-item"><a href="#" class="menu__dropdown-link">Дерматовенеролог</a></li>
+                                    <li class="menu__dropdown-item"><a href="#" class="menu__dropdown-link">Невролог</a></li>
+                                    <li class="menu__dropdown-item"><a href="#" class="menu__dropdown-link">Косметолог</a></li>
+                                    <li class="menu__dropdown-item"><a href="#" class="menu__dropdown-link">Аллерголог-иммунологог</a></li>
+                                    <li class="menu__dropdown-item"><a href="#" class="menu__dropdown-link">Эндокринолог</a></li>
+                                    <li class="menu__dropdown-item"><a href="#" class="menu__dropdown-link">Нутрициолог</a></li>
+                                </ul>
+                                <ul class="menu__dropdown">
+                                    <li class="menu__dropdown-item"><span class="menu__dropdown-link menu__dropdown-link_none">Детские врачи</span></li>
+                                    <li class="menu__dropdown-item"><a href="#" class="menu__dropdown-link">Педиатр</a></li>
+                                    <li class="menu__dropdown-item"><a href="#" class="menu__dropdown-link">Эндокринолог</a></li>
+                                    <li class="menu__dropdown-item"><a href="#" class="menu__dropdown-link">Невролог</a></li>
+                                    <li class="menu__dropdown-item"><a href="#" class="menu__dropdown-link">Нефролог</a></li>
                                 </ul>
                             </div>
                         </div>
@@ -166,7 +177,7 @@
             <div class="page__container">
                 <h1 class="page__title">Выберите врача</h1>
             </div>
-
+            <!-- WORKAREA -->
             <!-- Специальности -->
             <section class="specialties">
     <div class="page__container">
@@ -421,9 +432,7 @@
             </a>
         </div>
 
-
-
-
+        <!-- Фильтр (жду UI) -->
 
         <ul class="doctors__list">
             <li class="doctors__item">
@@ -737,7 +746,7 @@
                     <ul class="footer__social">
                         <!-- Instagram -->
                         <li>
-                            <a href="#">
+                            <a target="_blank" href="#">
                                 <svg>
                                     <use href="./img/icons/icons.svg#instagram"></use>
                                 </svg>
@@ -745,7 +754,7 @@
                         </li>
                         <!-- Whatsapp -->
                         <li>
-                            <a href="#">
+                            <a target="_blank" href="#">
                                 <svg>
                                     <use href="./img/icons/icons.svg#whatsapp"></use>
                                 </svg>
@@ -753,7 +762,7 @@
                         </li>
                         <!-- ВК -->
                         <li>
-                            <a href="#">
+                            <a target="_blank" href="#">
                                 <svg>
                                     <use href="./img/icons/icons.svg#vk"></use>
                                 </svg>
