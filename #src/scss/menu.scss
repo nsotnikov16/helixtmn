@@ -12,6 +12,31 @@
 
     &__item-dropdown {
         position: relative;
+
+        .menu__link {
+            &::before,
+            &::after {
+                position: absolute;
+                background: #111827;
+                content: "";
+                top: 25%;
+                bottom: 25%;
+                width: 2px;
+                height: 9px;
+                transition: transform 0.1s ease-in-out;
+            }
+
+            &::before {
+                right: -11px;
+                transform: rotate(-45deg);
+            }
+
+            &::after {
+                right: -17px;
+                transform: rotate(45deg);
+            }
+        }
+
         &:hover {
             .menu__expand {
                 visibility: visible;
@@ -46,28 +71,6 @@
 
         display: block;
         width: 120%;
-
-        &::before,
-        &::after {
-            position: absolute;
-            background: #111827;
-            content: "";
-            top: 25%;
-            bottom: 25%;
-            width: 2px;
-            height: 9px;
-            transition: transform 0.1s ease-in-out;
-        }
-
-        &::before {
-            right: -11px;
-            transform: rotate(-45deg);
-        }
-
-        &::after {
-            right: -17px;
-            transform: rotate(45deg);
-        }
 
         &_covid {
             display: flex;
