@@ -1346,6 +1346,7 @@ section {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  margin-bottom: 30px;
 }
 
 .left-menu__item {
@@ -1354,6 +1355,10 @@ section {
 }
 
 .left-menu__item:last-child {
+  border-bottom: 0;
+}
+
+.left-menu__item:last-child .left-menu__link {
   border-bottom: 0;
 }
 
@@ -1436,11 +1441,19 @@ section {
   border-bottom: 1px solid rgba(196, 220, 196, 0.6);
 }
 
+.left-menu__link.title {
+  font-size: 24px;
+  line-height: 38px;
+  font-weight: 400;
+  border: 0;
+  margin-bottom: 10px;
+}
+
 .left-menu__link.active {
   color: #45b553;
 }
 
-.left-menu__link:hover {
+.left-menu__link:hover:not(.left-menu__link.title) {
   color: #45b553;
 }
 
