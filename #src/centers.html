@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <title>HELIX</title>
+    <link rel="icon" href="./img/favicon.ico">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="description" content="Сеть лабораторий 'Хеликс' в Тюмени">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://api-maps.yandex.ru/2.1/?apikey=32934b60-7668-4b0e-b423-d1d9d7bd789d&lang=ru_RU"
+        type="text/javascript"></script>
+</head>
+
+<body>
+    <!-- Главная -->
+    <div class="page">
+        <!-- Шапка -->
+        @@include('components/_header.html')
+        <!-- Хлебные крошки -->
+        @@include('components/_breadcrumbs.html')
+
+        <main class="main">
+            <!-- Заголовок страницы -->
+            <div class="page__container">
+                <h1 class="page__title">Диагностические центры в Тюмени</h1>
+            </div>
+            <!-- WORKAREA -->
+
+            @@include('components/_centers.html')
+
+        </main>
+        @@include('components/_maps.html')
+        @@include('components/_footer.html')
+    </div>
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="js/script.js"></script>
+</body>
+
+</html>

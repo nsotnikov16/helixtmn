@@ -2332,6 +2332,110 @@ section {
   margin-bottom: 0;
 }
 
+/* Центры */
+
+.centers {
+  margin: 10px 0 50px;
+}
+
+.centers__list {
+  max-width: 960px;
+}
+
+.centers__item {
+  border: 1px solid #e7e7e7;
+  padding: 30px;
+  border-radius: 7px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 30px;
+}
+
+.centers__item:last-child {
+  margin-bottom: 0;
+}
+
+.centers__img {
+  margin-right: 40px;
+  -ms-flex-item-align: baseline;
+      align-self: baseline;
+  max-width: 180px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: top center;
+     object-position: top center;
+  border-radius: 5px;
+}
+
+.centers__description {
+  max-width: 90%;
+}
+
+.centers__description > * {
+  margin-bottom: 16px;
+}
+
+.centers__description > *:last-child {
+  margin-bottom: 0;
+}
+
+.centers__title {
+  font-weight: 500;
+  font-size: 24px;
+}
+
+.centers__info {
+  font-size: 16px;
+  line-height: 22px;
+  color: #4b5563;
+}
+
+.centers__contacts {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 16px !important;
+  line-height: 24px !important;
+}
+
+.centers__contacts svg {
+  width: 16px !important;
+  height: 16px !important;
+  margin-right: 5px !important;
+}
+
+.centers__contacts > * {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.centers__location span {
+  color: #45b553;
+}
+
+.centers__phone {
+  display: inline-block;
+}
+
+.centers__phone span {
+  font-size: 16px;
+  line-height: 19px;
+}
+
 /* Яндекс Карты */
 
 .maps {
