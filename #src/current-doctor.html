@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <title>HELIX</title>
+    <link rel="icon" href="./img/favicon.ico">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="description" content="Сеть лабораторий 'Хеликс' в Тюмени">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://api-maps.yandex.ru/2.1/?apikey=32934b60-7668-4b0e-b423-d1d9d7bd789d&lang=ru_RU"
+        type="text/javascript"></script>
+</head>
+
+<body>
+    <!-- Главная -->
+    <div class="page">
+        <!-- Шапка -->
+        @@include('components/_header.html')
+        <!-- Хлебные крошки -->
+        <div class="breadcrumbs">
+            <div class="page__container">
+                <ul class="breadcrumbs__list">
+                    <li class="breadcrumbs__item">
+                        <a href="./index.html" class="breadcrumbs__link">Главная</a>
+                    </li>
+                    <li class="breadcrumbs__item">
+                        <a href="./index.html" class="breadcrumbs__link">Врач</a>
+                    </li>
+                    <li class="breadcrumbs__item">
+                        <a href="./index.html" class="breadcrumbs__link">Оториноларинголог</a>
+                    </li>
+                    <li class="breadcrumbs__item">
+                        <span class="breadcrumbs__current">Петров Иван Иванович</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <main class="main">
+            <!-- Заголовок страницы -->
+            <div class="page__container">
+                <h1 class="page__title">Петров Иван Иванович — Врач оториноларинголог</h1>
+            </div>
+            <!-- WORKAREA -->
+
+            <!-- Петров Иван Петрович -->
+            <div class="doctor">
+                <div class="page__container ">
+                    <div class="doctor__container">
+                        <nav class="left-menu">
+
+                            <ul class="left-menu__list">
+                                <li class="left-menu__item">
+                                    <p class="left-menu__link title">Взрослые врачи</p>
+                                </li>
+                                <li class="left-menu__item">
+                                    <a href="#" class="left-menu__link">Отоларинголог (ЛОР)</a>
+                                </li>
+                                <li class="left-menu__item">
+                                    <a href="#" class="left-menu__link">Акушер-гинеколог</a>
+                                </li>
+                                <li class="left-menu__item">
+                                    <a href="#" class="left-menu__link">Дерматовенеролог</a>
+                                </li>
+                                <li class="left-menu__item">
+                                    <a href="#" class="left-menu__link">Невролог</a>
+                                </li>
+                                <li class="left-menu__item">
+                                    <a href="#" class="left-menu__link">Косметолог</a>
+                                </li>
+                                <li class="left-menu__item">
+                                    <a href="#" class="left-menu__link">Аллерголог-иммунологог</a>
+                                </li>
+                                <li class="left-menu__item">
+                                    <a href="#" class="left-menu__link">Эндокринолог</a>
+                                </li>
+                                <li class="left-menu__item">
+                                    <a href="#" class="left-menu__link">Нутрициолог</a>
+                                </li>
+                            </ul>
+                            <ul class="left-menu__list">
+                                <li class="left-menu__item">
+                                    <p class="left-menu__link title">Детские врачи</p>
+                                </li>
+                                <li class="left-menu__item">
+                                    <a href="#" class="left-menu__link">Педиатр</a>
+                                </li>
+                                <li class="left-menu__item">
+                                    <a href="#" class="left-menu__link">Эндокринолог</a>
+                                </li>
+                                <li class="left-menu__item">
+                                    <a href="#" class="left-menu__link">Невролог</a>
+                                </li>
+                                <li class="left-menu__item">
+                                    <a href="#" class="left-menu__link">Нефролог</a>
+                                </li>
+                            </ul>
+                        </nav>
+                        <div class="doctor__description">
+                            <div class="doctor__info">
+                                <img class="doctor__photo" src="./img/doctor.png" alt="Photo">
+                                <div class="doctor__info-text">
+                                    <div class="doctor__block">
+                                        <p>Специальности</p>
+                                        <p>Оториноларинголог</p>
+                                    </div>
+                                    <div class="doctor__block">
+                                        <p>Общий врачебный стаж</p>
+                                        <p>10 лет</p>
+                                    </div>
+                                    <div class="doctor__block">
+                                        <p>Адреса приема</p>
+                                        <p>ДЦ на Ямской, ДЦ на Гольцова</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="price-block light-green-block">
+                                <p>Первичный прием</p>
+                                <p class="price"><span>2 200 ₽</span></p>
+                                <p>Вторичный прием</p>
+                                <p class="price"><span>1 550 ₽</span></p>
+                                <button class="btn">Запись на прием</button>
+                            </div>
+                            <table class="price-list">
+                                <thead>
+                                    <tr>
+                                        <th>Прайс лист врача-оториноларинголога</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Вскрытие отогематомы или фурункула</td>
+                                        <td>2 200 ₽</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Вскрытие отогематомы или фурункула</td>
+                                        <td>1 800 ₽</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Вскрытие отогематомы или фурункула</td>
+                                        <td>1 800 ₽</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Вскрытие отогематомы или фурункула</td>
+                                        <td>1 800 ₽</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Вскрытие отогематомы или фурункула</td>
+                                        <td>1 800 ₽</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Вскрытие отогематомы или фурункула</td>
+                                        <td>1 800 ₽</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Вскрытие отогематомы или фурункула</td>
+                                        <td>1 800 ₽</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Вскрытие отогематомы или фурункула</td>
+                                        <td>1 800 ₽</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <div class="content full-column">
+                                <h3>Образование</h3>
+                                <ul class="rows">
+                                    <li>
+                                        <p class="big">2016</p>
+                                        <p>ГБОУ ВПО Первый Московский государственный медицинский университет им. И.М.
+                                            Сеченова, специализация «хирургия»</p>
+                                    </li>
+                                    <li>
+                                        <p class="big">2016</p>
+                                        <p>ГБОУ ВПО Первый Московский государственный медицинский университет им. И.М.
+                                            Сеченова, специализация «хирургия»</p>
+                                    </li>
+                                    <li>
+                                        <p class="big">2016</p>
+                                        <p>ГБОУ ВПО Первый Московский государственный медицинский университет им. И.М.
+                                            Сеченова, специализация «хирургия»</p>
+                                    </li>
+                                    <li>
+                                        <p class="big">2016</p>
+                                        <p>ГБОУ ВПО Первый Московский государственный медицинский университет им. И.М.
+                                            Сеченова, специализация «хирургия»</p>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- Лицензии -->
+            <section class="licenses licenses_main section__bt">
+                <div class="page__container">
+                    <h2 class="section__title">Лицензии и сертификаты врача</h2>
+                    <div class="licenses__container-for-arrows">
+                        <div class="swiper-button-next"></div>
+                        <div class="swiper-button-prev"></div>
+                        <div class="swiper swiper-licenses">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <div class="licenses__item">
+                                        <img class="licenses__img" src="./img/license.png" alt="license">
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="licenses__item">
+                                        <img class="licenses__img" src="./img/license.png" alt="license">
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="licenses__item">
+                                        <img class="licenses__img" src="./img/license.png" alt="license">
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="licenses__item">
+                                        <img class="licenses__img" src="./img/license.png" alt="license">
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="licenses__item">
+                                        <img class="licenses__img" src="./img/license.png" alt="license">
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="licenses__item">
+                                        <img class="licenses__img" src="./img/license.png" alt="license">
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+            </section>
+    </div>
+
+    <!-- Запись к врачу -->
+    <div class="page__container">
+        <section class="signup signup_doctor">
+            <img class="signup__img" src="./img/doctor-signup.png" alt="signup">
+            <h2>Запись к оториноларингологу</h2>
+            <p>Узнать подробности проведения процедуры, цены УЗИ и записаться на консультацию специалиста Вы
+                можете
+                по телефону.</p>
+            <a href="tel:+73452355560" class="phone">
+                <svg>
+                    <use href="./img/icons/icons.svg#phone"></use>
+                </svg>
+                <p>8 (3452) <span>35-55-60</span></p>
+            </a>
+            <button class="btn">Заказать обратный звонок</button>
+        </section>
+    </div>
+
+    </main>
+    @@include('components/_maps.html')
+    @@include('components/_footer.html')
+    </div>
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="js/script.js"></script>
+</body>
+
+</html>

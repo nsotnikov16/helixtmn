@@ -25,7 +25,44 @@
         }
     }
 
-    .signup {
-        background: linear-gradient(180deg, rgba(214, 231, 240, 0.75) 0%, rgba(228, 243, 251, 0.75) 100%) !important;
+    &__info {
+        display: flex;
+        
+    }
+
+    &__photo {
+        margin-right: 35px;
+        max-width: 270px;
+        object-fit: cover;
+        object-position: top center;
+        border-radius: 7px;
+        align-self: baseline;
+    }
+
+    &__info-text {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__block {
+        margin-bottom: 30px;
+        p {
+            &:first-child {
+                font-size: 14px;
+                line-height: 23px;
+                color: #4b5563;
+                margin-bottom: 2px;
+            }
+
+            &:last-child {
+                font-weight: 500;
+                font-size: 16px;
+                line-height: 19px;
+            }
+        }
+
+        &:last-child {
+            margin-bottom: 0;
+        }
     }
 }

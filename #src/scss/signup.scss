@@ -1,6 +1,10 @@
 .signup {
     padding: 74px 84px;
     position: relative;
+
+    &.signup_doctor {
+        background: linear-gradient(180deg, rgba(214, 231, 240, 0.75) 0%, rgba(228, 243, 251, 0.75) 100%) !important;
+    }
     > p {
         color: #4b5563;
         max-width: 550px;
