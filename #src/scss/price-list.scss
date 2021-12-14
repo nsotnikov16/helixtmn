@@ -1,0 +1,39 @@
+.price-list {
+    border-collapse: collapse;
+    color: #111827;
+    thead {
+        tr {
+            height: 120%;
+            border-bottom: 1px solid #e5e7eb;
+        }
+        th {
+            padding-bottom: 27px;
+            font-weight: 500;
+            font-size: 24px;
+            line-height: 29px;
+            text-align: left;
+        }
+    }
+    tbody {
+        tr {
+            
+            border-bottom: 1px solid #e5e7eb;
+        }
+        td {
+            padding: 8px 0;
+            
+            &:nth-child(1) {
+                font-size: 18px;
+                line-height: 54px;
+            }
+            &:nth-child(2) {
+                font-weight: 500;
+                font-size: 18px;
+                line-height: 22px;
+                color: #45b553;
+                font-family: "Roboto", sans-serif;
+                text-align: right;
+            }
+        }
+    }
+}

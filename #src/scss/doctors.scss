@@ -4,7 +4,9 @@
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 30px;
-
+    .btn_white {
+      margin-top: 15px;
+    }
   }
 
   &__item {
@@ -75,7 +77,5 @@
     height: 8px;
   }
 
-  .btn_white {
-    margin-top: 15px;
-  }
+  
 }

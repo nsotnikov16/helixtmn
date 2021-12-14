@@ -91,6 +91,20 @@ if (leftMenu) {
 }
 
 
+/* Spoiler */
+const spoilers = document.querySelectorAll('.spoiler')
+if (spoilers.length > 0) {
+    spoilers.forEach(spoiler => {
+        const items = spoiler.querySelectorAll('.spoiler__item')
+        items.forEach((item, ind, arr) => {
+            item.querySelector('.spoiler__top').addEventListener('click', (e) => {
+                item.classList.toggle('open')
+            })
+        })
+    })
+}
+
+
 //Яндекс карты
 
 /* Яндекс карты */

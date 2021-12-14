@@ -1,0 +1,103 @@
+.spoiler {
+    margin-bottom: 60px;
+    &__list {
+    }
+
+    &__item {
+        overflow: hidden;
+        &.open {
+            border-bottom: 1px solid #9ca3af;
+            padding-bottom: 30px;
+            .spoiler__top {
+                border-bottom: 0;
+            }
+
+            .spoiler__bottom {
+                padding: 5px 0;
+                display: block;
+
+                height: 100%;
+                opacity: 1;
+                transform: translateY(0);
+                transition: all 1s ease;
+                &.with-img {
+                    display: grid;
+                }
+            }
+
+            .spoiler__switch {
+                transform: rotate(180deg);
+                transition: transform 0.3s linear;
+                span {
+                    &:last-child {
+                        visibility: hidden;
+                        transition: visibility 0.3s linear;
+                    }
+                }
+            }
+        }
+
+        &:first-child {
+            border-top: 1px solid #9ca3af;
+        }
+
+        &:last-child {
+            border-bottom: 0;
+        }
+    }
+
+    &__img {
+        border-radius: 7px;
+        align-self: baseline;
+    }
+
+    &__top {
+        z-index: 999;
+        padding: 20px 0;
+        border-bottom: 1px solid #9ca3af;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        &:hover {
+            cursor: pointer;
+        }
+    }
+
+    &__title {
+    }
+
+    &__switch {
+        transform: rotate(0);
+        transition: transform 0.3s linear;
+        span {
+            display: block;
+            width: 22px;
+            height: 3px;
+            background: #45b553;
+            &:first-child {
+                margin-top: -15%;
+                transform: translateY(3px);
+            }
+            &:last-child {
+                transform: rotate(90deg);
+                visibility: visible;
+                transition: all 0.3s linear;
+            }
+        }
+    }
+
+    &__bottom {
+        display: block;
+        overflow: hidden;
+        z-index: -1;
+        height: 0;
+        opacity: 0;
+        transform: translateY(-10%);
+        /* transition: all 0.2s ease; */
+        &.with-img {
+            display: grid;
+            grid-template-columns: 65% 1fr;
+            gap: 0 80px;
+        }
+    }
+}

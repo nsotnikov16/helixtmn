@@ -455,6 +455,9 @@ section {
 /* Услуги */
 @import "services";
 
+/* Врач */
+@import "doctor";
+
 /* Яндекс Карты */
 @import "maps";
 
@@ -469,3 +472,9 @@ section {
 
 /* Блок записи на услугу */
 @import "signup";
+
+/* Прайс лист */
+@import "price-list";
+
+/* Спойлер */
+@import "spoiler";
