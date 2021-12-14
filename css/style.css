@@ -2297,6 +2297,8 @@ section {
   -o-object-position: top center;
      object-position: top center;
   border-radius: 7px;
+  -ms-flex-item-align: baseline;
+      align-self: baseline;
 }
 
 .doctor__info-text {
