@@ -3229,6 +3229,128 @@ section {
           box-shadow: initial;
 }
 
+/* Фильтр */
+
+.select {
+  display: inline-block;
+  position: relative;
+}
+
+.select.open .select__btn {
+  border: 1px solid #45b553;
+}
+
+.select.open .select__btn::before {
+  -webkit-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+.select.open .select__btn::after {
+  -webkit-transform: rotate(-45deg);
+      -ms-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+}
+
+.select.open .select__expand {
+  display: block;
+}
+
+.select__btn {
+  position: relative;
+  border: 1px solid #d1d5db;
+  border-radius: 5px;
+  padding: 15px;
+  font-size: 16px;
+  line-height: 19px;
+  color: #6b7280;
+  display: block;
+}
+
+.select__btn::before,
+.select__btn::after {
+  position: absolute;
+  content: "";
+  top: 44%;
+  width: 2px;
+  height: 10px;
+  background-color: #45b553;
+  -webkit-transition: -webkit-transform 0.3s ease;
+  transition: -webkit-transform 0.3s ease;
+  -o-transition: transform 0.3s ease;
+  transition: transform 0.3s ease;
+  transition: transform 0.3s ease, -webkit-transform 0.3s ease;
+}
+
+.select__btn::before {
+  right: 21px;
+  -webkit-transform: rotate(-45deg);
+      -ms-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+}
+
+.select__btn::after {
+  right: 15px;
+  -webkit-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+.select__expand {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  padding-top: 3px;
+}
+
+.select__expand-layout {
+  border: 1px solid #d1d5db;
+  border-radius: 5px;
+  padding: 20px 15px;
+  background: #fff;
+}
+
+.select__option {
+  margin-bottom: 8px;
+}
+
+.select__option:last-child {
+  margin-bottom: 0;
+}
+
+.select__label {
+  font-size: 16px;
+  line-height: 30px;
+  width: 100%;
+}
+
+.select__label:hover {
+  cursor: pointer;
+  color: #45b553;
+}
+
+.select input {
+  display: none;
+}
+
+.filter {
+  margin-bottom: 50px;
+}
+
+.filter__select {
+  width: 265px;
+}
+
+.filter > * {
+  margin-right: 20px;
+}
+
+.filter > *:last-child {
+  margin-right: 0;
+}
+
 @media (max-width: 1290px) {
   .page__container {
     padding: 0 30px;

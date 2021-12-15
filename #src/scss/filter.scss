@@ -1,0 +1,105 @@
+.select {
+    display: inline-block;
+    position: relative;
+    &.open {
+        .select__btn {
+
+            border: 1px solid #45b553;
+            &::before {
+                transform: rotate(45deg);
+            }
+
+            &::after {
+                transform: rotate(-45deg);
+            }
+        }
+
+        .select__expand {
+            display: block;
+        }
+    }
+
+    &__btn {
+        position: relative;
+        border: 1px solid #d1d5db;
+        border-radius: 5px;
+        padding: 15px;
+        
+        font-size: 16px;
+        line-height: 19px;
+        color: #6b7280;
+        display: block;
+
+        &::before,
+        &::after {
+            position: absolute;
+            content: "";
+            top: 44%;
+            width: 2px;
+            height: 10px;
+            background-color: #45b553;
+            transition: transform 0.3s ease;
+        }
+
+        &::before {
+            right: 21px;
+            transform: rotate(-45deg);
+        }
+
+        &::after {
+            right: 15px;
+            transform: rotate(45deg);
+        }
+    }
+
+    &__expand {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        padding-top: 3px;
+    }
+
+    &__expand-layout {
+        border: 1px solid #d1d5db;
+        border-radius: 5px;
+        padding: 20px 15px;
+        background: #fff;
+    }
+
+    &__option {
+        margin-bottom: 8px;
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+
+    &__label {
+        font-size: 16px;
+        line-height: 30px;
+        &:hover {
+            cursor: pointer;
+            color: #45b553;
+        }
+        width: 100%;
+    }
+
+    input {
+        display: none;
+    }
+}
+
+.filter {
+    margin-bottom: 50px;
+    &__select {
+        width: 265px;
+    }
+
+    > * {
+        margin-right: 20px;
+        &:last-child {
+            margin-right: 0;
+        }
+    }
+}
