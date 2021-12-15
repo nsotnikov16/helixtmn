@@ -3324,6 +3324,7 @@ section {
   font-size: 16px;
   line-height: 30px;
   width: 100%;
+  display: inline-block;
 }
 
 .select__label:hover {
@@ -3354,12 +3355,17 @@ section {
 
 /* Отзывы */
 
+.reviews {
+  min-height: 400px;
+}
+
 .reviews__block {
   height: 800px;
   max-width: 720px;
   overflow: hidden;
   border: 1px solid #d1d5db;
   border-radius: 5px;
+  display: none;
 }
 
 .reviews .select {

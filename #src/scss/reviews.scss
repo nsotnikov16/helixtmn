@@ -1,10 +1,12 @@
 .reviews {
+    min-height: 400px;
     &__block {
         height: 800px;
         max-width:720px;
         overflow: hidden;
         border: 1px solid #d1d5db;
         border-radius: 5px;
+        display: none;
     }
 
     .select {

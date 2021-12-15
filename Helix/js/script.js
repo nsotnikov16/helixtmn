@@ -214,7 +214,7 @@ if (selects.length > 0) {
 }
 
 
-//Яндекс карты
+
 
 /* Яндекс карты */
 ymaps.ready(init);
@@ -352,4 +352,43 @@ function init() {
         }
     );
 
+}
+
+
+//Отзывы
+
+function openReviews(el) {
+    const label = document.querySelector(`[for="${el.id}"]`);
+    document.querySelectorAll('.select input').forEach((el) => (el.checked = false));
+    el.checked = true;
+    const select = document.querySelector('.reviews .select')
+    const selectBtn = document.querySelector('.reviews .select__btn')
+    selectBtn.textContent = label.textContent;
+    if (el.checked) select.classList.remove('open')
+    const reviewsBlock = document.querySelector('.reviews__block')
+    reviewsBlock.style.display = 'block'
+    reviewsBlock.innerHTML = ""
+    reviewsBlock.insertAdjacentHTML('afterbegin', `<iframe style="width: 100%; height:100%; border: 0; background: #fff;"
+    src="https://yandex.ru/maps-reviews-widget/${el.id}?comments"></iframe>`)
+}
+
+const reviews = document.querySelector('.reviews')
+
+if (reviews) {
+    /* const select = reviews.querySelector('.select') */
+    const selectLayout = reviews.querySelector('.select__expand-layout')
+    
+
+    addresses.forEach(({ idMap, title }) => {
+
+        const html =
+            `<div class="select__option">
+            <label for="${idMap}" class="select__label">${title}</label>
+            <input onclick="openReviews(this)" type="checkbox" name="branch" value="${title}" id="${idMap}">
+        </div>`
+
+        selectLayout.insertAdjacentHTML("beforeend", html)
+    })
+
+    reviews.querySelector('label').click()
 }
