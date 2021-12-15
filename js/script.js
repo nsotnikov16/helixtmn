@@ -159,6 +159,7 @@ $(function () {
 });
 
 
+// Фокус инпутов
 const inputRows = document.querySelectorAll('.form__input')
 if (inputRows.length > 0) {
     function focus(el) {
@@ -177,7 +178,43 @@ if (inputRows.length > 0) {
 }
 
 
-//Яндекс карты
+// Filters
+/* Селект */
+
+const selects = document.querySelectorAll('.select')
+if (selects.length > 0) {
+    selects.forEach(select => {
+        const inputs = select.querySelectorAll('input')
+        const selectBtn = select.querySelector('.select__btn')
+        inputs.forEach((input, ind, arr) => {
+            const label = document.querySelector(`[for="${input.id}"]`);
+            if (input.checked) selectBtn.textContent = label.textContent;
+            input.addEventListener("click", ({ target }) => {
+                const label = document.querySelector(`[for="${target.id}"]`);
+                arr.forEach((el) => (el.checked = false));
+                input.checked = true;
+                selectBtn.textContent = label.textContent;
+                if (input.checked) select.classList.remove('open')
+            });
+        })
+
+        selectBtn.addEventListener("click", () => {
+            select.classList.toggle('open')
+            if (select.classList.contains("open")) {
+                document.addEventListener(
+                    "click",
+                    ({ target }) => {
+                        if (!target.closest('.select'))
+                            select.classList.remove("open");
+                    }
+                );
+            }
+        });
+    })
+}
+
+
+
 
 /* Яндекс карты */
 ymaps.ready(init);
@@ -188,42 +225,49 @@ const addresses = [
         coordinates: [57.158492, 65.552467],
         title: "Дц на Свердлова",
         adress: "г. Тюмень, улица Свердлова, 5к1",
+        idMap: "79382519486"
     },
     {
         id: "2",
         coordinates: [57.161763, 65.494850],
         title: "Дц на Ямской",
         adress: "г. Тюмень, Ямская улица, 86",
+        idMap: "34832144675"
     },
     {
         id: "3",
         coordinates: [57.171181, 65.555510],
         title: "Дц на Газовиков",
         adress: "г. Тюмень, улица Газовиков, 61",
+        idMap: "200308955503"
     },
     {
         id: "4",
         coordinates: [57.146266, 65.552662],
         title: "Дц на Республики",
         adress: "г. Тюмень, улица Республики, 86к1",
+        //нет в яндекс картах, координаты брались с 2гис
     },
     {
         id: "5",
         coordinates: [57.108818, 65.573952],
         title: "Дц на Гольцова",
         adress: "г. Тюмень, улица Василия Гольцова, 10",
+        idMap: "68329935208"
     },
     {
         id: "6",
         coordinates: [57.098054, 65.586601],
         title: "Дц на Монтажников",
         adress: "г. Тюмень, улица Монтажников, 61",
+        idMap: "204885165549"
     },
     {
         id: "7",
         coordinates: [57.114159, 65.553421],
         title: "Дц на Менделеева",
         adress: "г. Тюмень, улица Дмитрия Менделеева, 5",
+        idMap: "192625494590"
     },
 
     //Университетская или Ленина?
@@ -232,6 +276,7 @@ const addresses = [
         coordinates: [57.159395, 65.523845],
         title: "Дц на Ленина",
         adress: "г. Тюмень, ул. Ленина, 12",
+        idMap: "34542445968"
     },
 ];
 
@@ -307,4 +352,43 @@ function init() {
         }
     );
 
+}
+
+
+//Отзывы
+
+function openReviews(el) {
+    const label = document.querySelector(`[for="${el.id}"]`);
+    document.querySelectorAll('.select input').forEach((el) => (el.checked = false));
+    el.checked = true;
+    const select = document.querySelector('.reviews .select')
+    const selectBtn = document.querySelector('.reviews .select__btn')
+    selectBtn.textContent = label.textContent;
+    if (el.checked) select.classList.remove('open')
+    const reviewsBlock = document.querySelector('.reviews__block')
+    reviewsBlock.style.display = 'block'
+    reviewsBlock.innerHTML = ""
+    reviewsBlock.insertAdjacentHTML('afterbegin', `<iframe style="width: 100%; height:100%; border: 0; background: #fff;"
+    src="https://yandex.ru/maps-reviews-widget/${el.id}?comments"></iframe>`)
+}
+
+const reviews = document.querySelector('.reviews')
+
+if (reviews) {
+    /* const select = reviews.querySelector('.select') */
+    const selectLayout = reviews.querySelector('.select__expand-layout')
+    
+
+    addresses.forEach(({ idMap, title }) => {
+
+        const html =
+            `<div class="select__option">
+            <label for="${idMap}" class="select__label">${title}</label>
+            <input onclick="openReviews(this)" type="checkbox" name="branch" value="${title}" id="${idMap}">
+        </div>`
+
+        selectLayout.insertAdjacentHTML("beforeend", html)
+    })
+
+    reviews.querySelector('label').click()
 }
