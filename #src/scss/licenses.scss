@@ -1,4 +1,11 @@
 .licenses {
+
+  &.licenses_about {
+    grid-column: 2/3;
+    margin-left: 30px;
+    max-width: 76%;
+  }
+
   &.licenses_main {
     border-top: 1px solid #e5e7eb;
     padding-top: 70px;

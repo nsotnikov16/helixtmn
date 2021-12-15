@@ -1952,6 +1952,11 @@ section {
 
 /* Почему Hellix, о компании */
 
+.about.about_mleft {
+  margin-left: 30px;
+  max-width: 76%;
+}
+
 .about.about_main {
   margin-bottom: 110px;
   margin-top: 90px;
@@ -2023,6 +2028,12 @@ section {
 }
 
 /* Лицензии */
+
+.licenses.licenses_about {
+  grid-column: 2/3;
+  margin-left: 30px;
+  max-width: 76%;
+}
 
 .licenses.licenses_main {
   border-top: 1px solid #e5e7eb;

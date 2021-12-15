@@ -355,8 +355,8 @@ function init() {
 }
 
 
-//Отзывы
 
+//Отзывы
 function openReviews(el) {
     const label = document.querySelector(`[for="${el.id}"]`);
     document.querySelectorAll('.select input').forEach((el) => (el.checked = false));
@@ -375,20 +375,14 @@ function openReviews(el) {
 const reviews = document.querySelector('.reviews')
 
 if (reviews) {
-    /* const select = reviews.querySelector('.select') */
     const selectLayout = reviews.querySelector('.select__expand-layout')
-    
-
-    addresses.forEach(({ idMap, title }) => {
-
+    addresses.forEach(({ idMap, title }, ind) => {
         const html =
             `<div class="select__option">
-            <label for="${idMap}" class="select__label">${title}</label>
-            <input onclick="openReviews(this)" type="checkbox" name="branch" value="${title}" id="${idMap}">
+            <label for="${idMap ? idMap : (ind+1)}" class="select__label">${title}</label>
+            <input onclick="openReviews(this)" type="checkbox" name="branch" value="${title}" id="${idMap ? idMap : (ind+1)}">
         </div>`
-
         selectLayout.insertAdjacentHTML("beforeend", html)
     })
-
     reviews.querySelector('label').click()
 }
