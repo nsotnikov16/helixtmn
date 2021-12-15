@@ -1,5 +1,5 @@
 .select {
-    display: inline-block;
+    /* display: inline-block; */
     position: relative;
     &.open {
         .select__btn {
@@ -94,6 +94,7 @@
     margin-bottom: 50px;
     &__select {
         width: 265px;
+        display: inline-block;
     }
 
     > * {

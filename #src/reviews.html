@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <title>HELIX</title>
+    <link rel="icon" href="./img/favicon.ico">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="description" content="Сеть лабораторий 'Хеликс' в Тюмени">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://api-maps.yandex.ru/2.1/?apikey=32934b60-7668-4b0e-b423-d1d9d7bd789d&lang=ru_RU"
+        type="text/javascript"></script>
+</head>
+
+<body>
+    <!-- Главная -->
+    <div class="page">
+        <!-- Шапка -->
+        @@include('components/_header.html')
+        <!-- Хлебные крошки -->
+        @@include('components/_breadcrumbs.html')
+
+        <main class="main">
+            <!-- Заголовок страницы -->
+            <div class="page__container">
+                <h1 class="page__title">Отзывы о наших центрах</h1>
+            </div>
+
+
+            <div class="page__layout page__container">
+                <aside>
+                    <nav class="left-menu">
+                        <ul class="left-menu__list">
+
+                            <li class="left-menu__item">
+                                <a href="#" class="left-menu__link">О клинике</a>
+                            </li>
+                            <li class="left-menu__item">
+                                <a href="#" class="left-menu__link">Лицензии</a>
+                            </li>
+                            <li class="left-menu__item">
+                                <a href="#" class="left-menu__link">ОМС</a>
+                            </li>
+                            <li class="left-menu__item">
+                                <a href="#" class="left-menu__link">Отзывы</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </aside>
+
+                <!-- WORKAREA -->
+
+
+                <div class="reviews">
+                    <div class="select">
+                        <a class="select__btn">Выберите центр</a>
+                        <div class="select__expand">
+                            <div class="select__expand-layout">
+                                <div class="select__option">
+                                    <label for="21" class="select__label">ДЦ на Ямской</label>
+                                    <input type="checkbox" name="branch" value="ДЦ на Ямской" id="21">
+                                </div>
+                                <div class="select__option">
+                                    <label for="22" class="select__label">ДЦ на Ямской</label>
+                                    <input type="checkbox" name="branch" value="ДЦ на Ямской" id="22">
+                                </div>
+                                <div class="select__option">
+                                    <label for="23" class="select__label">ДЦ на Ямской</label>
+                                    <input type="checkbox" name="branch" value="ДЦ на Ямской" id="23">
+                                </div>
+                                <div class="select__option">
+                                    <label for="24" class="select__label">ДЦ на Ямской</label>
+                                    <input type="checkbox" name="branch" value="ДЦ на Ямской" id="24">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <section class="reviews__block">
+                        <iframe style="width: 100%; height:100%; border: 0; background: #fff;"
+                            src="https://yandex.ru/maps-reviews-widget/79382519486?comments"></iframe>
+                    </section>
+
+
+                </div>
+
+
+        </main>
+        @@include('components/_maps.html')
+        @@include('components/_footer.html')
+
+
+        <div id="photo" class="popup">
+            <div class="popup__container">
+                <div class="popup__content">
+                    <img src="" alt="Image" class="popup__img">
+                </div>
+                <button class="popup__close">&#10006;</button>
+
+            </div>
+        </div>
+
+
+
+    </div>
+
+    <div id="signup" class="popup">
+        <div class="popup__container">
+            <div class="popup__content">
+                <form class="form">
+                    <img src="./img/form-signup.png" alt="Записаться" class="form__img">
+                    <h3 class="form__title">Записаться на прием</h3>
+                    <ul class="form__rows">
+                        <li class="form__row">
+                            <input type="text" autocomplete="off" placeholder="Ваше имя" name="name" required
+                                minlength="3" maxlength="20" class="form__input">
+                        </li>
+                        <li class="form__row">
+                            <label for="phone" class="form__label">Телефон</label>
+                            <input type="tel" autocomplete="off" required name="phone" id="phone"
+                                placeholder="+7 900 550 50 50" class="form__input">
+                        </li>
+                    </ul>
+                    <button class="btn">Записаться</button>
+                    <p class="form__politics">Нажимая на кпопку «Записаться» вы соглашаетесь на <a href="#">политику
+                            обработки данных</a></p>
+                </form>
+            </div>
+            <button class="popup__close">&#10006;</button>
+        </div>
+    </div>
+
+
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script src="js/jquery.maskedinput.min.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="js/script.js"></script>
+</body>
+
+</html>

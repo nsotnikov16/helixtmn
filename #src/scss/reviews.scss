@@ -1,0 +1,13 @@
+.reviews {
+    &__block {
+        height: 800px;
+        max-width:720px;
+        overflow: hidden;
+        border: 1px solid #d1d5db;
+        border-radius: 5px;
+    }
+
+    .select {
+        max-width: 720px;
+    }
+}

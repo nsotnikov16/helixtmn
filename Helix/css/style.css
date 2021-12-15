@@ -3232,7 +3232,7 @@ section {
 /* Фильтр */
 
 .select {
-  display: inline-block;
+  /* display: inline-block; */
   position: relative;
 }
 
@@ -3341,6 +3341,7 @@ section {
 
 .filter__select {
   width: 265px;
+  display: inline-block;
 }
 
 .filter > * {
@@ -3349,6 +3350,20 @@ section {
 
 .filter > *:last-child {
   margin-right: 0;
+}
+
+/* Отзывы */
+
+.reviews__block {
+  height: 800px;
+  max-width: 720px;
+  overflow: hidden;
+  border: 1px solid #d1d5db;
+  border-radius: 5px;
+}
+
+.reviews .select {
+  max-width: 720px;
 }
 
 @media (max-width: 1290px) {
