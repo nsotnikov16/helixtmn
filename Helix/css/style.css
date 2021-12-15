@@ -2066,6 +2066,10 @@ section {
      object-fit: cover;
 }
 
+.licenses__img:hover {
+  cursor: pointer;
+}
+
 .licenses__container-for-arrows {
   position: relative;
 }
