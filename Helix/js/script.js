@@ -105,6 +105,60 @@ if (spoilers.length > 0) {
 }
 
 
+// Popups
+class Popup {
+    constructor(popupElement) {
+        this._popupElement = popupElement;
+        this._closeButton = this._popupElement.querySelector('.popup__close');
+        this._img = this._popupElement.id === "photo" ? this._popupElement.querySelector('.popup__img') : null;
+        this._handleEscClose = this._handleEscClose.bind(this)
+        this.openingLinks = document.querySelectorAll(`[data-pointer="${this._popupElement.id}"]`)
+        this.setEventListeners()
+    }
+
+    open(el) {
+        if (this._img) this._img.src = el.src
+        document.body.style.overflow = "hidden";
+        this._popupElement.classList.add('popup_opened')
+        document.addEventListener('keydown', this._handleEscClose);
+    }
+
+    close() {
+        if (this._img) this._img.src = ""
+        this._popupElement.classList.remove('popup_opened');
+        document.body.style.overflow = "visible";
+        document.removeEventListener('keydown', this._handleEscClose);
+    }
+
+    _handleEscClose(evt) {
+        if (evt.keyCode === 27) {
+            this.close();
+        }
+    }
+
+    _handleOverlayClick(evt) {
+        if (evt.target === evt.currentTarget) {
+            this.close();
+        }
+    }
+
+    setEventListeners() {
+        this.openingLinks.forEach(link => link.addEventListener('click', (e) => { e.preventDefault(); this.open(e.target) }))
+        this._closeButton.addEventListener('click', () => this.close());
+        this._popupElement.addEventListener('click', this._handleOverlayClick.bind(this));
+    }
+}
+
+const popups = document.querySelectorAll('.popup')
+
+if (popups.length > 0) popups.forEach(item => new Popup(item))
+
+// Mask phone
+$(function(){
+    $("#phone").mask("+7 999 999-9999");
+  });
+
+
 //Яндекс карты
 
 /* Яндекс карты */

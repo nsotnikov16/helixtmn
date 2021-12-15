@@ -4,6 +4,18 @@
     padding-top: 70px;
   }
 
+  &__list {
+    max-width: 770px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    margin-bottom: 120px;
+  }
+
+  &__name {
+    margin-top: 10px;
+  }
+
   &__item {
     max-width: 234px;
     padding: 22px 26px;
@@ -16,6 +28,7 @@
     height: 260px;
     object-fit: cover;
   }
+
 
   &__container-for-arrows {
     position: relative;

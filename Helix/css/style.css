@@ -521,6 +521,12 @@ body {
   margin: 22px 0;
 }
 
+.page__layout {
+  display: grid;
+  grid-template-columns: 20% 1fr;
+  gap: 30px;
+}
+
 h1,
 h2,
 h3,
@@ -1932,6 +1938,18 @@ section {
   height: 8px;
 }
 
+.doctors__type {
+  margin-bottom: 70px;
+}
+
+.doctors__type-title {
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 29px;
+  color: #45b553;
+  margin-bottom: 25px;
+}
+
 /* Почему Hellix, о компании */
 
 .about.about_main {
@@ -2009,6 +2027,18 @@ section {
 .licenses.licenses_main {
   border-top: 1px solid #e5e7eb;
   padding-top: 70px;
+}
+
+.licenses__list {
+  max-width: 770px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  margin-bottom: 120px;
+}
+
+.licenses__name {
+  margin-top: 10px;
 }
 
 .licenses__item {
@@ -3029,6 +3059,77 @@ section {
   gap: 0 80px;
 }
 
+/* Попапы */
+
+.popup {
+  position: fixed;
+  z-index: 999999999999;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: rgba(17, 24, 39, 0.5);
+}
+
+.popup.popup_opened {
+  opacity: 1;
+  visibility: visible;
+  -webkit-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.popup__container {
+  position: relative;
+  padding-top: 10px;
+}
+
+.popup__close {
+  position: absolute;
+  top: 25px;
+  right: 20px;
+  font-size: 25px;
+  color: rgba(17, 24, 39, 0.5);
+  font-weight: 300;
+}
+
+.popup__test {
+  background-color: white;
+  padding: 30px !important;
+  max-width: 600px;
+  border-radius: 13px;
+}
+
+.popup__img {
+  max-width: 50vw;
+  max-height: 70vh;
+  -o-object-fit: contain;
+     object-fit: contain;
+  -o-object-position: top center;
+     object-position: top center;
+  border-radius: 5px;
+}
+
+#photo.popup .popup__close {
+  color: white;
+  right: -10px;
+  top: -25px;
+}
+
 @media (max-width: 1290px) {
   .page__container {
     padding: 0 30px;
@@ -3071,5 +3172,17 @@ section {
   .header__eye,
   .header__contacts {
     display: none;
+  }
+}
+
+@media (max-width: 1180px) {
+  .popup__img {
+    max-width: 70vw;
+  }
+}
+
+@media (max-width: 768px) {
+  .popup__img {
+    max-width: 85vw;
   }
 }

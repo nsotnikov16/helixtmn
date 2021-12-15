@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <title>HELIX</title>
+    <link rel="icon" href="./img/favicon.ico">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="description" content="Сеть лабораторий 'Хеликс' в Тюмени">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://api-maps.yandex.ru/2.1/?apikey=32934b60-7668-4b0e-b423-d1d9d7bd789d&lang=ru_RU"
+        type="text/javascript"></script>
+</head>
+
+<body>
+    <!-- Главная -->
+    <div class="page">
+        <!-- Шапка -->
+        @@include('components/_header.html')
+        <!-- Хлебные крошки -->
+        @@include('components/_breadcrumbs.html')
+
+        <main class="main">
+            <!-- Заголовок страницы -->
+            <div class="page__container">
+                <h1 class="page__title">Наши врачи</h1>
+            </div>
+            <!-- WORKAREA -->
+
+            <!-- Наши врачи -->
+            <section class="doctors">
+                <div class="page__container">
+
+                    <!-- Взрослые  -->
+                    <div class="doctors__type">
+                        <h3 class="doctors__type-title">Взрослые врачи</h3>
+                        <ul class="doctors__list">
+                            <li class="doctors__item">
+                                <img class="doctors__photo" src="./img/doctor.png" alt="#">
+                                <div class="doctors__description">
+                                    <p class="doctors__post">Врач хирург</p>
+                                    <a href="#">
+                                        <h3 class="doctors__name">Петров Иван Иванович</h3>
+                                    </a>
+                                    <p class="doctors__experience">Стаж работы 10 лет</p>
+                                    <ul class="list doctors__lists">
+                                        <li class="list-item">
+                                            <a href="./current-doctor.html">
+                                                <svg class="ellipse-icon">
+                                                    <use href="./img/icons/icons.svg#ellipse-full"></use>
+                                                </svg>
+                                                <span class="list-text">ДЦ на Ямской</span>
+                                            </a>
+                                        </li>
+                                        <li class="list-item">
+                                            <a href="#">
+                                                <svg class="ellipse-icon">
+                                                    <use href="./img/icons/icons.svg#ellipse-full"></use>
+                                                </svg>
+                                                <span class="list-text">ДЦ на Гольцова</span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                    <button class="btn btn_white">Записаться</button>
+                                </div>
+                            </li>
+                            <li class="doctors__item">
+                                <img class="doctors__photo" src="./img/doctor.png" alt="#">
+                                <div class="doctors__description">
+                                    <p class="doctors__post">Врач хирург</p>
+                                    <a href="./current-doctor.html">
+                                        <h3 class="doctors__name">Петров Иван Иванович</h3>
+                                    </a>
+                                    <p class="doctors__experience">Стаж работы 10 лет</p>
+                                    <ul class="list doctors__lists">
+                                        <li class="list-item">
+                                            <a href="#">
+                                                <svg class="ellipse-icon">
+                                                    <use href="./img/icons/icons.svg#ellipse-full"></use>
+                                                </svg>
+                                                <span class="list-text">ДЦ на Ямской</span>
+                                            </a>
+                                        </li>
+                                        <li class="list-item">
+                                            <a href="#">
+                                                <svg class="ellipse-icon">
+                                                    <use href="./img/icons/icons.svg#ellipse-full"></use>
+                                                </svg>
+                                                <span class="list-text">ДЦ на Гольцова</span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                    <button class="btn btn_white">Записаться</button>
+                                </div>
+                            </li>
+                            <li class="doctors__item">
+                                <img class="doctors__photo" src="./img/doctor.png" alt="#">
+                                <div class="doctors__description">
+                                    <p class="doctors__post">Врач хирург</p>
+                                    <a href="./current-doctor.html">
+                                        <h3 class="doctors__name">Петров Иван Иванович</h3>
+                                    </a>
+                                    <p class="doctors__experience">Стаж работы 10 лет</p>
+                                    <ul class="list doctors__lists">
+                                        <li class="list-item">
+                                            <a href="#">
+                                                <svg class="ellipse-icon">
+                                                    <use href="./img/icons/icons.svg#ellipse-full"></use>
+                                                </svg>
+                                                <span class="list-text">ДЦ на Ямской</span>
+                                            </a>
+                                        </li>
+                                        <li class="list-item">
+                                            <a href="#">
+                                                <svg class="ellipse-icon">
+                                                    <use href="./img/icons/icons.svg#ellipse-full"></use>
+                                                </svg>
+                                                <span class="list-text">ДЦ на Гольцова</span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                    <button class="btn btn_white">Записаться</button>
+                                </div>
+                            </li>
+                            <li class="doctors__item">
+                                <img class="doctors__photo" src="./img/doctor.png" alt="#">
+                                <div class="doctors__description">
+                                    <p class="doctors__post">Врач хирург</p>
+                                    <a href="#">
+                                        <h3 class="doctors__name">Петров Иван Иванович</h3>
+                                    </a>
+                                    <p class="doctors__experience">Стаж работы 10 лет</p>
+                                    <ul class="list doctors__lists">
+                                        <li class="list-item">
+                                            <a href="#">
+                                                <svg class="ellipse-icon">
+                                                    <use href="./img/icons/icons.svg#ellipse-full"></use>
+                                                </svg>
+                                                <span class="list-text">ДЦ на Ямской</span>
+                                            </a>
+                                        </li>
+                                        <li class="list-item">
+                                            <a href="#">
+                                                <svg class="ellipse-icon">
+                                                    <use href="./img/icons/icons.svg#ellipse-full"></use>
+                                                </svg>
+                                                <span class="list-text">ДЦ на Гольцова</span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                    <button class="btn btn_white">Записаться</button>
+                                </div>
+                            </li>
+                            <li class="doctors__item">
+                                <img class="doctors__photo" src="./img/doctor.png" alt="#">
+                                <div class="doctors__description">
+                                    <p class="doctors__post">Врач хирург</p>
+                                    <a href="#">
+                                        <h3 class="doctors__name">Петров Иван Иванович</h3>
+                                    </a>
+                                    <p class="doctors__experience">Стаж работы 10 лет</p>
+                                    <ul class="list doctors__lists">
+                                        <li class="list-item">
+                                            <a href="./current-doctor.html">
+                                                <svg class="ellipse-icon">
+                                                    <use href="./img/icons/icons.svg#ellipse-full"></use>
+                                                </svg>
+                                                <span class="list-text">ДЦ на Ямской</span>
+                                            </a>
+                                        </li>
+                                        <li class="list-item">
+                                            <a href="#">
+                                                <svg class="ellipse-icon">
+                                                    <use href="./img/icons/icons.svg#ellipse-full"></use>
+                                                </svg>
+                                                <span class="list-text">ДЦ на Гольцова</span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                    <button class="btn btn_white">Записаться</button>
+                                </div>
+                            </li>
+                            <li class="doctors__item">
+                                <img class="doctors__photo" src="./img/doctor.png" alt="#">
+                                <div class="doctors__description">
+                                    <p class="doctors__post">Врач хирург</p>
+                                    <a href="./current-doctor.html">
+                                        <h3 class="doctors__name">Петров Иван Иванович</h3>
+                                    </a>
+                                    <p class="doctors__experience">Стаж работы 10 лет</p>
+                                    <ul class="list doctors__lists">
+                                        <li class="list-item">
+                                            <a href="#">
+                                                <svg class="ellipse-icon">
+                                                    <use href="./img/icons/icons.svg#ellipse-full"></use>
+                                                </svg>
+                                                <span class="list-text">ДЦ на Ямской</span>
+                                            </a>
+                                        </li>
+                                        <li class="list-item">
+                                            <a href="#">
+                                                <svg class="ellipse-icon">
+                                                    <use href="./img/icons/icons.svg#ellipse-full"></use>
+                                                </svg>
+                                                <span class="list-text">ДЦ на Гольцова</span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                    <button class="btn btn_white">Записаться</button>
+                                </div>
+                            </li>
+                            <li class="doctors__item">
+                                <img class="doctors__photo" src="./img/doctor.png" alt="#">
+                                <div class="doctors__description">
+                                    <p class="doctors__post">Врач хирург</p>
+                                    <a href="./current-doctor.html">
+                                        <h3 class="doctors__name">Петров Иван Иванович</h3>
+                                    </a>
+                                    <p class="doctors__experience">Стаж работы 10 лет</p>
+                                    <ul class="list doctors__lists">
+                                        <li class="list-item">
+                                            <a href="#">
+                                                <svg class="ellipse-icon">
+                                                    <use href="./img/icons/icons.svg#ellipse-full"></use>
+                                                </svg>
+                                                <span class="list-text">ДЦ на Ямской</span>
+                                            </a>
+                                        </li>
+                                        <li class="list-item">
+                                            <a href="#">
+                                                <svg class="ellipse-icon">
+                                                    <use href="./img/icons/icons.svg#ellipse-full"></use>
+                                                </svg>
+                                                <span class="list-text">ДЦ на Гольцова</span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                    <button class="btn btn_white">Записаться</button>
+                                </div>
+                            </li>
+                            <li class="doctors__item">
+                                <img class="doctors__photo" src="./img/doctor.png" alt="#">
+                                <div class="doctors__description">
+                                    <p class="doctors__post">Врач хирург</p>
+                                    <a href="#">
+                                        <h3 class="doctors__name">Петров Иван Иванович</h3>
+                                    </a>
+                                    <p class="doctors__experience">Стаж работы 10 лет</p>
+                                    <ul class="list doctors__lists">
+                                        <li class="list-item">
+                                            <a href="#">
+                                                <svg class="ellipse-icon">
+                                                    <use href="./img/icons/icons.svg#ellipse-full"></use>
+                                                </svg>
+                                                <span class="list-text">ДЦ на Ямской</span>
+                                            </a>
+                                        </li>
+                                        <li class="list-item">
+                                            <a href="#">
+                                                <svg class="ellipse-icon">
+                                                    <use href="./img/icons/icons.svg#ellipse-full"></use>
+                                                </svg>
+                                                <span class="list-text">ДЦ на Гольцова</span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                    <button class="btn btn_white">Записаться</button>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Детские -->
+                    <div class="doctors__type">
+                        <h3 class="doctors__type-title">Детские врачи</h3>
+                        <ul class="doctors__list">
+                            <li class="doctors__item">
+                                <img class="doctors__photo" src="./img/doctor.png" alt="#">
+                                <div class="doctors__description">
+                                    <p class="doctors__post">Врач хирург</p>
+                                    <a href="./current-doctor.html">
+                                        <h3 class="doctors__name">Петров Иван Иванович</h3>
+                                    </a>
+                                    <p class="doctors__experience">Стаж работы 10 лет</p>
+                                    <ul class="list doctors__lists">
+                                        <li class="list-item">
+                                            <a href="#">
+                                                <svg class="ellipse-icon">
+                                                    <use href="./img/icons/icons.svg#ellipse-full"></use>
+                                                </svg>
+                                                <span class="list-text">ДЦ на Ямской</span>
+                                            </a>
+                                        </li>
+                                        <li class="list-item">
+                                            <a href="#">
+                                                <svg class="ellipse-icon">
+                                                    <use href="./img/icons/icons.svg#ellipse-full"></use>
+                                                </svg>
+                                                <span class="list-text">ДЦ на Гольцова</span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                    <button class="btn btn_white">Записаться</button>
+                                </div>
+                            </li>
+                            <li class="doctors__item">
+                                <img class="doctors__photo" src="./img/doctor.png" alt="#">
+                                <div class="doctors__description">
+                                    <p class="doctors__post">Врач хирург</p>
+                                    <a href="./current-doctor.html">
+                                        <h3 class="doctors__name">Петров Иван Иванович</h3>
+                                    </a>
+                                    <p class="doctors__experience">Стаж работы 10 лет</p>
+                                    <ul class="list doctors__lists">
+                                        <li class="list-item">
+                                            <a href="#">
+                                                <svg class="ellipse-icon">
+                                                    <use href="./img/icons/icons.svg#ellipse-full"></use>
+                                                </svg>
+                                                <span class="list-text">ДЦ на Ямской</span>
+                                            </a>
+                                        </li>
+                                        <li class="list-item">
+                                            <a href="#">
+                                                <svg class="ellipse-icon">
+                                                    <use href="./img/icons/icons.svg#ellipse-full"></use>
+                                                </svg>
+                                                <span class="list-text">ДЦ на Гольцова</span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                    <button class="btn btn_white">Записаться</button>
+                                </div>
+                            </li>
+                            <li class="doctors__item">
+                                <img class="doctors__photo" src="./img/doctor.png" alt="#">
+                                <div class="doctors__description">
+                                    <p class="doctors__post">Врач хирург</p>
+                                    <a href="#">
+                                        <h3 class="doctors__name">Петров Иван Иванович</h3>
+                                    </a>
+                                    <p class="doctors__experience">Стаж работы 10 лет</p>
+                                    <ul class="list doctors__lists">
+                                        <li class="list-item">
+                                            <a href="#">
+                                                <svg class="ellipse-icon">
+                                                    <use href="./img/icons/icons.svg#ellipse-full"></use>
+                                                </svg>
+                                                <span class="list-text">ДЦ на Ямской</span>
+                                            </a>
+                                        </li>
+                                        <li class="list-item">
+                                            <a href="#">
+                                                <svg class="ellipse-icon">
+                                                    <use href="./img/icons/icons.svg#ellipse-full"></use>
+                                                </svg>
+                                                <span class="list-text">ДЦ на Гольцова</span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                    <button class="btn btn_white">Записаться</button>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+
+                </div>
+
+            </section>
+
+        </main>
+        @@include('components/_maps.html')
+        @@include('components/_footer.html')
+    </div>
+    <script src="js/jquery-3.6.0.min.js"></script>
+    
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="js/script.js"></script>
+</body>
+
+</html>
