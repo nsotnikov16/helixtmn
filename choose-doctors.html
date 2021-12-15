@@ -84,7 +84,7 @@
             </div>
 
             <!-- Кнопка -->
-            <button class="btn btn_main">Запись на прием</button>
+            <button data-pointer="signup" class="btn btn_main">Запись на прием</button>
 
             <!-- Верхнее меню -->
             <nav class="menu">
@@ -778,7 +778,35 @@
     </div>
 </footer>
     </div>
+
+    <div id="signup" class="popup">
+        <div class="popup__container">
+            <div class="popup__content">
+                <form class="form">
+                    <img src="./img/form-signup.png" alt="Записаться" class="form__img">
+                    <h3 class="form__title">Записаться на прием</h3>
+                    <ul class="form__rows">
+                        <li class="form__row">
+                            <input type="text" autocomplete="off" placeholder="Ваше имя" name="name" required
+                                minlength="3" maxlength="20" class="form__input">
+                        </li>
+                        <li class="form__row">
+                            <label for="phone" class="form__label">Телефон</label>
+                            <input type="tel" autocomplete="off" required name="phone" id="phone"
+                                placeholder="+7 900 550 50 50" class="form__input">
+                        </li>
+                    </ul>
+                    <button class="btn">Записаться</button>
+                    <p class="form__politics">Нажимая на кпопку «Записаться» вы соглашаетесь на <a href="#">политику
+                            обработки данных</a></p>
+                </form>
+            </div>
+            <button class="popup__close">&#10006;</button>
+        </div>
+    </div>
+
     <script src="js/jquery-3.6.0.min.js"></script>
+    <script src="js/jquery.maskedinput.min.js"></script>
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script src="js/script.js"></script>
 </body>
