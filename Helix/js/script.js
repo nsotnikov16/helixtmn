@@ -112,7 +112,7 @@ class Popup {
         this._closeButton = this._popupElement.querySelector('.popup__close');
         this._img = this._popupElement.id === "photo" ? this._popupElement.querySelector('.popup__img') : null;
         this._handleEscClose = this._handleEscClose.bind(this)
-        this.openingLinks = document.querySelectorAll(`[data-pointer="${this._popupElement.id}"]`)
+        this._openingLinks = document.querySelectorAll(`[data-pointer="${this._popupElement.id}"]`)
         this.setEventListeners()
     }
 
@@ -143,7 +143,7 @@ class Popup {
     }
 
     setEventListeners() {
-        this.openingLinks.forEach(link => link.addEventListener('click', (e) => { e.preventDefault(); this.open(e.target) }))
+        this._openingLinks.forEach(link => link.addEventListener('click', (e) => { e.preventDefault(); this.open(e.target) }))
         this._closeButton.addEventListener('click', () => this.close());
         this._popupElement.addEventListener('click', this._handleOverlayClick.bind(this));
     }
@@ -154,9 +154,27 @@ const popups = document.querySelectorAll('.popup')
 if (popups.length > 0) popups.forEach(item => new Popup(item))
 
 // Mask phone
-$(function(){
+$(function () {
     $("#phone").mask("+7 999 999-9999");
-  });
+});
+
+
+const inputRows = document.querySelectorAll('.form__input')
+if (inputRows.length > 0) {
+    function focus(el) {
+        el.closest('.form__row').classList.add('focus')
+        el.addEventListener('focusout', () => focusout(el))
+    }
+
+    function focusout(el) {
+        el.closest('.form__row').classList.remove('focus')
+        return el.removeEventListener('focusout', focusout)
+    }
+
+    inputRows.forEach(item => {
+        item.addEventListener('focus', () => focus(item))
+    })
+}
 
 
 //Яндекс карты
