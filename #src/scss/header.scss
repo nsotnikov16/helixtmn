@@ -7,6 +7,13 @@
     /* gap: 10px 0; */
   }
 
+  &__burger {
+    display: none;
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
   &__submenu {
     grid-column: 2/4;
     grid-row: 1/2;
@@ -96,7 +103,7 @@
     color: #45b553;
 
     &:hover {
-      background: #45B553;
+      background: #45b553;
       color: #fff;
     }
   }
@@ -127,49 +134,304 @@
 
 @media (max-width: 1289px) {
   .header {
-    &__container {
-      grid-template-columns: 1fr 1fr;
-      /* gap: 0; */
+    position: relative;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #e5e7eb;
+
+    &__burger {
+      width: 24px;
+      display: flex;
+      flex-direction: column;
+      span {
+        display: block;
+        height: 2px;
+        width: 100%;
+        background: #111827;
+        margin-bottom: 5px;
+        &:last-child {
+          margin-bottom: 0;
+        }
+
+        transform: rotate(0) translate(0);
+        transition: transform 0.3s ease-in;
+      }
     }
 
-    &__submenu,
-    &__search,
-    &__eye,
-    &__contacts {
+    &::before {
+      position: absolute;
+      content: "";
+      top: 90px;
+      left: 0;
+      right: 0;
+      height: 1px;
+      width: 100%;
+      display: block;
+      background: #e5e7eb;
+    }
+
+    &__container {
+      grid-template-columns: 1fr 24px 24px;
+      gap: 40px;
+    }
+
+    &__submenu {
       display: none;
     }
 
-    &__submenu-list {
-    }
-
-    &__submenu-item {
-    }
-
-    &__submenu-link {
-    }
-
     &__eye {
-    }
-
-    &__eye-icon {
+      display: none;
     }
 
     &__search {
-    }
+      grid-column: 3/4;
+      grid-row: 2/3;
+      border: 0;
 
-    &__search-row {
-    }
+      &-row {
+        padding: 0;
+        width: auto;
+        svg {
+          opacity: 1;
+          flex-grow: 0;
+          flex-shrink: 0;
+          width: 24px;
+          height: 24px;
+        }
+      }
 
-    &__search-input {
-    }
+      &-input {
+        display: none;
+      }
 
-    &__search-btn {
+      &-btn {
+        display: none;
+      }
     }
 
     &__contacts {
+      grid-column: 2/3;
+      grid-row: 2/3;
+      margin: 0;
+      width: auto;
+
+      .phone {
+        svg {
+          width: 24px;
+          height: 24px;
+        }
+
+        p {
+          display: none;
+        }
+      }
+
+      &-map {
+        display: none;
+      }
     }
 
-    &__contacts-map {
+    .btn_main {
+      grid-column: 3/4;
+      grid-row: 1/2;
+    }
+
+    .logo {
+      margin-right: 0;
+      img {
+        max-width: 145px;
+      }
+
+      p {
+        font-size: 10.5px;
+        margin-top: 6px;
+        letter-spacing: 0.03em;
+        /* font-weight: 500; */
+      }
+    }
+
+    .menu {
+      /* display: none; */
+      grid-row: 2/3;
+      grid-column: 1/2;
+      display: flex;
+      align-items: center;
+      margin: 0;
+
+      &__list {
+        display: none;
+      }
+    }
+
+    /* Открытое меню */
+    &.open-menu {
+      &::before {
+        display: none;
+      }
+
+      .header__container {
+        gap: 20px 40px;
+      }
+
+      .header__burger {
+        span {
+          &:nth-child(2) {
+            display: none;
+          }
+
+          &:first-child {
+            transform: rotate(45deg) translateX(5px);
+          }
+
+          &:last-child {
+            transform: rotate(-45deg) translateX(5px);
+          }
+        }
+      }
+
+      .menu__list {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        padding: 0 30px;
+        background: #fff;
+        z-index: 9999;
+        align-items: flex-start;
+        box-shadow: 0px 20px 12px rgba(75, 85, 99, 0.13);
+        @media (max-width: 560px) {
+          padding: 0 15px;
+        }
+      }
+
+      .menu__item {
+        width: 100%;
+        border-bottom: 1px solid #e5e7eb;
+
+        &:last-of-type {
+          border-bottom: 0;
+        }
+
+        &.menu__item-dropdown {
+          &.open,
+          &.open:hover {
+            .menu__link {
+              &::before,
+              &::after {
+                top: 14px;
+                background: #45b553;
+              }
+            }
+            .menu__expand {
+              position: static;
+              visibility: visible;
+              opacity: 1;
+              padding: 0;
+              display: block;
+            }
+
+            .menu__expand-layout {
+              padding: 0 20px 10px 20px;
+              border: 0;
+            }
+
+            .menu__dropdown-link {
+              display: block;
+            }
+
+            .menu__link::before {
+              transform: rotate(45deg);
+            }
+
+            .menu__link::after {
+              transform: rotate(-45deg);
+            }
+
+            .menu__link {
+              color: #45b553;
+            }
+          }
+
+          &:hover {
+            .menu__expand {
+              display: none;
+            }
+
+            .menu__link {
+              color: #111827;
+            }
+
+            .menu__link::before {
+              transform: rotate(-45deg);
+              background: #111827;
+            }
+
+            .menu__link::after {
+              transform: rotate(45deg);
+              background: #111827;
+            }
+          }
+        }
+      }
+
+      .menu__link {
+        width: 100%;
+        font-weight: 500;
+        padding: 9px 0;
+
+        &::before {
+          right: 8px;
+          top: 40%;
+        }
+
+        &::after {
+          right: 2px;
+          top: 40%;
+        }
+
+        &.menu__link_covid {
+          justify-content: flex-start;
+        }
+      }
+
+      .header__submenu-list {
+        flex-direction: column;
+        align-items: flex-start;
+        width: 100%;
+        padding-bottom: 20px;
+      }
+
+      .header__submenu-item {
+        margin-right: 0;
+      }
+
+      .header__submenu-link {
+        display: block;
+        font-size: 16px;
+        font-weight: 19px;
+        padding: 6px 0;
+      }
+    }
+
+    /* Конец открытого меню */
+  }
+}
+
+@media (max-width: 1080px) {
+  .header {
+    &::before {
+      top: 80px;
+    }
+
+    .logo {
+      img {
+        max-width: 108px;
+      }
+
+      p {
+        font-size: 8px;
+      }
     }
   }
 }

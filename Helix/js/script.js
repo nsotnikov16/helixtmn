@@ -74,6 +74,42 @@ if (tabs.length > 0) {
 }
 
 
+// Меню в шапке (max-width: 1289px)
+const header = document.querySelector('.header')
+const burger = header.querySelector('.header__burger')
+const submenu = header.querySelector('.header__submenu')
+const submenuList = header.querySelector('.header__submenu-list')
+const menuList = header.querySelector('.menu__list')
+const menuItemsDropdown = header.querySelectorAll('.menu__item-dropdown')
+menuItemsDropdown.forEach(item => {
+    item.querySelector('.menu__link').addEventListener('click', () => {
+        item.classList.toggle('open')
+    })
+})
+
+burger.addEventListener('click', () => {
+    header.classList.toggle('open-menu')
+})
+
+function handleHeaderMenu() {
+    menuList.append(submenuList)
+    menuItemsDropdown.forEach(menuItem => {
+        const menuLink = menuItem.querySelector('.menu__link')
+        menuLink.addEventListener('click', e => e.preventDefault())
+    })
+}
+
+if (window.innerWidth <= 1289) {
+    handleHeaderMenu()
+}
+
+window.addEventListener('resize', () => {
+    window.innerWidth <= 1289 ? handleHeaderMenu() : submenu.append(submenuList)
+    
+})
+
+
+
 // Левое меню 
 
 const leftMenu = document.querySelector('.left-menu')
@@ -223,49 +259,49 @@ const addresses = [
     {
         id: "1",
         coordinates: [57.158492, 65.552467],
-        title: "Дц на Свердлова",
+        title: "ДЦ на Свердлова",
         adress: "г. Тюмень, улица Свердлова, 5к1",
         idMap: "79382519486"
     },
     {
         id: "2",
         coordinates: [57.161763, 65.494850],
-        title: "Дц на Ямской",
+        title: "ДЦ на Ямской",
         adress: "г. Тюмень, Ямская улица, 86",
         idMap: "34832144675"
     },
     {
         id: "3",
         coordinates: [57.171181, 65.555510],
-        title: "Дц на Газовиков",
+        title: "ДЦ на Газовиков",
         adress: "г. Тюмень, улица Газовиков, 61",
         idMap: "200308955503"
     },
     {
         id: "4",
         coordinates: [57.146266, 65.552662],
-        title: "Дц на Республики",
+        title: "ДЦ на Республики",
         adress: "г. Тюмень, улица Республики, 86к1",
         //нет в яндекс картах, координаты брались с 2гис
     },
     {
         id: "5",
         coordinates: [57.108818, 65.573952],
-        title: "Дц на Гольцова",
+        title: "ДЦ на Гольцова",
         adress: "г. Тюмень, улица Василия Гольцова, 10",
         idMap: "68329935208"
     },
     {
         id: "6",
         coordinates: [57.098054, 65.586601],
-        title: "Дц на Монтажников",
+        title: "ДЦ на Монтажников",
         adress: "г. Тюмень, улица Монтажников, 61",
         idMap: "204885165549"
     },
     {
         id: "7",
         coordinates: [57.114159, 65.553421],
-        title: "Дц на Менделеева",
+        title: "ДЦ на Менделеева",
         adress: "г. Тюмень, улица Дмитрия Менделеева, 5",
         idMap: "192625494590"
     },
@@ -274,7 +310,7 @@ const addresses = [
     {
         id: "8",
         coordinates: [57.159395, 65.523845],
-        title: "Дц на Ленина",
+        title: "ДЦ на Ленина",
         adress: "г. Тюмень, ул. Ленина, 12",
         idMap: "34542445968"
     },
@@ -379,8 +415,8 @@ if (reviews) {
     addresses.forEach(({ idMap, title }, ind) => {
         const html =
             `<div class="select__option">
-            <label for="${idMap ? idMap : (ind+1)}" class="select__label">${title}</label>
-            <input onclick="openReviews(this)" type="checkbox" name="branch" value="${title}" id="${idMap ? idMap : (ind+1)}">
+            <label for="${idMap ? idMap : (ind + 1)}" class="select__label">${title}</label>
+            <input onclick="openReviews(this)" type="checkbox" name="branch" value="${title}" id="${idMap ? idMap : (ind + 1)}">
         </div>`
         selectLayout.insertAdjacentHTML("beforeend", html)
     })

@@ -25,6 +25,10 @@ body {
     @media (max-width: 1290px) {
       padding: 0 30px;
     }
+
+    @media (max-width: 560px) {
+      padding: 0 15px;
+    }
   }
 
   &__title {
