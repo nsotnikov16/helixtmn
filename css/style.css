@@ -985,7 +985,6 @@ section {
 .header__container {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  /* gap: 10px 0; */
 }
 
 .header__burger {
@@ -1097,7 +1096,6 @@ section {
   width: 90%;
   font-size: 16px;
   line-height: 19px;
-  /* color: #9ca3af; */
 }
 
 .header__search-btn {
@@ -3515,8 +3513,7 @@ section {
     top: 40%;
     left: -45px;
     background: #fff;
-    /* height: 24px;
-    z-index: -1; */
+    z-index: -1;
   }
 
   .header__search-close span {
@@ -3633,11 +3630,9 @@ section {
     font-size: 10.5px;
     margin-top: 6px;
     letter-spacing: 0.03em;
-    /* font-weight: 500; */
   }
 
   .header .menu {
-    /* display: none; */
     grid-row: 2/3;
     grid-column: 1/2;
     display: -webkit-box;
@@ -3833,9 +3828,6 @@ section {
     width: auto;
     border: 1px solid rgba(69, 181, 83, 0.6);
     z-index: 999;
-    /* &-close {
-      display: block;
-    } */
   }
 
   .header.open-search .header__search-row {
