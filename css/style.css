@@ -3515,8 +3515,8 @@ section {
     top: 40%;
     left: -45px;
     background: #fff;
-    height: 24px;
-    z-index: -1;
+    /* height: 24px;
+    z-index: -1; */
   }
 
   .header__search-close span {
@@ -3833,10 +3833,9 @@ section {
     width: auto;
     border: 1px solid rgba(69, 181, 83, 0.6);
     z-index: 999;
-  }
-
-  .header.open-search .header__search-close {
-    display: block;
+    /* &-close {
+      display: block;
+    } */
   }
 
   .header.open-search .header__search-row {
