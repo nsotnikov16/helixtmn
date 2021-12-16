@@ -82,13 +82,27 @@ const submenuList = header.querySelector('.header__submenu-list')
 const menuList = header.querySelector('.menu__list')
 const menuItemsDropdown = header.querySelectorAll('.menu__item-dropdown')
 menuItemsDropdown.forEach(item => {
-    item.querySelector('.menu__link').addEventListener('click', () => {
+    const menuLink = item.querySelector('.menu__link')
+    const menuDropdownLinks = item.querySelectorAll('.menu__dropdown-link')
+
+    menuDropdownLinks.forEach(el => {
+        const text = el.textContent;
+        if (!el.classList.contains('menu__dropdown-link_none')) {
+            el.textContent = ""
+            el.insertAdjacentHTML('afterbegin', `<svg><use href="img/icons/icons.svg#ellipse"></use></svg><span>${text}</span>`)
+        }
+    })
+
+    menuLink.addEventListener('click', () => {
         item.classList.toggle('open')
+
     })
 })
 
 burger.addEventListener('click', () => {
     header.classList.toggle('open-menu')
+    if (header.classList.contains('open-search')) header.classList.remove('open-search')
+
 })
 
 function handleHeaderMenu() {
@@ -99,19 +113,36 @@ function handleHeaderMenu() {
     })
 }
 
+
+
+
+// Поиск
+const search = header.querySelector('.header__search')
+const btn = search.querySelector('.header__search-btn')
+const svg = search.querySelector('.header__search-only-icon')
+const closeSearch = search.querySelector('.header__search-close')
+
+svg.addEventListener('click',
+    () => {
+        if (!header.classList.contains('open-search')) header.classList.add('open-search')
+        if (header.classList.contains('open-menu')) header.classList.remove('open-menu')
+    }
+)
+
+closeSearch.addEventListener('click', () => header.classList.remove('open-search'))
+
+
+
 if (window.innerWidth <= 1289) {
     handleHeaderMenu()
+
 }
 
 window.addEventListener('resize', () => {
     window.innerWidth <= 1289 ? handleHeaderMenu() : submenu.append(submenuList)
-    
 })
 
-
-
 // Левое меню 
-
 const leftMenu = document.querySelector('.left-menu')
 if (leftMenu) {
     const leftMenuItems = leftMenu.querySelectorAll('.left-menu__item_dropdown');

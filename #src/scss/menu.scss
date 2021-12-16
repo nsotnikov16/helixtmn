@@ -123,6 +123,14 @@
         font-size: 16px;
         line-height: 30px;
         white-space: nowrap;
+
+        svg {
+            display: none;
+            width: 12px;
+            height: 12px;
+            margin-right: 6px;
+        }
+
         &.menu__dropdown-link_none {
             color: #9ca3af;
         }
@@ -130,5 +138,18 @@
         &:hover:not(.menu__dropdown-link_none) {
             color: #45b553;
         }
+    }
+}
+
+@media (max-width: 1289px) {
+    .menu__dropdown-link:not(.menu__dropdown-link_none) {
+        svg {
+            display: inline;
+            flex-shrink: 0;
+        }
+
+        display: flex !important;
+        align-items: baseline !important;
+        white-space: initial !important;
     }
 }
