@@ -6,7 +6,7 @@
   &__container {
   }
 
-  &__absoulute {
+  &__absolute {
     position: absolute;
 
     top: 7%;
@@ -16,18 +16,87 @@
     z-index: 9999999;
     background: #fff;
     border-radius: 7px;
+    @media (max-width: 1024px) {
+      bottom: initial;
+      padding: 15px 30px;
+      width: 500px;
+    }
+
+    @media (max-width: 560px) {
+      width: calc(100vw - 30px);
+    }
+
+    @media(max-width: 375px) {
+      padding: 15px 20px;
+    }
+
+    @media(max-width: 320px) {
+      padding: 15px 10px;
+    }
+
+    &.open {
+      padding-bottom: 25px;
+      .list {
+        display: grid;
+      }
+
+      .maps__absolute-title {
+        &::before {
+          transform: rotate(-45deg);
+        }
+
+        &::after {
+          transform: rotate(45deg);
+        }
+      }
+    }
+
   }
+
+
+  
 
   &__absolute-title {
     font-weight: 500;
     font-size: 30px;
     line-height: 54px;
     margin: 0 10px 0 12px;
+    font-size: 24px;
+
+    @media (max-width: 1024px) {
+      position: relative;
+
+      &::before,
+      &::after {
+        position: absolute;
+        content: "";
+        top: 50%;
+        width: 12px;
+        height: 2px;
+        background: #111827;
+        transition: transform 0.2s ease-in;
+      }
+
+      &::before {
+        right: 8px;
+        transform: rotate(45deg);
+      }
+
+      &::after {
+        right: 0;
+        transform: rotate(-45deg);
+        
+      }
+    }
   }
 
   .list {
     grid-template-columns: 1fr;
     gap: 10px;
+
+    @media (max-width: 1024px) {
+      display: none;
+    }
   }
   .list-item {
     a {
@@ -79,10 +148,14 @@
       p {
       }
     }
+    
   }
   .phone {
     p {
       margin-left: 0;
     }
   }
+
+
+  
 }

@@ -69,6 +69,14 @@ if (tabs.length > 0) {
                     if (el.dataset.pointer === input.id) el.classList.add('tabs__tab_active')
                 })
                 input.parentNode.classList.add('label--active')
+                if (window.innerWidth <= 1080) {
+                    $('html, body').animate({
+                        scrollTop: $('.tabs__controls').offset().top
+                    }, {
+                        duration: 300,   // по умолчанию «400» 
+                        easing: "linear" // по умолчанию «swing» 
+                    });
+                }
             })
         })
 
@@ -370,10 +378,13 @@ function init() {
         {
             center: [57.155719, 65.550156],
             zoom: 12,
-            controls: [],
+            controls: ['zoomControl', 'geolocationControl'],
         },
         {
             searchControlProvider: "yandex#search",
+            zoomControlPosition: { right: 10, top: 250 },
+            zoomControlSize: 'small',
+            geolocationControlPosition: { right: 10, top: 330 }
         }
     ),
 
@@ -394,6 +405,11 @@ function init() {
                 </a>
             </div>`
         );
+
+    const absolute = document.querySelector('.maps__absolute')
+    const titleAbsolute = document.querySelector('.maps__absolute-title')
+    titleAbsolute.addEventListener('click', () => absolute.classList.toggle('open'))
+
 
     addresses.forEach(
         ({ adress, title, coordinates, id }, ind) => {
@@ -420,6 +436,8 @@ function init() {
 
             const links = document.querySelectorAll('.maps .list-item a')
             const link = document.querySelector(`[data-map="${id}"]`)
+            const spanLink = link.querySelector('.list-text')
+
 
             const handleClass = () => {
                 links.forEach(item => item.classList.remove('active'))
@@ -427,8 +445,10 @@ function init() {
             }
 
             link.addEventListener('click', () => {
+                titleAbsolute.textContent = spanLink.textContent;
                 myMap.geoObjects.get(ind).balloon.open()
                 handleClass()
+                absolute.classList.remove('open')
             })
 
             myPlacemarkWithContent.events.add('click', handleClass)
