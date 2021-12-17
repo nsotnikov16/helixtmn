@@ -50,6 +50,7 @@ if (tabs.length > 0) {
     tabs.forEach(element => {
         const tabsControls = element.querySelector('.tabs__controls')
         const tabsInputs = tabsControls.querySelectorAll('input')
+        const tabsLabels = tabsControls.querySelectorAll('label')
         const tabsContent = element.querySelector('.tabs__content')
         const tabsTab = tabsContent.querySelectorAll('.tabs__tab')
 
@@ -70,6 +71,21 @@ if (tabs.length > 0) {
                 input.parentNode.classList.add('label--active')
             })
         })
+
+        function changeBlocksMobile() {
+            tabsTab.forEach(tab => {
+                tabsLabels.forEach(label => {
+                    if (label.getAttribute('for') === tab.dataset.pointer) label.after(tab)
+                })
+            })
+        }
+
+        function changeBlocksDesktop() {
+            tabsTab.forEach(tab => tabsContent.append(tab))
+        }
+
+        if (window.innerWidth <= 1080) changeBlocksMobile()
+        window.addEventListener('resize', () => window.innerWidth <= 1080 ? changeBlocksMobile() : changeBlocksDesktop())
     })
 }
 
