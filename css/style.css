@@ -507,6 +507,7 @@ body {
 
 .page {
   color: #111827;
+  overflow: hidden;
 }
 
 .page__container {
