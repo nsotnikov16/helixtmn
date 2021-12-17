@@ -1,5 +1,29 @@
 .doctors {
   /* margin-bottom: 90px; */
+
+  &.doctors_main {
+    @media (max-width: 1289px) {
+      .page__container {
+        @media (max-width: 1289px) {
+          padding-right: 0;
+        }
+      }
+
+      .doctors__list {
+        display: flex;
+        overflow: auto;
+        align-items: stretch;
+        gap: 0;
+      }
+
+      .doctors__item {
+        margin-right: 24px;
+        &:last-child {
+          margin-right: 0;
+        }
+      }
+    }
+  }
   &__list {
     display: grid;
     grid-template-columns: repeat(4, 1fr);

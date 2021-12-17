@@ -1,5 +1,11 @@
 .diagnostics {
     /* margin-bottom: 58px; */
+
+    .page__container {
+        @media (max-width: 1289px) {
+            padding-right: 0;
+        }
+    }
     &__container {
     }
 
@@ -8,12 +14,33 @@
         display: grid;
         grid-template-columns: repeat(4, 1fr);
         gap: 30px;
+
+        @media (max-width: 1289px) {
+            display: flex;
+            overflow: auto;
+            align-items: stretch;
+            gap: 0;
+        }
     }
 
     &__card {
         border: 1px solid #e5e7eb;
         border-radius: 13px;
         padding: 40px 18px;
+
+        @media (max-width: 1289px) {
+            margin-right: 30px;
+            &:last-child {
+                margin-right: 0;
+            }
+        }
+
+        min-width: 300px;
+        max-width: 300px;
+
+        @media (max-width: 1080px) {
+            margin-right: 20px;
+        }
     }
 
     &__card-img {
@@ -36,6 +63,4 @@
             align-items: flex-start;
         }
     }
-
-    
 }

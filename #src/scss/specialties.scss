@@ -18,6 +18,20 @@
         display: grid;
         grid-template-columns: repeat(4, 1fr);
         gap: 35px 50px;
+
+        @media (max-width: 1080px) {
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px 15px;
+        }
+
+        @media(max-width: 767px) {
+            grid-template-columns: repeat(2, 1fr);
+            gap: 25px 30px;
+        }
+
+        @media(max-width: 580px) {
+            grid-template-columns: 1fr;
+        }
     }
 
     &__item {
@@ -35,6 +49,15 @@
             padding-left: 10px;
             font-size: 16px;
             line-height: 19px;
+        }
+
+        @media (max-width: 1080px) {
+            align-items: stretch;
+            svg {
+                width: 25px;
+                height: 25px;
+                flex-shrink: 0;
+            }
         }
     }
 
@@ -110,6 +133,62 @@
             display: none;
             &.tabs__tab_active {
                 display: block;
+            }
+        }
+
+        @media (max-width: 1080px) {
+            * {
+                border: none;
+            }
+            &__content {
+                border: none;
+            }
+
+            &__controls {
+                flex-direction: column;
+
+                > label {
+                    border: none;
+                    width: 100%;
+                    border: 1px solid #8fd398;
+                    border-top: none;
+                    &:first-of-type {
+                        border-top: 1px solid #8fd398;
+                        border-top-right-radius: 9px;
+                    }
+
+                    &.label--active {
+                        border-bottom: 1px solid #8fd398;
+                        border-top: 0;
+
+                        &:first-child {
+                            border-top: 1px solid #8fd398;
+                        }
+
+                        &::after {
+                            content: none;
+                        }
+                    }
+                    &:last-of-type:not(.label--active) {
+                        border-bottom-left-radius: 9px;
+                        border-bottom-right-radius: 9px;
+                    }
+                }
+            }
+
+            &__tab_active {
+                background: #f3faf4;
+                border-bottom: 1px solid #8fd398;
+                border-bottom-left-radius: 0;
+                border-bottom-right-radius: 0;
+                border-left: 1px solid #8fd398;
+                border-right: 1px solid #8fd398;
+                width: 100%;
+                &:last-child {
+                    border-bottom-left-radius: 9px;
+                    border-bottom-right-radius: 9px;
+                }
+                padding: 40px 30px;
             }
         }
     }

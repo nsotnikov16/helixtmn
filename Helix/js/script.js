@@ -75,7 +75,7 @@ if (tabs.length > 0) {
         function changeBlocksMobile() {
             tabsTab.forEach(tab => {
                 tabsLabels.forEach(label => {
-                    if(label.getAttribute('for') === tab.dataset.pointer) label.after(tab)
+                    if (label.getAttribute('for') === tab.dataset.pointer) label.after(tab)
                 })
             })
         }
@@ -84,22 +84,9 @@ if (tabs.length > 0) {
             tabsTab.forEach(tab => tabsContent.append(tab))
         }
 
-
         if (window.innerWidth <= 1080) changeBlocksMobile()
-
-        window.addEventListener('resize', () => {
-            
-            if (window.innerWidth <= 1080) {
-                changeBlocksMobile()
-            } else {
-                changeBlocksDesktop()
-            }
-        })
+        window.addEventListener('resize', () => window.innerWidth <= 1080 ? changeBlocksMobile() : changeBlocksDesktop())
     })
-
-
-
-
 }
 
 
