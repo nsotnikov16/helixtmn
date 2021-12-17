@@ -2053,7 +2053,7 @@ section {
 }
 
 .about__mission > ul {
-  margin-top: 11px;
+  margin-top: 20px;
   display: grid;
   grid-template-columns: repeat(4, minmax(-webkit-min-content, -webkit-max-content));
   grid-template-columns: repeat(4, minmax(min-content, max-content));
