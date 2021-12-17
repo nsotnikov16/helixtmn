@@ -965,7 +965,7 @@ section {
 .logo p {
   font-family: "Din Pro";
   font-weight: 600;
-  font-size: 14px;
+  font-size: 0.87em;
   line-height: 0;
   margin-top: 10px;
   letter-spacing: 0.015em;
@@ -3627,7 +3627,8 @@ section {
   }
 
   .header .logo p {
-    font-size: 10.5px;
+    /* font-size: 10.5px; */
+    font-size: 0.67em;
     margin-top: 6px;
     letter-spacing: 0.03em;
   }
@@ -3951,7 +3952,7 @@ section {
   }
 
   .header .logo p {
-    font-size: 8px;
+    font-size: 0.5em;
   }
 
   .footer__grid {
