@@ -3501,6 +3501,10 @@ section {
     grid-row: 1/2;
   }
 
+  .header__search-row {
+    padding: 0;
+  }
+
   .header {
     position: relative;
     padding-bottom: 20px;
