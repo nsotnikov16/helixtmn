@@ -968,7 +968,7 @@ section {
 .logo p {
   font-family: "Din Pro";
   font-weight: 600;
-  font-size: 0.87em;
+  font-size: 14px;
   line-height: 0;
   margin-top: 10px;
   letter-spacing: 0.01em;
@@ -1957,10 +1957,10 @@ section {
   margin: 2px !important;
 }
 
-.doctors__lists .list-item a {
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
+.doctors__lists .list-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 .doctors__lists .list-text {
@@ -3499,13 +3499,6 @@ section {
 
   .logo {
     grid-row: 1/2;
-    /* p {
-        font-size: 7.68px;
-        letter-spacing: 0.04em;
-    }
-    img {
-        max-width: 108px;
-    } */
   }
 
   .header {
@@ -3672,8 +3665,7 @@ section {
   }
 
   .header .logo p {
-    /* font-size: 10.5px; */
-    font-size: 0.67em;
+    font-size: 11px;
     margin-top: 6px;
     letter-spacing: 0.01em;
   }
@@ -4080,7 +4072,7 @@ section {
   }
 
   .header .logo p {
-    font-size: 0.5em;
+    font-size: 8.3px;
   }
 
   .banners__banner {
