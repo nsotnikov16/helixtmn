@@ -61,11 +61,11 @@
     font-size: 30px;
     line-height: 54px;
     margin: 0 10px 0 12px;
-    font-size: 24px;
+    
 
     @media (max-width: 1024px) {
       position: relative;
-
+      font-size: 24px;
       &::before,
       &::after {
         position: absolute;

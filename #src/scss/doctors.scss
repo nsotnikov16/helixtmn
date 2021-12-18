@@ -79,8 +79,8 @@
       margin: 2px !important;
     }
 
-    .list-item a {
-      align-items: flex-start;
+    .list-item {
+      display: flex;
     }
 
     .list-text {

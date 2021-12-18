@@ -445,7 +445,7 @@ function init() {
             }
 
             link.addEventListener('click', () => {
-                titleAbsolute.textContent = spanLink.textContent;
+                if (window.innerWidth <= 1024) titleAbsolute.textContent = spanLink.textContent;
                 myMap.geoObjects.get(ind).balloon.open()
                 handleClass()
                 absolute.classList.remove('open')

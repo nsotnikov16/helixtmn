@@ -968,7 +968,7 @@ section {
 .logo p {
   font-family: "Din Pro";
   font-weight: 600;
-  font-size: 0.87em;
+  font-size: 14px;
   line-height: 0;
   margin-top: 10px;
   letter-spacing: 0.01em;
@@ -1642,6 +1642,11 @@ section {
   max-width: 850px;
 }
 
+.swiper-banners .swiper-button-next:focus-visible,
+.swiper-banners .swiper-button-prev:focus-visible {
+  outline: none;
+}
+
 .swiper-banners .swiper-button-next::after,
 .swiper-banners .swiper-button-prev::after {
   padding: 10px 15px;
@@ -1957,10 +1962,10 @@ section {
   margin: 2px !important;
 }
 
-.doctors__lists .list-item a {
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
+.doctors__lists .list-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 .doctors__lists .list-text {
@@ -2573,7 +2578,6 @@ section {
   font-size: 30px;
   line-height: 54px;
   margin: 0 10px 0 12px;
-  font-size: 24px;
 }
 
 .maps .list {
@@ -3499,13 +3503,14 @@ section {
 
   .logo {
     grid-row: 1/2;
-    /* p {
-        font-size: 7.68px;
-        letter-spacing: 0.04em;
-    }
-    img {
-        max-width: 108px;
-    } */
+  }
+
+  .header__search {
+    min-height: initial;
+  }
+
+  .header__search-row {
+    padding: 0;
   }
 
   .header {
@@ -3672,8 +3677,7 @@ section {
   }
 
   .header .logo p {
-    /* font-size: 10.5px; */
-    font-size: 0.67em;
+    font-size: 11px;
     margin-top: 6px;
     letter-spacing: 0.01em;
   }
@@ -4080,7 +4084,7 @@ section {
   }
 
   .header .logo p {
-    font-size: 0.5em;
+    font-size: 8.3px;
   }
 
   .banners__banner {
@@ -4270,6 +4274,7 @@ section {
 
   .maps__absolute-title {
     position: relative;
+    font-size: 24px;
   }
 
   .maps__absolute-title::before,
