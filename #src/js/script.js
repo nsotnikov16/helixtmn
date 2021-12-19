@@ -41,6 +41,7 @@ var swiperLicenses = new Swiper(".swiper-licenses", {
     },
     scrollbar: {
         el: ".licenses .swiper-scrollbar",
+        draggable: true,
     },
 
     breakpoints: {
