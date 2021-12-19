@@ -28,6 +28,29 @@
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 30px;
+
+    @media (max-width: 1289px) {
+      grid-template-columns: repeat(auto-fit, minmax(300px, max-content));
+    }
+
+    @media (max-width: 768px) {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+    }
+
+    @media (max-width: 680px) {
+      .doctors__lists:not(.doctors_main .doctors__lists) {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 580px) {
+      grid-template-columns: 1fr;
+      .doctors__lists:not(.doctors_main .doctors__lists) {
+        grid-template-columns: repeat(2, max-content);
+      }
+    }
+
     .btn_white {
       margin-top: 15px;
     }
@@ -35,6 +58,7 @@
 
   &__item {
     border: 1px solid #e5e7eb;
+
     border-radius: 13px;
   }
 
@@ -44,10 +68,15 @@
     width: 100%;
     height: 270px;
     object-fit: cover;
+    object-position: top center;
   }
 
   &__description {
     padding: 30px 28px 35px;
+
+    @media (max-width: 320px) {
+      padding: 30px 20px 35px;
+    }
   }
 
   &__post {

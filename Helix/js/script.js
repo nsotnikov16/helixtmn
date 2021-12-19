@@ -31,16 +31,30 @@ var swiperBanners = new Swiper(".swiper-banners", {
 });
 
 
-// Swiper Doctors
+// Swiper Licenses
 var swiperLicenses = new Swiper(".swiper-licenses", {
-    slidesPerView: 5,
-    spaceBetween: 30,
+    width: 234,
+    
     navigation: {
         nextEl: ".licenses .swiper-button-next",
         prevEl: ".licenses .swiper-button-prev",
     },
+    scrollbar: {
+        el: ".licenses .swiper-scrollbar",
+    },
+
+    breakpoints: {
+        320: {
+            slidesPerView: 1,
+            spaceBetween: 20,
+        },
+        769: {
+            spaceBetween: 30
+        }
+    }
 });
 
+console.log(swiperLicenses)
 
 //Tabs
 

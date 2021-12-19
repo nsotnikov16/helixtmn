@@ -1,5 +1,4 @@
 .licenses {
-
   &.licenses_about {
     grid-column: 2/3;
     margin-left: 30px;
@@ -9,6 +8,11 @@
   &.licenses_main {
     border-top: 1px solid #e5e7eb;
     padding-top: 70px;
+    @media (max-width: 1289px) {
+      .page__container {
+        padding-right: 0;
+      }
+    }
   }
 
   &__list {
@@ -39,11 +43,13 @@
     }
   }
 
-
   &__container-for-arrows {
     position: relative;
     .swiper-button-next,
     .swiper-button-prev {
+      @media (max-width: 1289px) {
+        display: none;
+      }
       &::after {
         font-size: 25px;
         color: #9ca3af;
@@ -62,4 +68,20 @@
 
 .swiper.swiper-licenses {
   margin-top: 40px;
+
+  .swiper-scrollbar {
+    
+    
+    @media (min-width: 1290px) {
+      display: none;
+    }
+
+    @media(max-width: 1289px) {
+      width: calc(100vw - 60px);
+    }
+
+    @media(max-width: 560px) {
+      width: calc(100vw - 30px);
+    }
+  }
 }

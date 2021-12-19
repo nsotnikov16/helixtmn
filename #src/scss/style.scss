@@ -179,7 +179,7 @@ section {
 /* Кнопки */
 .btn {
   font-family: "Din Next";
-  padding: 13px 25px 10px;
+  padding: 12px 25px;
   background-color: #45b553;
   border-radius: 6px;
   font-weight: 500;
@@ -245,6 +245,13 @@ section {
     border-radius: 7px;
     background: #fff;
     text-transform: initial;
+
+    padding: 12px 25px;
+
+    &:hover {
+      color: #fff;
+      background-color: #45b553;
+    }
   }
 }
 
@@ -335,7 +342,11 @@ section {
 
 /* Салатовый блок */
 .light-green-block {
-  background: linear-gradient(180deg, rgba(228, 244, 234, 0.75) 0%, rgba(249, 246, 229, 0.75) 100%);
+  background: linear-gradient(
+    180deg,
+    rgba(228, 244, 234, 0.75) 0%,
+    rgba(249, 246, 229, 0.75) 100%
+  );
   border-radius: 5px;
   padding: 28px 40px 15px;
 }

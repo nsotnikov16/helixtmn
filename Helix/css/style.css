@@ -669,7 +669,7 @@ section {
 
 .btn {
   font-family: "Din Next";
-  padding: 13px 25px 10px;
+  padding: 12px 25px;
   background-color: #45b553;
   border-radius: 6px;
   font-weight: 500;
@@ -737,6 +737,12 @@ section {
   border-radius: 7px;
   background: #fff;
   text-transform: initial;
+  padding: 12px 25px;
+}
+
+.btn.btn_all:hover {
+  color: #fff;
+  background-color: #45b553;
 }
 
 /* Список */
@@ -1924,6 +1930,8 @@ section {
   height: 270px;
   -o-object-fit: cover;
      object-fit: cover;
+  -o-object-position: top center;
+     object-position: top center;
 }
 
 .doctors__description {
@@ -3401,6 +3409,7 @@ section {
   left: 0;
   right: 0;
   padding-top: 3px;
+  z-index: 999;
 }
 
 .select__expand-layout {
@@ -3435,6 +3444,9 @@ section {
 }
 
 .filter {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   margin-bottom: 50px;
 }
 
@@ -3449,6 +3461,14 @@ section {
 
 .filter > *:last-child {
   margin-right: 0;
+}
+
+.filter .btn {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 19px;
+  text-transform: initial;
+  width: 140px;
 }
 
 /* Отзывы */
@@ -3468,6 +3488,12 @@ section {
 
 .reviews .select {
   max-width: 720px;
+}
+
+@media (min-width: 1290px) {
+  .swiper.swiper-licenses .swiper-scrollbar {
+    display: none;
+  }
 }
 
 @media (max-width: 1290px) {
@@ -4020,6 +4046,24 @@ section {
     margin-right: 0;
   }
 
+  .doctors__list {
+    grid-template-columns: repeat(auto-fit, minmax(300px, -webkit-max-content));
+    grid-template-columns: repeat(auto-fit, minmax(300px, max-content));
+  }
+
+  .licenses.licenses_main .page__container {
+    padding-right: 0;
+  }
+
+  .licenses__container-for-arrows .swiper-button-next,
+  .licenses__container-for-arrows .swiper-button-prev {
+    display: none;
+  }
+
+  .swiper.swiper-licenses .swiper-scrollbar {
+    width: calc(100vw - 60px);
+  }
+
   .footer .btn_main {
     width: 100% !important;
   }
@@ -4383,6 +4427,11 @@ section {
     gap: 30px 3%;
   }
 
+  .doctors__list {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+
   .about__mission {
     padding: 28px 25px 15px;
   }
@@ -4408,6 +4457,35 @@ section {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
+  }
+}
+
+@media (max-width: 680px) {
+  .doctors__list .doctors__lists:not(.doctors_main .doctors__lists) {
+    grid-template-columns: 1fr;
+  }
+
+  .filter {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+
+  .filter__select {
+    width: 100%;
+  }
+
+  .filter > * {
+    margin-bottom: 20px;
+  }
+
+  .filter > *:last-child {
+    margin-bottom: 0;
+  }
+
+  .filter .btn {
+    width: 100%;
   }
 }
 
@@ -4468,6 +4546,15 @@ section {
   .specialties__list {
     grid-template-columns: 1fr;
   }
+
+  .doctors__list {
+    grid-template-columns: 1fr;
+  }
+
+  .doctors__list .doctors__lists:not(.doctors_main .doctors__lists) {
+    grid-template-columns: repeat(2, -webkit-max-content);
+    grid-template-columns: repeat(2, max-content);
+  }
 }
 
 @media (max-width: 560px) {
@@ -4478,6 +4565,10 @@ section {
   .popular__cards {
     grid-template-columns: repeat(2, 1fr);
     gap: 30px 3%;
+  }
+
+  .swiper.swiper-licenses .swiper-scrollbar {
+    width: calc(100vw - 30px);
   }
 
   .maps__absolute {
@@ -4572,6 +4663,10 @@ section {
 
   .popular__card-text {
     margin-bottom: 12px;
+  }
+
+  .doctors__description {
+    padding: 30px 20px 35px;
   }
 
   .maps__absolute {
