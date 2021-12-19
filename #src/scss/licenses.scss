@@ -70,7 +70,9 @@
   margin-top: 40px;
 
   .swiper-scrollbar {
-    
+    position: relative;
+    height: 6px;
+    margin-top: 15px;
     
     @media (min-width: 1290px) {
       display: none;
