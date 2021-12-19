@@ -2153,6 +2153,12 @@ section {
   margin-top: 40px;
 }
 
+.swiper.swiper-licenses .swiper-scrollbar {
+  position: relative;
+  height: 6px;
+  margin-top: 15px;
+}
+
 /* Услуги */
 
 .services__hashtags {
