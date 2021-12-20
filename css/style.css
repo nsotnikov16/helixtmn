@@ -4626,6 +4626,10 @@ section {
             justify-content: center;
   }
 
+  .services .price_old {
+    top: -40%;
+  }
+
   .services__item {
     grid-template-columns: 1fr 1fr;
   }
