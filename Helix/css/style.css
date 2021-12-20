@@ -4760,6 +4760,11 @@ section {
     gap: 20px;
   }
 
+  .doctors__type-title {
+    font-size: 18px;
+    line-height: 22px;
+  }
+
   .about__mission {
     padding: 28px 25px 15px;
   }
