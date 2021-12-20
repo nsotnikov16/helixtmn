@@ -42,6 +42,10 @@ body {
       font-size: 36px;
       line-height: 42px;
     }
+    @media (max-width: 580px) {
+      font-size: 30px;
+      line-height: 36px;
+    }
   }
 
   &__layout {
