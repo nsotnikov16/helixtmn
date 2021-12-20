@@ -7,6 +7,11 @@
 
         @media (max-width: 1200px) {
             grid-template-columns: 1fr;
+            margin-bottom: 20px;
+        }
+
+        @media(max-width: 768px) {
+            
         }
     }
 
@@ -22,6 +27,9 @@
 
         @media (max-width: 900px) {
             grid-template-columns: 1fr;
+        }
+
+        @media (max-width: 768px) {
             .content.full-column {
                 grid-column: initial;
             }
@@ -33,7 +41,7 @@
 
         .price-block {
             align-self: baseline;
-            @media(max-width: 767px) {
+            @media (max-width: 767px) {
                 grid-row: 1/2;
                 display: grid;
                 grid-template-columns: 1fr 1fr;
@@ -47,7 +55,7 @@
                 }
             }
 
-            @media(max-width: 320px) {
+            @media (max-width: 320px) {
                 grid-template-columns: 1fr;
 
                 .price {
@@ -58,7 +66,6 @@
                     grid-column: initial;
                 }
             }
-            
         }
 
         .price-list {
@@ -71,7 +78,7 @@
 
     &__info {
         display: flex;
-        @media(max-width: 320px) {
+        @media (max-width: 320px) {
             flex-direction: column;
         }
     }
@@ -83,14 +90,14 @@
         object-position: top center;
         border-radius: 7px;
         align-self: baseline;
-        @media(max-width: 900px) {
+        @media (max-width: 900px) {
             max-width: 45%;
         }
 
-        @media(max-width: 580px) {
+        @media (max-width: 580px) {
             margin-right: 20px;
         }
-        @media(max-width: 320px) {
+        @media (max-width: 320px) {
             margin-bottom: 20px;
             max-width: 100%;
         }
@@ -126,7 +133,7 @@
     .content ul.two-columns {
         gap: 0 20%;
 
-        @media(max-width: 650px) {
+        @media (max-width: 650px) {
             grid-template-columns: 1fr;
         }
     }

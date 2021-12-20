@@ -2,6 +2,7 @@
     padding: 74px 84px;
     position: relative;
     z-index: 1;
+    border-radius: 6px;
 
     @media (max-width: 1080px) {
         padding: 50px;
@@ -102,6 +103,8 @@
         right: 0;
         object-fit: contain;
         height: 100%;
+        border-top-right-radius: 6px;
+        border-bottom-right-radius: 6px;
 
         @media (max-width: 768px) {
             object-fit: cover;

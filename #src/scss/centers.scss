@@ -49,17 +49,30 @@
     &__contacts {
         display: flex;
         justify-content: space-between;
-        align-items: center;
+        align-items: baseline;
         font-size: 16px !important;
         line-height: 24px !important;
         svg {
             width: 16px !important;
             height: 16px !important;
             margin-right: 5px !important;
+            flex-shrink: 0;
         }
         > * {
             display: flex;
-            align-items: center;
+            align-items: baseline;
+        }
+
+        @media (max-width: 1289px) {
+            flex-direction: column;
+            align-items: flex-start;
+
+            > * {
+                margin-bottom: 10px;
+                &:last-child {
+                    margin-bottom: 0;
+                }
+            }
         }
     }
 
@@ -67,9 +80,15 @@
         span {
             color: #45b553;
         }
+        @media (min-width: 1290px) {
+            max-width: 275px;
+        }
     }
 
     &__mode {
+        @media (min-width: 1290px) {
+            max-width: 275px;
+        }
     }
 
     &__phone {
@@ -78,5 +97,40 @@
             font-size: 16px;
             line-height: 19px;
         }
+    }
+}
+
+@media (max-width: 600px) {
+    .centers {
+        &__info {
+            font-size: 14px;
+            line-height: 20px;
+        }
+
+        &__title {
+            font-size: 24px;
+            line-height: 29px;
+        }
+
+        &__item {
+            flex-direction: column;
+            align-items: baseline;
+        }
+
+        &__img {
+            margin-right: 0;
+            margin-bottom: 20px;
+            max-width: 125px;
+        }
+
+        &__description {
+            max-width: 100%;
+        }
+    }
+}
+
+@media (max-width: 320px) {
+    .centers__item {
+        padding: 30px 15px;
     }
 }
