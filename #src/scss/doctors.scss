@@ -1,6 +1,11 @@
 .doctors {
   /* margin-bottom: 90px; */
-
+  &.doctors_main.section_bt {
+    @media (max-width: 1024px) {
+      padding-top: 40px;
+      margin-top: 0;
+    }
+  }
   &.doctors_main {
     @media (max-width: 1289px) {
       .page__container {

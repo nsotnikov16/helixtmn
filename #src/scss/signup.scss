@@ -1,11 +1,29 @@
 .signup {
     padding: 74px 84px;
     position: relative;
+    z-index: -2;
+
+    @media (max-width: 1080px) {
+        padding: 50px;
+        > p {
+            max-width: 450px;
+        }
+    }
+
+    @media (max-width: 650px) {
+        padding: 50px 25px;
+        overflow: hidden;
+    }
 
     &.signup_doctor {
         background: linear-gradient(180deg, rgba(214, 231, 240, 0.75) 0%, rgba(228, 243, 251, 0.75) 100%) !important;
     }
     > p {
+        @media (max-width: 650px) {
+            font-size: 14px;
+            line-height: 20px;
+        }
+
         color: #4b5563;
         max-width: 550px;
         margin: 15px 0;
@@ -19,14 +37,66 @@
     }
     .phone {
         margin: 10px 0;
+
+        @media (max-width: 768px) {
+            margin: 12px 0 20px;
+            p {
+                font-size: 36px;
+                line-height: 43px;
+            }
+
+            svg {
+                width: 28px;
+                height: 28px;
+            }
+        }
+
+        @media (max-width: 650px) {
+            p {
+                font-size: 30px;
+                line-height: 36px;
+            }
+
+            svg {
+                width: 23px;
+                height: 23px;
+            }
+        }
+
+        @media (max-width: 320px) {
+            p {
+                font-size: 20px;
+            }
+
+            svg {
+                width: 18px;
+                height: 18px;
+            }
+        }
     }
 
     &__img {
         position: absolute;
-        z-index: 10;
-        top:0;
+        z-index: -1;
+        top: 0;
         right: 0;
         object-fit: contain;
         height: 100%;
+
+        @media (max-width: 768px) {
+            object-fit: cover;
+            width: 40%;
+        }
+
+        @media (max-width: 650px) {
+            margin-right: -40%;
+            width: 100%;
+        }
+    }
+
+    .btn {
+        @media(max-width: 320px) {
+            padding: 12px 20px;
+        }
     }
 }

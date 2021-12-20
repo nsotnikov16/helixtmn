@@ -34,7 +34,7 @@ var swiperBanners = new Swiper(".swiper-banners", {
 // Swiper Licenses
 var swiperLicenses = new Swiper(".swiper-licenses", {
     width: 234,
-    
+
     navigation: {
         nextEl: ".licenses .swiper-button-next",
         prevEl: ".licenses .swiper-button-prev",
@@ -56,7 +56,6 @@ var swiperLicenses = new Swiper(".swiper-licenses", {
     }
 });
 
-console.log(swiperLicenses)
 
 //Tabs
 
@@ -185,16 +184,22 @@ window.addEventListener('resize', () => {
 // Левое меню 
 const leftMenu = document.querySelector('.left-menu')
 if (leftMenu) {
+    const titleMenu = leftMenu.querySelector('.left-menu__title')
     const leftMenuItems = leftMenu.querySelectorAll('.left-menu__item_dropdown');
-    leftMenuItems.forEach(li => {
-        const prevEl = li.previousElementSibling;
-        li.querySelector('.left-menu__link').addEventListener('click', e => e.preventDefault())
-        li.addEventListener('click', () => {
-            li.classList.toggle('open')
-            li.classList.contains('open') && prevEl ? prevEl.querySelector('.left-menu__link').style.borderBottom = "0" : prevEl.querySelector('.left-menu__link').style.borderBottom = "1px solid rgba(196, 220, 196, 0.6)"
-        })
 
-    })
+    if (titleMenu) titleMenu.addEventListener('click', () => leftMenu.classList.toggle('open'))
+
+    if (leftMenuItems.length > 0) {
+        leftMenuItems.forEach((li, ind) => {
+            li.querySelector('.left-menu__link').addEventListener('click', e => e.preventDefault())
+            li.addEventListener('click', () => {
+                const prevEl = li.previousElementSibling;
+                li.classList.toggle('open')
+                if (ind === 0) return
+                li.classList.contains('open') && prevEl ? prevEl.querySelector('.left-menu__link').style.borderBottom = "0" : prevEl.querySelector('.left-menu__link').style.borderBottom = "1px solid rgba(196, 220, 196, 0.6)"
+            })
+        })
+    }
 }
 
 

@@ -13,6 +13,10 @@
         padding-right: 0;
       }
     }
+
+    @media(max-width: 1080px) {
+      margin-bottom: 60px;
+    }
   }
 
   &__list {
