@@ -2,14 +2,21 @@
   padding: 22px 0 10px;
   border-top: 1px solid #e5e7eb;
 
+  .page__container {
+    padding-right: 0;
+    
+  }
+
   &__list {
     display: flex;
     align-items: center;
+    overflow: auto;
   }
 
   &__item {
     font-size: 14px;
     line-height: 17px;
+    white-space: nowrap;
     &::after {
       content: "/";
       margin: 0 15px 0 11px;
