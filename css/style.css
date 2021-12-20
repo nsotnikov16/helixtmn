@@ -1424,10 +1424,6 @@ section {
   transition: transform 0.2s linear, -webkit-transform 0.2s linear;
 }
 
-.left-menu.left-menu_selected .left-menu__list {
-  display: none;
-}
-
 .left-menu__title {
   display: none;
   position: relative;
@@ -4215,6 +4211,10 @@ section {
 }
 
 @media (max-width: 1200px) {
+  .left-menu.left-menu_selected .left-menu__list {
+    display: none;
+  }
+
   .left-menu__title {
     display: block;
     margin: 0 25px;
