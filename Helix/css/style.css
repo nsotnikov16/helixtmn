@@ -4359,6 +4359,10 @@ section {
 }
 
 @media (max-width: 1080px) {
+  .page__layout {
+    grid-template-columns: 1fr;
+  }
+
   section {
     margin: 30px 0;
   }
@@ -4492,6 +4496,12 @@ section {
 
   .licenses.licenses_main {
     margin-bottom: 60px;
+  }
+
+  .licenses__list {
+    grid-template-columns: repeat(auto-fit, 234px);
+    gap: 20px;
+    max-width: 100%;
   }
 
   .footer__grid {
@@ -4767,6 +4777,18 @@ section {
 
   .about__mission {
     padding: 28px 25px 15px;
+  }
+
+  .licenses__list {
+    grid-template-columns: repeat(auto-fit, 222px);
+  }
+
+  .licenses__list .licenses__item {
+    max-width: 222px;
+  }
+
+  .licenses__item {
+    padding: 22px;
   }
 
   .services__result {
@@ -5186,6 +5208,25 @@ section {
   .about__mission > ul li p {
     font-size: 14px;
     line-height: 17px;
+  }
+
+  .licenses__list {
+    grid-template-columns: 1fr;
+  }
+
+  .licenses__list .licenses__item {
+    max-width: 100%;
+  }
+
+  .licenses__list .licenses__item .licenses__img {
+    width: 100%;
+    height: 400px;
+    -o-object-fit: contain;
+       object-fit: contain;
+  }
+
+  .licenses__list .licenses__item .licenses__name {
+    text-align: center;
   }
 
   .services__item {
