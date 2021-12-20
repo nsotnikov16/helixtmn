@@ -4312,6 +4312,7 @@ section {
 
   .doctor__container {
     grid-template-columns: 1fr;
+    margin-bottom: 20px;
   }
 
   .doctor__description {
@@ -4672,10 +4673,6 @@ section {
     grid-template-columns: 1fr;
   }
 
-  .doctor__description .content.full-column {
-    grid-column: initial;
-  }
-
   .doctor__photo {
     max-width: 45%;
   }
@@ -4742,6 +4739,10 @@ section {
 
   .services__result-img {
     display: none;
+  }
+
+  .doctor__description .content.full-column {
+    grid-column: initial;
   }
 
   .content p {
@@ -5141,6 +5142,10 @@ section {
 
   .services__result {
     padding: 50px 25px;
+  }
+
+  .content ul.rows li > * {
+    margin-right: 30px;
   }
 
   .content ul li {
