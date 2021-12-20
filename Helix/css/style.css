@@ -4485,6 +4485,11 @@ section {
     margin-right: 20px;
   }
 
+  .about.about_mleft {
+    margin-left: 0;
+    max-width: 100%;
+  }
+
   .about.about_main {
     margin-top: 60px;
     margin-bottom: 60px;
@@ -4492,6 +4497,12 @@ section {
 
   .about__photo {
     margin-right: 45px;
+  }
+
+  .licenses.licenses_about {
+    grid-column: initial;
+    margin-left: 0;
+    max-width: 100%;
   }
 
   .licenses.licenses_main {

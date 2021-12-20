@@ -3,6 +3,11 @@
     grid-column: 2/3;
     margin-left: 30px;
     max-width: 76%;
+    @media(max-width: 1080px) {
+      grid-column: initial;
+      margin-left: 0;
+      max-width: 100%;
+    }
   }
 
   &.licenses_main {
