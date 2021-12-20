@@ -7,7 +7,8 @@
         overflow: hidden;
         &.open {
             border-bottom: 1px solid #9ca3af;
-            padding-bottom: 30px;
+            /* padding-bottom: 30px; */
+            padding-bottom: 10px;
             .spoiler__top {
                 border-bottom: 0;
             }
@@ -49,6 +50,9 @@
     &__img {
         border-radius: 7px;
         align-self: baseline;
+        @media (max-width: 1080px) {
+            display: none;
+        }
     }
 
     &__top {
@@ -64,6 +68,7 @@
     }
 
     &__title {
+        margin-right: 7px;
     }
 
     &__switch {
@@ -97,6 +102,71 @@
             display: grid;
             grid-template-columns: 65% 1fr;
             gap: 0 80px;
+
+            @media (max-width: 1080px) {
+                grid-template-columns: 1fr;
+            }
+        }
+    }
+
+    .doctors-spoiler {
+        @media (max-width: 1289px) {
+            .spoiler__bottom {
+                position: relative;
+                overflow: visible;
+                height: 100%;
+                transition: all 0s ease;
+            }
+
+            &.open {
+                overflow: visible;
+                .spoiler__bottom {
+                    z-index: 9999;
+                    height: 560px;
+
+                    @media (max-width: 374px) {
+                        height: 600px;
+                    }
+                }
+            }
+        }
+
+        .doctors__list {
+            @media (max-width: 1289px) {
+                position: absolute;
+                top: 0;
+                left: 0;
+                z-index: 9999;
+                width: calc(100vw - 30px);
+                display: flex !important;
+                gap: initial;
+                overflow: scroll;
+                .doctors__item {
+                    flex-shrink: 0;
+                    margin-right: 30px;
+                    &:last-child {
+                        margin-right: 0;
+                    }
+
+                    @media (max-width: 768) {
+                        margin-right: 20px;
+                    }
+                }
+            }
+
+            @media (max-width: 580px) {
+                width: calc(100vw - 15px);
+            }
+
+            @media (max-width: 374px) {
+                .doctors__item {
+                    max-width: 260px;
+                    margin-right: 20px;
+                    .doctors__lists {
+                        grid-template-columns: max-content;
+                    }
+                }
+            }
         }
     }
 }
