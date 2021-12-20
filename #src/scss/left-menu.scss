@@ -33,7 +33,9 @@
     }
 
     .left-menu__list {
-      display: none;
+      @media (max-width: 1200px) {
+        display: none;
+      }
     }
   }
 
