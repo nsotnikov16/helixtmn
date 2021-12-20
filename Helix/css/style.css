@@ -4133,7 +4133,7 @@ section {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    overflow: auto;
+    overflow: scroll;
     -webkit-box-align: stretch;
         -ms-flex-align: stretch;
             align-items: stretch;
