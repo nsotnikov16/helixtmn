@@ -5146,6 +5146,23 @@ section {
   .spoiler .doctors-spoiler .doctors__list {
     width: calc(100vw - 15px);
   }
+
+  .form {
+    max-width: calc(300px + 272 * (100vw - 320px) / 580);
+    padding: 35px calc(20px + 51 * (100vw - 320px) / 580);
+  }
+
+  .form__title {
+    font-size: calc(25px + 8.5 * (100vw - 320px) / 580);
+  }
+
+  .form__rows {
+    margin: 30px 0;
+  }
+
+  .form__politics {
+    margin-top: calc(27px + 22.1 * (100vw - 320px) / 580);
+  }
 }
 
 @media (max-width: 560px) {
