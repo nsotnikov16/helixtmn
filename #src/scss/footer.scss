@@ -32,6 +32,9 @@
     a {
       font-size: 16px;
       line-height: 19px;
+      &:hover {
+        color: #45b553;
+      }
     }
   }
 
@@ -145,7 +148,7 @@
     letter-spacing: -0.03em;
     @media (max-width: 1290px) {
       font-size: calc(24px + (17 + 17 * 0.7) * ((100vw - 320px) / 1290));
-      line-height: calc(30px + (20 + 20 * 0.7) * ((100vw - 320px) / 1290));;
+      line-height: calc(30px + (20 + 20 * 0.7) * ((100vw - 320px) / 1290));
     }
   }
 }
@@ -203,7 +206,7 @@
   }
 }
 
-@media(max-width: 900px) {
+@media (max-width: 900px) {
   .footer {
     &__additionally {
       grid-template-columns: max-content;
@@ -213,7 +216,7 @@
   }
 }
 
-@media(max-width: 600px) {
+@media (max-width: 600px) {
   .footer {
     &__grid {
       grid-template-columns: max-content;
@@ -253,7 +256,7 @@
   }
 }
 
-@media(max-width: 374px) {
+@media (max-width: 374px) {
   .footer {
     &__copyright {
       font-size: 12px;

@@ -1297,6 +1297,10 @@ section {
   width: 120%;
 }
 
+.menu__link:hover:not(.menu__link_covid) {
+  color: #45b553;
+}
+
 .menu__link_covid {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -2650,7 +2654,7 @@ section {
   bottom: 7%;
   width: 350px;
   padding: 50px 30px;
-  z-index: 9999999;
+  z-index: 1000;
   background: #fff;
   border-radius: 7px;
 }
@@ -2778,6 +2782,10 @@ section {
 .footer__menu-list a {
   font-size: 16px;
   line-height: 19px;
+}
+
+.footer__menu-list a:hover {
+  color: #45b553;
 }
 
 .footer__contacts {

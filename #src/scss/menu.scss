@@ -8,6 +8,7 @@
     }
 
     &__item {
+        
     }
 
     &__item-dropdown {
@@ -71,6 +72,9 @@
 
         display: block;
         width: 120%;
+        &:hover:not(.menu__link_covid) {
+            color: #45b553;
+        }
 
         &_covid {
             display: flex;
