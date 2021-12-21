@@ -2933,7 +2933,7 @@ section {
 }
 
 .search-result__item {
-  padding-bottom: 17px;
+  /* padding-bottom: 17px; */
 }
 
 .search-result__item:last-child {
