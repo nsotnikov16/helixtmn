@@ -81,3 +81,23 @@
         }
     }
 }
+
+
+@media(max-width: 580px) {
+    .form {
+        max-width: calc(300px + (160 + 160 * 0.7) * ((100vw - 320px) / 580));
+        padding: 35px calc(20px + (30 + 30 * 0.7) * ((100vw - 320px) / 580));
+
+        &__title {
+            font-size: calc(25px + (5 + 5 * 0.7) * ((100vw - 320px) / 580));
+        }
+
+        &__rows {
+            margin: 30px 0;
+        }
+
+        &__politics {
+            margin-top: calc(27px + (13 + 13 * 0.7) * ((100vw - 320px) / 580));
+        }
+    }
+}
