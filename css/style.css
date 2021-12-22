@@ -709,6 +709,9 @@ section {
 .btn.btn_banner:hover {
   -webkit-box-shadow: 0px 7px 15px rgba(69, 181, 83, 0.6);
           box-shadow: 0px 7px 15px rgba(69, 181, 83, 0.6);
+  -webkit-transition: initial;
+  -o-transition: initial;
+  transition: initial;
 }
 
 .btn.btn_banners-block {
@@ -1822,6 +1825,56 @@ section {
   border: 1px solid #45b553;
 }
 
+/* Анимация баннера */
+
+.banners__banner .banners__title,
+.banners__banner .list-item,
+.banners__banner .price,
+.banners__banner .btn_banner {
+  opacity: 0;
+  overflow: hidden;
+  -webkit-transition: opacity 0.8s ease 0.2s, overflow 0.8s ease 0.2s, -webkit-transform 0.8s ease 0.2s;
+  transition: opacity 0.8s ease 0.2s, overflow 0.8s ease 0.2s, -webkit-transform 0.8s ease 0.2s;
+  -o-transition: opacity 0.8s ease 0.2s, overflow 0.8s ease 0.2s, transform 0.8s ease 0.2s;
+  transition: opacity 0.8s ease 0.2s, overflow 0.8s ease 0.2s, transform 0.8s ease 0.2s;
+  transition: opacity 0.8s ease 0.2s, overflow 0.8s ease 0.2s, transform 0.8s ease 0.2s, -webkit-transform 0.8s ease 0.2s;
+}
+
+.banners__banner .banners__title {
+  -webkit-transform: translateY(10%);
+      -ms-transform: translateY(10%);
+          transform: translateY(10%);
+}
+
+.banners__banner .list-item {
+  -webkit-transform: translateX(-10%);
+      -ms-transform: translateX(-10%);
+          transform: translateX(-10%);
+}
+
+.banners__banner .price {
+  -webkit-transform: translateX(10%);
+      -ms-transform: translateX(10%);
+          transform: translateX(10%);
+}
+
+.banners__banner .btn_banner {
+  -webkit-transform: translateX(-20%);
+      -ms-transform: translateX(-20%);
+          transform: translateX(-20%);
+}
+
+.banners__banner._animate .banners__title,
+.banners__banner._animate .list-item,
+.banners__banner._animate .price,
+.banners__banner._animate .btn_banner {
+  opacity: 1;
+  overflow: visible;
+  -webkit-transform: translate(0);
+      -ms-transform: translate(0);
+          transform: translate(0);
+}
+
 /* Специальности */
 
 .specialties {
@@ -2100,16 +2153,16 @@ section {
 }
 
 .doctors.doctors_main .doctors__list .doctors__item:nth-child(odd) {
-  -webkit-transform: translateY(150%);
-      -ms-transform: translateY(150%);
-          transform: translateY(150%);
+  -webkit-transform: translateY(15%);
+      -ms-transform: translateY(15%);
+          transform: translateY(15%);
   opacity: 0;
 }
 
 .doctors.doctors_main .doctors__list .doctors__item:nth-child(even) {
-  -webkit-transform: translateY(-150%);
-      -ms-transform: translateY(-150%);
-          transform: translateY(-150%);
+  -webkit-transform: translateY(-15%);
+      -ms-transform: translateY(-15%);
+          transform: translateY(-15%);
   opacity: 0;
 }
 
@@ -2261,9 +2314,9 @@ section {
   -webkit-transform: translateX(-200%);
       -ms-transform: translateX(-200%);
           transform: translateX(-200%);
-  -webkit-transition: all 0.8s ease-in 0.2s;
-  -o-transition: all 0.8s ease-in 0.2s;
-  transition: all 0.8s ease-in 0.2s;
+  -webkit-transition: all 0.8s ease 0.2s;
+  -o-transition: all 0.8s ease 0.2s;
+  transition: all 0.8s ease 0.2s;
 }
 
 .about__photo._animate {
@@ -5343,6 +5396,22 @@ section {
     gap: 10px 25px;
   }
 
+  .banners .swiper-slide:nth-child(1) .banners__banner {
+    background-position-x: 30%;
+  }
+
+  .banners .swiper-slide:nth-child(2) .banners__banner {
+    background-position-x: 70%;
+  }
+
+  .banners .swiper-slide:nth-child(3) .banners__banner {
+    background-position: 20%;
+  }
+
+  .banners__banner {
+    background-size: cover;
+  }
+
   .specialties__list {
     grid-template-columns: 1fr;
   }
@@ -5419,7 +5488,23 @@ section {
   }
 
   .banners__banner {
-    padding: 45px;
+    padding: 40px 45px;
+  }
+
+  .banners .swiper-slide:nth-child(1) .banners__banner {
+    padding: 30px 40px;
+  }
+
+  .banners .swiper-slide:nth-child(2) .banners__banner {
+    padding: 40px;
+  }
+
+  .banners .swiper-slide:nth-child(2) .banners__banner .banners__title {
+    max-width: 250px;
+  }
+
+  .banners .swiper-slide:nth-child(3) .banners__banner {
+    padding: 50px 40px;
   }
 
   .banners .ellipse-icon {
@@ -5428,11 +5513,18 @@ section {
   }
 
   .banners__title {
-    max-width: 250px;
+    /* max-width: 250px; */
+    max-width: 310px;
+    font-size: 28px;
+  }
+
+  .banners .list {
+    grid-template-columns: repeat(2, -webkit-max-content);
+    grid-template-columns: repeat(2, max-content);
   }
 
   .banners .list-text {
-    font-size: 10px;
+    font-size: 12px;
     margin-left: 2px;
   }
 
@@ -5551,7 +5643,7 @@ section {
 
 @media (max-width: 320px) {
   .banners__banner {
-    /* padding: 35px 40px; */
+    padding: 30px 40px !important;
     max-height: 275px;
   }
 
@@ -5559,6 +5651,20 @@ section {
     grid-template-columns: repeat(2, -webkit-max-content);
     grid-template-columns: repeat(2, max-content);
     gap: 0 18px;
+  }
+
+  .banners .banners__title {
+    font-size: 24px;
+    max-width: 210px !important;
+  }
+
+  .banners .list-text {
+    font-size: 10px;
+  }
+
+  .banners .btn_banner {
+    height: 30px;
+    padding: 0 !important;
   }
 
   .swiper-banners .swiper-button-next::after,
