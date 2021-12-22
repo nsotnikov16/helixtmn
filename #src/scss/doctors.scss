@@ -7,6 +7,28 @@
     }
   }
   &.doctors_main {
+    .doctors__list {
+      .doctors__item {
+        overflow: hidden;
+        &:nth-child(odd) {
+          transform: translateY(150%);
+          opacity: 0;
+        }
+        &:nth-child(even) {
+          transform: translateY(-150%);
+          opacity: 0;
+        }
+      }
+
+      &._animate {
+        .doctors__item {
+          opacity: 1;
+          transform: translate(0, 0);
+          transition: all 1s ease-in-out 0.2s;
+        }
+      }
+    }
+
     @media (max-width: 1289px) {
       .page__container {
         @media (max-width: 1289px) {
@@ -64,15 +86,13 @@
       }
     }
 
-    @media(max-width: 1024px) and (min-width: 901px) {
+    @media (max-width: 1024px) and (min-width: 901px) {
       gap: 30px;
     }
 
-    @media(max-width: 1023px) and (min-width: 901px) {
+    @media (max-width: 1023px) and (min-width: 901px) {
       grid-template-columns: repeat(3, minmax(306px, max-content));
     }
-
-    
   }
   &__list {
     display: grid;

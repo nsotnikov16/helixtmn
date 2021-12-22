@@ -1952,8 +1952,23 @@ section {
   border: 1px solid #e5e7eb;
   border-radius: 13px;
   padding: 40px 18px;
+  overflow: hidden;
+  -webkit-transform: translateX(-200%);
+      -ms-transform: translateX(-200%);
+          transform: translateX(-200%);
+  opacity: 0;
+  -webkit-transition: all 0.8s ease;
+  -o-transition: all 0.8s ease;
+  transition: all 0.8s ease;
   min-width: 300px;
   max-width: 300px;
+}
+
+.diagnostics__card._animate {
+  -webkit-transform: translateY(0);
+      -ms-transform: translateY(0);
+          transform: translateY(0);
+  opacity: 1;
 }
 
 .diagnostics__card-img {
@@ -1993,6 +2008,34 @@ section {
   gap: 30px;
 }
 
+.popular__cards .popular__card {
+  overflow: hidden;
+}
+
+.popular__cards .popular__card:nth-child(odd) {
+  -webkit-transform: translateY(200%);
+      -ms-transform: translateY(200%);
+          transform: translateY(200%);
+  opacity: 0;
+}
+
+.popular__cards .popular__card:nth-child(even) {
+  -webkit-transform: translateX(200%);
+      -ms-transform: translateX(200%);
+          transform: translateX(200%);
+  opacity: 0;
+}
+
+.popular__cards._animate .popular__card {
+  opacity: 1;
+  -webkit-transform: translate(0, 0);
+      -ms-transform: translate(0, 0);
+          transform: translate(0, 0);
+  -webkit-transition: all 0.8s ease 0.2s;
+  -o-transition: all 0.8s ease 0.2s;
+  transition: all 0.8s ease 0.2s;
+}
+
 .popular__card {
   height: 220px;
   background-repeat: no-repeat;
@@ -2030,6 +2073,34 @@ section {
 
 .doctors {
   /* margin-bottom: 90px; */
+}
+
+.doctors.doctors_main .doctors__list .doctors__item {
+  overflow: hidden;
+}
+
+.doctors.doctors_main .doctors__list .doctors__item:nth-child(odd) {
+  -webkit-transform: translateY(150%);
+      -ms-transform: translateY(150%);
+          transform: translateY(150%);
+  opacity: 0;
+}
+
+.doctors.doctors_main .doctors__list .doctors__item:nth-child(even) {
+  -webkit-transform: translateY(-150%);
+      -ms-transform: translateY(-150%);
+          transform: translateY(-150%);
+  opacity: 0;
+}
+
+.doctors.doctors_main .doctors__list._animate .doctors__item {
+  opacity: 1;
+  -webkit-transform: translate(0, 0);
+      -ms-transform: translate(0, 0);
+          transform: translate(0, 0);
+  -webkit-transition: all 1s ease-in-out 0.2s;
+  -o-transition: all 1s ease-in-out 0.2s;
+  transition: all 1s ease-in-out 0.2s;
 }
 
 .doctors__list {

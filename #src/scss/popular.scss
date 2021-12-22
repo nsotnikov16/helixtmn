@@ -7,7 +7,28 @@
   &__cards {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(234px, 1fr));
-    gap: 30px;
+    gap: 30px; 
+
+    .popular__card {
+      overflow: hidden;
+      &:nth-child(odd) {
+        transform: translateY(200%);
+        opacity: 0;
+      }
+      &:nth-child(even) {
+        transform: translateX(200%);
+        opacity: 0;
+      }
+    }
+
+    &._animate {
+      .popular__card {
+        opacity: 1;
+        transform: translate(0, 0);
+        transition: all 0.8s ease 0.2s;
+       
+      }
+    }
 
     @media (max-width: 768px) {
       grid-template-columns: repeat(3, 1fr);
