@@ -2257,14 +2257,42 @@ section {
   border-radius: 7px;
   -o-object-fit: cover;
      object-fit: cover;
+  opacity: 0;
+  -webkit-transform: translateX(-200%);
+      -ms-transform: translateX(-200%);
+          transform: translateX(-200%);
+  -webkit-transition: all 0.8s ease-in 0.2s;
+  -o-transition: all 0.8s ease-in 0.2s;
+  transition: all 0.8s ease-in 0.2s;
+}
+
+.about__photo._animate {
+  opacity: 1;
+  -webkit-transform: translateX(0);
+      -ms-transform: translateX(0);
+          transform: translateX(0);
 }
 
 .about__block {
   margin: 10px 0 0;
+  opacity: 0;
+  -webkit-transform: translateX(200%);
+      -ms-transform: translateX(200%);
+          transform: translateX(200%);
+  -webkit-transition: all 0.8s ease-in 0.2s;
+  -o-transition: all 0.8s ease-in 0.2s;
+  transition: all 0.8s ease-in 0.2s;
 }
 
 .about__block > h2 {
   padding-bottom: 11px;
+}
+
+.about__block._animate {
+  opacity: 1;
+  -webkit-transform: translateX(0);
+      -ms-transform: translateX(0);
+          transform: translateX(0);
 }
 
 .about__info {
