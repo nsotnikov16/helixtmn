@@ -27,7 +27,7 @@
     object-fit: cover;
     opacity: 0;
     transform: translateX(-200%);
-    transition: all 0.8s ease-in 0.2s;
+    transition: all 0.8s ease 0.2s;
 
     &._animate {
       opacity: 1;

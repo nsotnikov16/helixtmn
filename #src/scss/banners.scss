@@ -16,7 +16,6 @@
     flex-direction: column;
     justify-content: space-between;
     border-radius: 7px;
-
   }
 
   &__title {
@@ -237,13 +236,56 @@
     .list {
       gap: 10px 25px;
     }
+
+    .swiper-slide {
+      &:nth-child(1) {
+        .banners__banner {
+          background-position-x: 30%;
+        }
+      }
+      &:nth-child(2) {
+        .banners__banner {
+          background-position-x: 70%;
+        }
+      }
+      &:nth-child(3) {
+        .banners__banner {
+          background-position: 20%;
+        }
+      }
+    }
+
+    &__banner {
+      background-size: cover;
+    }
   }
 }
 
 @media (max-width: 480px) {
   .banners {
     &__banner {
-      padding: 45px;
+      padding: 40px 45px;
+    }
+
+    .swiper-slide {
+      &:nth-child(1) {
+        .banners__banner {
+          padding: 30px 40px;
+        }
+      }
+      &:nth-child(2) {
+        .banners__banner {
+          padding: 40px;
+          .banners__title {
+            max-width: 250px;
+          }
+        }
+      }
+      &:nth-child(3) {
+        .banners__banner {
+          padding: 50px 40px;
+        }
+      }
     }
 
     .ellipse-icon {
@@ -252,10 +294,17 @@
     }
 
     &__title {
-      max-width: 250px;
+      /* max-width: 250px; */
+      max-width: 310px;
+      font-size: 28px;
     }
+
+    .list {
+      grid-template-columns: repeat(2, max-content);
+    }
+
     .list-text {
-      font-size: 10px;
+      font-size: 12px;
       margin-left: 2px;
     }
   }
@@ -273,7 +322,7 @@
 @media (max-width: 320px) {
   .banners {
     &__banner {
-      /* padding: 35px 40px; */
+      padding: 30px 40px !important;
       max-height: 275px;
     }
 
@@ -281,10 +330,65 @@
       grid-template-columns: repeat(2, max-content);
       gap: 0 18px;
     }
+
+    .banners__title {
+      font-size: 24px;
+      max-width: 210px !important;
+    }
+
+    .list-text {
+      font-size: 10px;
+    }
+
+    .btn_banner {
+      height: 30px;
+      padding: 0 !important;
+    }
   }
 
   .swiper-banners .swiper-button-next::after,
   .swiper-banners .swiper-button-next::before {
     font-size: 15px;
+  }
+}
+
+/* Анимация баннера */
+.banners {
+  &__banner {
+    .banners__title,
+    .list-item,
+    .price,
+    .btn_banner {
+      opacity: 0;
+      overflow: hidden;
+      transition: opacity 0.8s ease 0.2s, overflow 0.8s ease 0.2s, transform 0.8s ease 0.2s,;
+    }
+
+    .banners__title {
+      transform: translateY(10%);
+    }
+
+    .list-item {
+      transform: translateX(-10%);
+    }
+
+    .price {
+      transform: translateX(10%);
+    }
+
+    .btn_banner {
+      transform: translateX(-20%);
+    }
+
+    &._animate {
+      .banners__title,
+      .list-item,
+      .price,
+      .btn_banner {
+        opacity: 1;
+        overflow: visible;
+        transform: translate(0);
+      }
+    }
   }
 }

@@ -18,7 +18,6 @@ $('.header__contacts-map').on('click', function () {
 var swiperBanners = new Swiper(".swiper-banners", {
     autoplay: {
         delay: 4000,
-
     },
     navigation: {
         nextEl: ".swiper-banners .swiper-button-next",
@@ -30,6 +29,21 @@ var swiperBanners = new Swiper(".swiper-banners", {
         renderBullet: function (index, className) {
             return '<span class="' + className + '">' + /* (index + 1) + */ "</span>";
         },
+    },
+    on: {
+        slideChange: function () {
+            const bannersSlides = document.querySelectorAll('.swiper-banners .swiper-slide')
+            setTimeout(() => {
+                bannersSlides.forEach(item => {
+                    const banner = item.querySelector('.banners__banner')
+                    banner.classList.remove('_animate')
+                    if (item.classList.contains('swiper-slide-active')) banner.classList.add('_animate')
+                })
+            }, 50)
+        },
+        init: function() {
+            document.querySelector('.swiper-banners .swiper-slide .banners__banner').classList.add('_animate')
+        }
     },
 });
 
@@ -525,6 +539,20 @@ const animItems = document.querySelectorAll('._anim-items');
 
 if (animItems.length > 0) {
     window.addEventListener('scroll', animOnScroll);
+
+    /* const bannersSwiperButtonNext = document.querySelector('.swiper-banners .swiper-button-next')
+    const bannersSwiperButtonPrev = document.querySelector('.swiper-banners .swiper-button-prev')
+    const bannersSlides = document.querySelectorAll('.swiper-banners .swiper-slide')
+    const buttonsSwiperBanners = [bannersSwiperButtonNext, bannersSwiperButtonPrev]
+    buttonsSwiperBanners.forEach(button => button.addEventListener('click', () => {
+        bannersSlides.forEach(item => {
+            const banner = item.querySelector('.banners__banner')
+            banner.classList.remove('_animate', '_anim-no-hide')
+            if (item.classList.contains('swiper-slide-active')) banner.classList.add('_animate', '_anim-no-hide')
+        }
+        )
+    })) */
+
     function animOnScroll() {
         for (let index = 0; index < animItems.length; index++) {
             const animItem = animItems[index];
@@ -555,5 +583,5 @@ if (animItems.length > 0) {
 
     setTimeout(() => {
         animOnScroll();
-    }, 300);
+    }, 150);
 }

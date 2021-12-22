@@ -11,11 +11,11 @@
       .doctors__item {
         overflow: hidden;
         &:nth-child(odd) {
-          transform: translateY(150%);
+          transform: translateY(15%);
           opacity: 0;
         }
         &:nth-child(even) {
-          transform: translateY(-150%);
+          transform: translateY(-15%);
           opacity: 0;
         }
       }
