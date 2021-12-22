@@ -706,11 +706,21 @@ section {
   height: 50px;
 }
 
+.btn.btn_banner:hover {
+  -webkit-box-shadow: 0px 7px 15px rgba(69, 181, 83, 0.6);
+          box-shadow: 0px 7px 15px rgba(69, 181, 83, 0.6);
+}
+
 .btn.btn_banners-block {
   color: #111827;
   background-color: #ffffff;
   width: 165px;
   height: 50px;
+}
+
+.btn.btn_banners-block:hover {
+  color: #fff;
+  background-color: #45b553;
 }
 
 .btn.btn_white {
@@ -768,6 +778,24 @@ section {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  position: relative;
+  z-index: 1;
+}
+
+.list-item a:hover::after,
+.list-item .banners .list-item p:hover::after {
+  position: absolute;
+  content: "";
+  top: -3px;
+  left: -5px;
+  bottom: 0px;
+  right: 0px;
+  background: #eef8f0;
+  border-radius: 6px;
+  z-index: -1;
+  width: 100%;
+  height: 105%;
+  padding: 2px 5px;
 }
 
 .list-item a svg,
@@ -926,6 +954,11 @@ section {
   max-width: 100% !important;
   width: 100% !important;
   height: 50px;
+}
+
+.price-block .btn:hover {
+  -webkit-box-shadow: 0px 7px 15px rgba(69, 181, 83, 0.6);
+          box-shadow: 0px 7px 15px rgba(69, 181, 83, 0.6);
 }
 
 .price-block .price > span {
@@ -1293,8 +1326,13 @@ section {
   line-height: 19px;
   text-transform: uppercase;
   opacity: 0.8;
+  font-weight: 500;
   display: block;
   width: 120%;
+}
+
+.menu__link:hover:not(.menu__link_covid) {
+  color: #45b553;
 }
 
 .menu__link_covid {
@@ -1800,6 +1838,10 @@ section {
           align-items: center;
 }
 
+.specialties__item-link:hover {
+  color: #45b553;
+}
+
 .specialties__item-link svg {
   width: 30px;
   height: 30px;
@@ -2056,11 +2098,15 @@ section {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: baseline;
+      -ms-flex-align: baseline;
+          align-items: baseline;
 }
 
 .doctors__lists .list-text {
   font-size: 14px;
   max-width: 115px;
+  margin-left: 5px;
 }
 
 .doctors__all {
@@ -2077,8 +2123,8 @@ section {
 }
 
 .doctors .ellipse-icon {
-  width: 8px;
-  height: 8px;
+  width: 8px !important;
+  height: 8px !important;
 }
 
 .doctors__type {
@@ -2193,6 +2239,7 @@ section {
 
 .licenses__name {
   margin-top: 10px;
+  font-weight: 500;
 }
 
 .licenses__item {
@@ -2363,6 +2410,10 @@ section {
   grid-column: 1/3;
 }
 
+.services__result-container {
+  max-width: 620px;
+}
+
 .services__result-container > * {
   margin-bottom: 20px;
 }
@@ -2375,12 +2426,13 @@ section {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
 }
 
 .services__result-btns .btn {
+  width: 100%;
   background-color: inherit;
   max-width: 100% !important;
   margin-right: 30px;
@@ -2436,6 +2488,11 @@ section {
   grid-row: 2/3;
   max-width: 135px;
   justify-self: end;
+}
+
+.services .btn:hover {
+  -webkit-box-shadow: 0px 7px 15px rgba(69, 181, 83, 0.6);
+          box-shadow: 0px 7px 15px rgba(69, 181, 83, 0.6);
 }
 
 .services__service-right {
@@ -2650,7 +2707,7 @@ section {
   bottom: 7%;
   width: 350px;
   padding: 50px 30px;
-  z-index: 9999999;
+  z-index: 1000;
   background: #fff;
   border-radius: 7px;
 }
@@ -2709,6 +2766,7 @@ section {
 
 .maps .list-text {
   text-transform: uppercase;
+  font-weight: 500;
 }
 
 .maps .map__info p {
@@ -2778,6 +2836,10 @@ section {
 .footer__menu-list a {
   font-size: 16px;
   line-height: 19px;
+}
+
+.footer__menu-list a:hover {
+  color: #45b553;
 }
 
 .footer__contacts {
@@ -2925,7 +2987,7 @@ section {
 }
 
 .search-result__item {
-  padding-bottom: 17px;
+  /* padding-bottom: 17px; */
 }
 
 .search-result__item:last-child {
@@ -2933,6 +2995,7 @@ section {
 }
 
 .search-result__link {
+  display: block;
   padding: 7px 10px;
   border-radius: 6px;
 }
@@ -3011,7 +3074,7 @@ section {
   font-size: 16px;
   line-height: 22px;
   color: #111827;
-  opacity: 0.7;
+  opacity: 1;
   margin-bottom: 7px;
 }
 
@@ -3067,7 +3130,17 @@ section {
 }
 
 .signup .phone {
-  margin: 10px 0;
+  margin: 20px 0;
+}
+
+.signup .phone p {
+  font-size: 36px;
+  line-height: 43px;
+}
+
+.signup .phone svg {
+  width: 28px;
+  height: 28px;
 }
 
 .signup__img {
@@ -3080,6 +3153,15 @@ section {
   height: 100%;
   border-top-right-radius: 6px;
   border-bottom-right-radius: 6px;
+}
+
+.signup .btn {
+  padding: 18px 27px;
+}
+
+.signup .btn:hover {
+  -webkit-box-shadow: 0px 7px 15px rgba(69, 181, 83, 0.6);
+          box-shadow: 0px 7px 15px rgba(69, 181, 83, 0.6);
 }
 
 /* Прайс лист */
@@ -3575,6 +3657,11 @@ section {
   width: 140px;
 }
 
+.filter .btn:hover {
+  -webkit-box-shadow: 0px 7px 15px rgba(69, 181, 83, 0.6);
+          box-shadow: 0px 7px 15px rgba(69, 181, 83, 0.6);
+}
+
 /* Отзывы */
 
 .reviews {
@@ -3595,6 +3682,17 @@ section {
 }
 
 @media (min-width: 1290px) {
+  .doctors__filter {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+  }
+
+  .doctors__filter .filter__select {
+    margin-right: 0;
+    width: auto;
+  }
+
   .swiper.swiper-licenses .swiper-scrollbar {
     display: none;
   }
@@ -4737,6 +4835,29 @@ section {
             justify-content: space-between;
     gap: 25px 0;
   }
+
+  .filter {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+
+  .filter__select {
+    width: 100%;
+  }
+
+  .filter > * {
+    margin-bottom: 20px;
+  }
+
+  .filter > *:last-child {
+    margin-bottom: 0;
+  }
+
+  .filter .btn {
+    width: 100%;
+  }
 }
 
 @media (max-width: 768px) {
@@ -4958,29 +5079,6 @@ section {
 @media (max-width: 680px) {
   .doctors__list .doctors__lists:not(.doctors_main .doctors__lists) {
     grid-template-columns: 1fr;
-  }
-
-  .filter {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-  }
-
-  .filter__select {
-    width: 100%;
-  }
-
-  .filter > * {
-    margin-bottom: 20px;
-  }
-
-  .filter > *:last-child {
-    margin-bottom: 0;
-  }
-
-  .filter .btn {
-    width: 100%;
   }
 }
 
@@ -5411,5 +5509,32 @@ section {
 
   .signup .btn {
     padding: 12px 20px;
+  }
+}
+
+@media (max-width: 1289px) and (min-width: 901px) {
+  .doctors__filter {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(300px, -webkit-max-content));
+    grid-template-columns: repeat(3, minmax(300px, max-content));
+    gap: 35px;
+  }
+
+  .doctors__filter .filter__select {
+    margin-right: 0;
+    width: auto;
+  }
+}
+
+@media (max-width: 1024px) and (min-width: 901px) {
+  .doctors__filter {
+    gap: 30px;
+  }
+}
+
+@media (max-width: 1023px) and (min-width: 901px) {
+  .doctors__filter {
+    grid-template-columns: repeat(3, minmax(306px, -webkit-max-content));
+    grid-template-columns: repeat(3, minmax(306px, max-content));
   }
 }
