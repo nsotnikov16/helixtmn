@@ -24,12 +24,12 @@
             gap: 25px 15px;
         }
 
-        @media(max-width: 767px) {
+        @media (max-width: 767px) {
             grid-template-columns: repeat(2, 1fr);
             gap: 25px 30px;
         }
 
-        @media(max-width: 580px) {
+        @media (max-width: 580px) {
             grid-template-columns: 1fr;
         }
     }
@@ -40,6 +40,10 @@
     &__item-link {
         display: flex;
         align-items: center;
+
+        &:hover {
+            color: #45b553;
+        }
         svg {
             width: 30px;
             height: 30px;

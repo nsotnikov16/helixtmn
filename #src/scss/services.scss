@@ -49,7 +49,7 @@
             grid-template-columns: 1fr;
         }
 
-        @media(max-width: 1024px) {
+        @media (max-width: 1024px) {
             padding-bottom: 45px;
         }
     }
@@ -154,12 +154,13 @@
             padding: 50px;
         }
 
-        @media(max-width: 480px) {
+        @media (max-width: 480px) {
             padding: 50px 25px;
         }
     }
 
     &__result-container {
+        max-width:620px;
         > * {
             margin-bottom: 20px;
             &:last-child {
@@ -170,8 +171,9 @@
 
     &__result-btns {
         display: flex;
-        align-items: center;
+        align-items: stretch;
         .btn {
+            width: 100%;
             background-color: inherit;
             max-width: 100% !important;
             margin-right: 30px;
@@ -188,7 +190,7 @@
             }
         }
 
-        @media(max-width: 650px) {
+        @media (max-width: 650px) {
             flex-direction: column;
 
             .btn {
@@ -243,6 +245,9 @@
         grid-row: 2/3;
         max-width: 135px;
         justify-self: end;
+        &:hover {
+            box-shadow: 0px 7px 15px rgba(69, 181, 83, 0.6);
+        }
 
         @media (max-width: 320px) {
             grid-column: 1/3;
@@ -332,11 +337,11 @@
 
             .price-block .btn {
                 width: 40% !important;
-                @media(max-width: 480px) {
+                @media (max-width: 480px) {
                     width: 65% !important;
                 }
 
-                @media(max-width: 320px) {
+                @media (max-width: 320px) {
                     width: 80% !important;
                 }
             }

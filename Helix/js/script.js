@@ -310,7 +310,7 @@ if (selects.length > 0) {
             });
         })
 
-        selectBtn.addEventListener("click", () => {
+        selectBtn.addEventListener("click", (e) => {
             select.classList.toggle('open')
             if (select.classList.contains("open")) {
                 document.addEventListener(
