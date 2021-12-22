@@ -2075,6 +2075,34 @@ section {
   /* margin-bottom: 90px; */
 }
 
+.doctors.doctors_main .doctors__list .doctors__item {
+  overflow: hidden;
+}
+
+.doctors.doctors_main .doctors__list .doctors__item:nth-child(odd) {
+  -webkit-transform: translateY(150%);
+      -ms-transform: translateY(150%);
+          transform: translateY(150%);
+  opacity: 0;
+}
+
+.doctors.doctors_main .doctors__list .doctors__item:nth-child(even) {
+  -webkit-transform: translateY(-150%);
+      -ms-transform: translateY(-150%);
+          transform: translateY(-150%);
+  opacity: 0;
+}
+
+.doctors.doctors_main .doctors__list._animate .doctors__item {
+  opacity: 1;
+  -webkit-transform: translate(0, 0);
+      -ms-transform: translate(0, 0);
+          transform: translate(0, 0);
+  -webkit-transition: all 1s ease-in-out 0.2s;
+  -o-transition: all 1s ease-in-out 0.2s;
+  transition: all 1s ease-in-out 0.2s;
+}
+
 .doctors__list {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
