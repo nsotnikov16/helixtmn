@@ -516,6 +516,12 @@ if (reviews) {
 
 
 //Анимация
+const sectionTitle = document.querySelectorAll('.section__title')
+const sectionAll = document.querySelectorAll('.section__all')
+
+sectionTitle.forEach(item => item.classList.add('_anim-items', '_anim-no-hide'))
+sectionAll.forEach(item => item.classList.add('_anim-items', '_anim-no-hide'))
+
 const animItems = document.querySelectorAll('._anim-items');
 
 if (animItems.length > 0) {

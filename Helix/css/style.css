@@ -998,6 +998,26 @@ section {
   margin-bottom: 0;
 }
 
+.section__title:not(.about .section__title),
+.section__all {
+  overflow: hidden;
+  -webkit-transform: translateX(-200%);
+      -ms-transform: translateX(-200%);
+          transform: translateX(-200%);
+  opacity: 0;
+  -webkit-transition: all 0.8s ease 0.2s;
+  -o-transition: all 0.8s ease 0.2s;
+  transition: all 0.8s ease 0.2s;
+}
+
+.section__title:not(.about .section__title)._animate,
+.section__all._animate {
+  opacity: 1;
+  -webkit-transform: translateX(0);
+      -ms-transform: translateX(0);
+          transform: translateX(0);
+}
+
 /* Лого */
 
 .logo {
