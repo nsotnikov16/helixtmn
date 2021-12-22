@@ -16,7 +16,10 @@ $('.header__contacts-map').on('click', function () {
 
 // Swiper Banners 
 var swiperBanners = new Swiper(".swiper-banners", {
-
+    autoplay: {
+        delay: 4000,
+        
+    },
     navigation: {
         nextEl: ".swiper-banners .swiper-button-next",
         prevEl: ".swiper-banners .swiper-button-prev",
