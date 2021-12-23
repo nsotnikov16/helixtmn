@@ -240,6 +240,7 @@ class Popup {
         this._popupElement = popupElement;
         this._closeButton = this._popupElement.querySelector('.popup__close');
         this._img = this._popupElement.id === "photo" ? this._popupElement.querySelector('.popup__img') : null;
+        this._source = this._img ? this._img.previousElementSibling : null;
         this._handleEscClose = this._handleEscClose.bind(this)
         this._openingLinks = document.querySelectorAll(`[data-pointer="${this._popupElement.id}"]`)
         this.setEventListeners()
@@ -247,6 +248,7 @@ class Popup {
 
     open(el) {
         if (this._img) this._img.src = el.src
+        if (this._source) this._source.srcset = el.src
         document.body.style.overflow = "hidden";
         this._popupElement.classList.add('popup_opened')
         document.addEventListener('keydown', this._handleEscClose);
