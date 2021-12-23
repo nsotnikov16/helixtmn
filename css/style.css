@@ -2399,6 +2399,18 @@ section {
 .licenses.licenses_main {
   border-top: 1px solid #e5e7eb;
   padding-top: 70px;
+  opacity: 0;
+  overflow: hidden;
+  /* transform: translateX(10%); */
+  -webkit-transition: all 0.8s ease 0.2s;
+  -o-transition: all 0.8s ease 0.2s;
+  transition: all 0.8s ease 0.2s;
+}
+
+.licenses.licenses_main._animate {
+  opacity: 1;
+  overflow: visible;
+  /* transform: translateX(0); */
 }
 
 .licenses__list {
