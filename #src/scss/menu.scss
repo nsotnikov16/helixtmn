@@ -70,7 +70,6 @@
         text-transform: uppercase;
         opacity: 0.8;
         font-weight: 500;
-
         display: block;
         width: 120%;
         &:hover:not(.menu__link_covid) {
@@ -128,7 +127,7 @@
         font-size: 16px;
         line-height: 30px;
         white-space: nowrap;
-
+        display: block;
         svg {
             display: none;
             width: 12px;
