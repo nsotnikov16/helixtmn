@@ -61,7 +61,7 @@ function browserSync(params) {
 function html() {
 	return src(path.src.html)
 		.pipe(fileinclude())
-		.pipe(webphtml())
+		/* .pipe(webphtml()) */
 		.pipe(dest(path.build.html))
 		.pipe(browsersync.stream())
 }
@@ -79,12 +79,12 @@ function css() {
 				cascade: true
 			})
 		)
-		.pipe(webpcss(
+		/* .pipe(webpcss(
 			{
 				webpClass: "._webp",
 				noWebpClass: "._no-webp"
 			}
-		))
+		)) */
 		.pipe(dest(path.build.css))
 		.pipe(clean_css())
 		.pipe(
@@ -121,11 +121,11 @@ function images() {
 				})
 			])
 		) */
-		.pipe(
+		/* .pipe(
 			rename({
 				extname: ".webp"
 			})
-		)
+		) */
 		.pipe(dest(path.build.img))
 		.pipe(src(path.src.img))
 		.pipe(newer(path.build.img))
